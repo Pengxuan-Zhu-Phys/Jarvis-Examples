@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+
+# Jarvis runtime state / agent artifacts
+.jarvis/
+
+# Runtime cache (function/data cache used during runs)
+.cache/
+
+# Generated at runtime, not part of the example source
+calculators/
+checkpoints/
+outputs/
+logs/

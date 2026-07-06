@@ -34,6 +34,11 @@ Runtime directories are created automatically on first run:
 - `logs/<scan>/`: Jarvis / sampler / factory logs
 - `images/<scan>/`: plots, generated plotting YAML, and workflow flowcharts
 
+The `_paper.yaml` files under `images/` are preserved Jarvis-PLOT configurations
+for reproducing the arXiv figures. Newly generated Jarvis-PLOT YAML files may
+use default names; the `_paper.yaml` files are kept stable to avoid being
+overwritten.
+
 Add optional project directories such as `calculators/`, `configs/`, `scripts/`,
 `assets/`, and `docs/` only when your workflow actually needs them.
 

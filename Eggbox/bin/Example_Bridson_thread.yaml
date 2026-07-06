@@ -1,9 +1,12 @@
-Scan: 
-  name: "EggBox_Bridson_newIO"
+# A/B benchmark: thread execution (v1-default path, closest to legacy Jarvis-HEP).
+# Compare with Example_Bridson_process.yaml using: Jarvis <file> --benchmark 60
+Scan:
+  name: "EggBox_Bridson_thread"
   save_dir: "&J/outputs"
 
 Runtime:
-  mode: process
+  mode: thread
+  workers: 14
   batch_size: 1
   Subprocess:
     max_concurrency: 16
@@ -11,7 +14,7 @@ Runtime:
     log_policy: logger
 
 Sampling:
-  Method: "Bridson" 
+  Method: "Bridson"
   Variables:
     - name: x
       description: "Variable X following a Flat distribution for sampling."
@@ -20,7 +23,7 @@ Sampling:
         parameters:
           min: 0.1
           max: 5.0
-          length: 100
+          length: 20
 
     - name: y
       description: "Variable Y following a Logarithmic distribution for sampling."
@@ -29,55 +32,55 @@ Sampling:
         parameters:
           min: 0
           max: 5.0
-          length: 100
-  
+          length: 20
+
   Radius: 1
-  MaxAttempt:  30
-  LogLikelihood: 
-    - {name: "LogL_Z",  expression: "LogGauss(z, 100, 10)"}
+  MaxAttempt: 30
+  LogLikelihood:
+    - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
 
 EnvReqs:
-  OS: 
-    - name: linux 
+  OS:
+    - name: linux
       version: ">=3.10.0"
     - name: Darwin
       version: ">=10.0"
   Check_default_dependencies:
-    required: True 
-    default_yaml_path:  "&J/deps/environment_default.yaml"
+    required: True
+    default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
   make_paraller: 16
   path: "&J/calculators/runtime/program"
   Modules:
     - name: EggBox
-      required_modules: [] 
+      required_modules: []
       clone_shadow: True
-      path: &eggbox_path "&J/calculators/runtime/program/EggBox/@PackID"  # Define Anchor point 
+      path: &eggbox_path "&J/calculators/runtime/program/EggBox/@PackID"
       source: "&J/deps/assets/inertial/EggBox"
       installation:
-          - "cp -r ${source}/* ${path}"
+        - "cp -r ${source}/* ${path}"
       initialization:
-          - "cp -r ${source}/input.json ${path}/input.json"
-          - "rm -f output.json"
+        - "cp -r ${source}/input.json ${path}/input.json"
+        - "rm -f output.json"
       execution:
-        path: *eggbox_path  # using the Anchor point
+        path: *eggbox_path
         commands:
           - "./eggbox.py"
         input:
           - name: inpjson
-            path: "&J/calculators/runtime/program/EggBox/@PackID/input.json"  
+            path: "&J/calculators/runtime/program/EggBox/@PackID/input.json"
             type: "JSON"
             actions:
               - type: "Dump"
                 variables:
-                  - { name: "xx", expression: "x * Pi" }
-                  - { name: "yy", expression: "y * Pi" }
-                  - { name: "cx", expression: "(x + y) * Pi", entry: "test.config.x" }
+                  - {name: "xx", expression: "x * Pi"}
+                  - {name: "yy", expression: "y * Pi"}
+                  - {name: "cx", expression: "(x + y) * Pi", entry: "test.config.x"}
             save: True
         output:
           - name: oupjson
-            path: "&J/calculators/runtime/program/EggBox/@PackID/output.json" 
+            path: "&J/calculators/runtime/program/EggBox/@PackID/output.json"
             type: "JSON"
             save: True
             variables:
@@ -88,7 +91,7 @@ Utils:
     - name: XenonSD2019
       file: "&J/data/reference/Xenon1T2019SD_p.csv"
       logY: True
-      logX: False 
+      logX: False
       kind: "cubic"
     - name: inter1P
       x_values: [1, 2, 3, 4, 5]
