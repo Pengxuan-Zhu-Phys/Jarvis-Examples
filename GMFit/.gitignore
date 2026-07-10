@@ -6,6 +6,7 @@ calculators/
 checkpoints/
 outputs/
 logs/
+tmp_check/ 
 
 # Not staged yet (large, 1.9G) — remove this line when ready to commit deps
-deps/
+# deps/

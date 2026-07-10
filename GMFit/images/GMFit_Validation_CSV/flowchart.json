@@ -1,0 +1,8549 @@
+{
+  "schema": "jarvisplot.scene/v1",
+  "scene_type": "flowchart",
+  "scene_id": "workflow_main",
+  "metadata": {
+    "producer": "Jarvis-HEP",
+    "producer_version": "1.7.5",
+    "workflow_name": "GMFit_Validation_CSV"
+  },
+  "layers": [
+    {
+      "id": "layer_1",
+      "index": 1,
+      "label": "Parameters",
+      "nodes": [
+        "Parameters"
+      ]
+    },
+    {
+      "id": "layer_2",
+      "index": 2,
+      "label": "GMFit",
+      "nodes": [
+        "GMFit",
+        "file::GMFit::input::gmfit_json",
+        "var::mh",
+        "var::mH",
+        "var::sinThetaH",
+        "var::sinAlpha",
+        "var::lambda2",
+        "var::lambda3",
+        "var::lambda4",
+        "var::lambda5",
+        "file::GMFit::output::gmfit_output",
+        "var::gm_mu2sq",
+        "var::gm_lambda1",
+        "var::gm_lambda2",
+        "var::gm_lambda3",
+        "var::gm_lambda4",
+        "var::gm_lambda5",
+        "var::gm_m1",
+        "var::gm_m2",
+        "var::gm_vphi",
+        "var::gm_vchi",
+        "var::gm_alpha",
+        "var::gm_sin_alpha",
+        "var::gm_sin_thetaH",
+        "var::gm_mh",
+        "var::gm_mH",
+        "var::gm_mH3",
+        "var::gm_mH5",
+        "var::gm_kappa_V",
+        "var::gm_kappa_f",
+        "var::gm_kappa_gamma",
+        "var::gm_kappa_Zgamma",
+        "var::gm_H_kappa_V",
+        "var::gm_H_kappa_f",
+        "var::gm_H_kappa_gamma",
+        "var::gm_H_kappa_Zgamma",
+        "var::gm_H30_kappa_W",
+        "var::gm_H30_kappa_Z",
+        "var::gm_H30_kappa_f",
+        "var::gm_H50_kappa_W",
+        "var::gm_H50_kappa_Z",
+        "var::gm_H50_kappa_f",
+        "var::gm_width_h",
+        "var::gm_width_H",
+        "var::gm_width_H30",
+        "var::gm_width_H3p",
+        "var::gm_width_H50",
+        "var::gm_width_H5p",
+        "var::gm_width_H5pp",
+        "var::gm_width_top",
+        "var::gm_br_h_bb",
+        "var::gm_br_h_tautau",
+        "var::gm_br_h_mumu",
+        "var::gm_br_h_ss",
+        "var::gm_br_h_cc",
+        "var::gm_br_h_tt",
+        "var::gm_br_h_gg",
+        "var::gm_br_h_gamgam",
+        "var::gm_br_h_Zgam",
+        "var::gm_br_h_WW",
+        "var::gm_br_h_ZZ",
+        "var::gm_br_h_W_H3p",
+        "var::gm_br_h_Z_H30",
+        "var::gm_br_h_H30_H30",
+        "var::gm_br_h_H3p_H3p",
+        "var::gm_br_h_H50_H50",
+        "var::gm_br_h_H5p_H5p",
+        "var::gm_br_h_H5pp_H5pp",
+        "var::gm_br_H_bb",
+        "var::gm_br_H_tautau",
+        "var::gm_br_H_mumu",
+        "var::gm_br_H_ss",
+        "var::gm_br_H_cc",
+        "var::gm_br_H_tt",
+        "var::gm_br_H_gg",
+        "var::gm_br_H_gamgam",
+        "var::gm_br_H_Zgam",
+        "var::gm_br_H_WW",
+        "var::gm_br_H_ZZ",
+        "var::gm_br_H_W_H3p",
+        "var::gm_br_H_Z_H30",
+        "var::gm_br_H_h_h",
+        "var::gm_br_H_H30_H30",
+        "var::gm_br_H_H3p_H3p",
+        "var::gm_br_H_H50_H50",
+        "var::gm_br_H_H5p_H5p",
+        "var::gm_br_H_H5pp_H5pp",
+        "var::gm_br_H30_bb",
+        "var::gm_br_H30_tautau",
+        "var::gm_br_H30_mumu",
+        "var::gm_br_H30_ss",
+        "var::gm_br_H30_cc",
+        "var::gm_br_H30_tt",
+        "var::gm_br_H30_gg",
+        "var::gm_br_H30_gamgam",
+        "var::gm_br_H30_Zgam",
+        "var::gm_br_H30_Z_h",
+        "var::gm_br_H30_Z_H",
+        "var::gm_br_H30_Z_H50",
+        "var::gm_br_H30_W_H5p",
+        "var::gm_br_H3p_cb",
+        "var::gm_br_H3p_taunu",
+        "var::gm_br_H3p_munu",
+        "var::gm_br_H3p_us",
+        "var::gm_br_H3p_cs",
+        "var::gm_br_H3p_tb",
+        "var::gm_br_H3p_ub",
+        "var::gm_br_H3p_W_h",
+        "var::gm_br_H3p_W_H",
+        "var::gm_br_H3p_Z_H5p",
+        "var::gm_br_H3p_W_H50",
+        "var::gm_br_H3p_W_H5pp",
+        "var::gm_br_H3p_Wgam",
+        "var::gm_br_H50_gamgam",
+        "var::gm_br_H50_Zgam",
+        "var::gm_br_H50_WW",
+        "var::gm_br_H50_ZZ",
+        "var::gm_br_H50_Z_H30",
+        "var::gm_br_H50_W_H3p",
+        "var::gm_br_H50_H30_H30",
+        "var::gm_br_H50_H3p_H3p",
+        "var::gm_br_H5p_WZ",
+        "var::gm_br_H5p_Z_H3p",
+        "var::gm_br_H5p_W_H30",
+        "var::gm_br_H5p_H3p_H30",
+        "var::gm_br_H5p_Wgam",
+        "var::gm_br_H5pp_WWsamesign",
+        "var::gm_br_H5pp_W_H3p",
+        "var::gm_br_H5pp_H3p_H3p",
+        "var::gm_br_top_Wb",
+        "var::gm_br_top_H3pb",
+        "var::gm_unitarity",
+        "var::gm_bfb",
+        "var::gm_posmsq",
+        "var::gm_min",
+        "var::gm_inputok",
+        "var::gm_bsmm_ok",
+        "var::gm_sparam_ok",
+        "var::gm_bsg_loose_ok",
+        "var::gm_bsg_tight_ok"
+      ]
+    },
+    {
+      "id": "layer_3",
+      "index": 3,
+      "label": "SPhenoGM, RGEGM, GMTreeVacuumStability",
+      "nodes": [
+        "SPhenoGM",
+        "file::SPhenoGM::input::spheno_input",
+        "file::SPhenoGM::output::spheno_output",
+        "var::spheno_tparam",
+        "var::spheno_sparam",
+        "var::spheno_uparam",
+        "var::spheno_mh",
+        "var::spheno_mH",
+        "RGEGM",
+        "file::RGEGM::input::rge_input",
+        "file::RGEGM::output::rge_output",
+        "var::rge_input_mode",
+        "var::rge_found_solution",
+        "var::rge_pass_gut",
+        "var::rge_scale",
+        "var::rge_g83_gut",
+        "var::rge_lambda_gut_1",
+        "var::rge_lambda_gut_2",
+        "var::rge_lambda_gut_3",
+        "var::rge_lambda_gut_4",
+        "var::rge_lambda_gut_5",
+        "var::rge_mz_lam",
+        "var::rge_mz_rho1",
+        "var::rge_mz_rho2",
+        "var::rge_mz_rho3",
+        "var::rge_mz_rho4",
+        "var::rge_mz_rho5",
+        "var::rge_mz_sigma1",
+        "var::rge_mz_sigma2",
+        "var::rge_mz_sigma3",
+        "var::rge_mz_sigma4",
+        "GMTreeVacuumStability",
+        "var::gm_vs_ok"
+      ]
+    },
+    {
+      "id": "layer_4",
+      "index": 4,
+      "label": "RGETreeVacuumStability",
+      "nodes": [
+        "RGETreeVacuumStability",
+        "var::rge_vs_ok",
+        "bridge::rge_g83_gut::L4",
+        "bridge::rge_scale::L4",
+        "bridge::gm_vs_ok::L4"
+      ]
+    },
+    {
+      "id": "layer_5",
+      "index": 5,
+      "label": "RGEVacuum",
+      "nodes": [
+        "RGEVacuum",
+        "var::rge_vac_ok",
+        "var::rge_vac_v",
+        "var::rge_vac_neg",
+        "var::rge_vac_skip"
+      ]
+    },
+    {
+      "id": "layer_6",
+      "index": 6,
+      "label": "GMHiggsTools",
+      "nodes": [
+        "GMHiggsTools",
+        "var::ht_ready",
+        "var::ht_allowed",
+        "var::ht_hb_allowed",
+        "var::ht_hb_selected_count",
+        "var::ht_hb_obsratio_max",
+        "var::ht_hb_expratio_max",
+        "var::ht_hb_limit_id",
+        "var::ht_hb_reference",
+        "var::ht_hb_process",
+        "var::ht_hb_particle",
+        "var::ht_hs_chisq",
+        "var::ht_hs_loglike",
+        "var::ht_cms_h5pp_vbf_allowed",
+        "var::ht_cms_h5pp_vbf_obsratio",
+        "var::ht_coverage_complete",
+        "var::ht_coverage_missing_count",
+        "var::ht_coverage_missing"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "Parameters",
+      "kind": "source",
+      "role": "parameter_source",
+      "label": "Parameters",
+      "in_ports": [],
+      "out_ports": [],
+      "metadata": {
+        "module_type": "Parameter",
+        "required_modules": []
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "GMFit",
+      "kind": "module",
+      "role": "calculator",
+      "label": "GMFit",
+      "in_ports": [
+        {
+          "id": "gmfit_json",
+          "role": "file",
+          "metadata": {
+            "file_type": "JSON"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "gmfit_output",
+          "role": "file",
+          "metadata": {
+            "file_type": "xSLHA"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "LoopTools"
+        ]
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::GMFit::input::gmfit_json",
+      "kind": "file",
+      "role": "input_file",
+      "label": "gmfit_json",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "JSON"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mh",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mh",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mH",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mH",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::sinThetaH",
+      "kind": "variable",
+      "role": "observable",
+      "label": "sinThetaH",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::sinAlpha",
+      "kind": "variable",
+      "role": "observable",
+      "label": "sinAlpha",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::lambda2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "lambda2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::lambda3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "lambda3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::lambda4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "lambda4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::lambda5",
+      "kind": "variable",
+      "role": "observable",
+      "label": "lambda5",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::GMFit::output::gmfit_output",
+      "kind": "file",
+      "role": "output_file",
+      "label": "gmfit_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "xSLHA"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_mu2sq",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_mu2sq",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_lambda1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_lambda1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_lambda2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_lambda2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_lambda3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_lambda3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_lambda4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_lambda4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_lambda5",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_lambda5",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_m1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_m1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_m2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_m2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_vphi",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_vphi",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_vchi",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_vchi",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_alpha",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_alpha",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_sin_alpha",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_sin_alpha",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_sin_thetaH",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_sin_thetaH",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_mh",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_mh",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_mH",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_mH",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_mH3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_mH3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_mH5",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_mH5",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_kappa_V",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_kappa_V",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_kappa_f",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_kappa_f",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_kappa_gamma",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_kappa_gamma",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_kappa_Zgamma",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_kappa_Zgamma",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H_kappa_V",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H_kappa_V",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H_kappa_f",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H_kappa_f",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H_kappa_gamma",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H_kappa_gamma",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H_kappa_Zgamma",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H_kappa_Zgamma",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H30_kappa_W",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H30_kappa_W",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H30_kappa_Z",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H30_kappa_Z",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H30_kappa_f",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H30_kappa_f",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H50_kappa_W",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H50_kappa_W",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H50_kappa_Z",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H50_kappa_Z",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_H50_kappa_f",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_H50_kappa_f",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_h",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_h",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H50",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H50",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H5p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H5p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_H5pp",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_H5pp",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_width_top",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_width_top",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_bb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_bb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_tautau",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_tautau",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_mumu",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_mumu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_ss",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_ss",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_cc",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_cc",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_tt",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_tt",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_gg",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_gg",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_gamgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_gamgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_Zgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_Zgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_WW",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_WW",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_ZZ",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_ZZ",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_W_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_W_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_Z_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_Z_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_H30_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_H30_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_H3p_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_H3p_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_H50_H50",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_H50_H50",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_H5p_H5p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_H5p_H5p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_h_H5pp_H5pp",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_h_H5pp_H5pp",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_bb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_bb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_tautau",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_tautau",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_mumu",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_mumu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_ss",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_ss",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_cc",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_cc",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_tt",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_tt",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_gg",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_gg",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_gamgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_gamgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_Zgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_Zgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_WW",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_WW",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_ZZ",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_ZZ",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_W_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_W_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_Z_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_Z_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_h_h",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_h_h",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_H30_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_H30_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_H3p_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_H3p_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_H50_H50",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_H50_H50",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_H5p_H5p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_H5p_H5p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H_H5pp_H5pp",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H_H5pp_H5pp",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_bb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_bb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_tautau",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_tautau",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_mumu",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_mumu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_ss",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_ss",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_cc",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_cc",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_tt",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_tt",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_gg",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_gg",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_gamgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_gamgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_Zgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_Zgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_Z_h",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_Z_h",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_Z_H",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_Z_H",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_Z_H50",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_Z_H50",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H30_W_H5p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H30_W_H5p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_cb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_cb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_taunu",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_taunu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_munu",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_munu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_us",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_us",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_cs",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_cs",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_tb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_tb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_ub",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_ub",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_W_h",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_W_h",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_W_H",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_W_H",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_Z_H5p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_Z_H5p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_W_H50",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_W_H50",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_W_H5pp",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_W_H5pp",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H3p_Wgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H3p_Wgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_gamgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_gamgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_Zgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_Zgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_WW",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_WW",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_ZZ",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_ZZ",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_Z_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_Z_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_W_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_W_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_H30_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_H30_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H50_H3p_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H50_H3p_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5p_WZ",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5p_WZ",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5p_Z_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5p_Z_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5p_W_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5p_W_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5p_H3p_H30",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5p_H3p_H30",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5p_Wgam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5p_Wgam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5pp_WWsamesign",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5pp_WWsamesign",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5pp_W_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5pp_W_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_H5pp_H3p_H3p",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_H5pp_H3p_H3p",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_top_Wb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_top_Wb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_br_top_H3pb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_br_top_H3pb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_unitarity",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_unitarity",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_bfb",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_bfb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_posmsq",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_posmsq",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_min",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_min",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_inputok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_inputok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_bsmm_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_bsmm_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_sparam_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_sparam_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_bsg_loose_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_bsg_loose_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::gm_bsg_tight_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_bsg_tight_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMFit"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "SPhenoGM",
+      "kind": "module",
+      "role": "calculator",
+      "label": "SPhenoGM",
+      "in_ports": [
+        {
+          "id": "spheno_input",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "spheno_output",
+          "role": "file",
+          "metadata": {
+            "file_type": "xSLHA"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "GMFit"
+        ]
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::SPhenoGM::input::spheno_input",
+      "kind": "file",
+      "role": "input_file",
+      "label": "spheno_input",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::SPhenoGM::output::spheno_output",
+      "kind": "file",
+      "role": "output_file",
+      "label": "spheno_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "xSLHA"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::spheno_tparam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "spheno_tparam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SPhenoGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::spheno_sparam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "spheno_sparam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SPhenoGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::spheno_uparam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "spheno_uparam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SPhenoGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::spheno_mh",
+      "kind": "variable",
+      "role": "observable",
+      "label": "spheno_mh",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SPhenoGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::spheno_mH",
+      "kind": "variable",
+      "role": "observable",
+      "label": "spheno_mH",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SPhenoGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "RGEGM",
+      "kind": "module",
+      "role": "calculator",
+      "label": "RGEGM",
+      "in_ports": [
+        {
+          "id": "rge_input",
+          "role": "file",
+          "metadata": {
+            "file_type": "JSON"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "rge_output",
+          "role": "file",
+          "metadata": {
+            "file_type": "JSON"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "GMFit"
+        ]
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::RGEGM::input::rge_input",
+      "kind": "file",
+      "role": "input_file",
+      "label": "rge_input",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "JSON"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::RGEGM::output::rge_output",
+      "kind": "file",
+      "role": "output_file",
+      "label": "rge_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "JSON"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_input_mode",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_input_mode",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_found_solution",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_found_solution",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_pass_gut",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_pass_gut",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_scale",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_scale",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_g83_gut",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_g83_gut",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_lambda_gut_1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_lambda_gut_1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_lambda_gut_2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_lambda_gut_2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_lambda_gut_3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_lambda_gut_3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_lambda_gut_4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_lambda_gut_4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_lambda_gut_5",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_lambda_gut_5",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_lam",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_lam",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_rho1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_rho1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_rho2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_rho2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_rho3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_rho3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_rho4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_rho4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_rho5",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_rho5",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_sigma1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_sigma1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_sigma2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_sigma2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_sigma3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_sigma3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::rge_mz_sigma4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_mz_sigma4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEGM"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "GMTreeVacuumStability",
+      "kind": "module",
+      "role": "operas",
+      "label": "GMTreeVacuumStability",
+      "in_ports": [
+        {
+          "id": "lambda1",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_lambda1"
+          }
+        },
+        {
+          "id": "lambda2",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_lambda2"
+          }
+        },
+        {
+          "id": "lambda3",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_lambda3"
+          }
+        },
+        {
+          "id": "lambda4",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_lambda4"
+          }
+        },
+        {
+          "id": "lambda5",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_lambda5"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "gm_vs_ok",
+          "role": "variable",
+          "metadata": {
+            "entry": "vs_ok"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Operas",
+        "required_modules": [
+          "GMFit"
+        ],
+        "operator": "gm_helper.check_tree_level_vacuum_stability",
+        "call_mode": "call"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::gm_vs_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "gm_vs_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMTreeVacuumStability"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "RGETreeVacuumStability",
+      "kind": "module",
+      "role": "operas",
+      "label": "RGETreeVacuumStability",
+      "in_ports": [
+        {
+          "id": "lambda1",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_lambda_gut_1"
+          }
+        },
+        {
+          "id": "lambda2",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_lambda_gut_2"
+          }
+        },
+        {
+          "id": "lambda3",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_lambda_gut_3"
+          }
+        },
+        {
+          "id": "lambda4",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_lambda_gut_4"
+          }
+        },
+        {
+          "id": "lambda5",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_lambda_gut_5"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "rge_vs_ok",
+          "role": "variable",
+          "metadata": {
+            "entry": "vs_ok"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Operas",
+        "required_modules": [
+          "RGEGM"
+        ],
+        "operator": "gm_helper.check_tree_level_vacuum_stability",
+        "call_mode": "call"
+      },
+      "layer": "layer_4"
+    },
+    {
+      "id": "var::rge_vs_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_vs_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGETreeVacuumStability"
+      },
+      "layer": "layer_4"
+    },
+    {
+      "id": "RGEVacuum",
+      "kind": "module",
+      "role": "operas",
+      "label": "RGEVacuum",
+      "in_ports": [
+        {
+          "id": "payload",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_g83_gut"
+          }
+        },
+        {
+          "id": "scale",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_scale"
+          }
+        },
+        {
+          "id": "gm_vs_ok",
+          "role": "variable",
+          "metadata": {
+            "entry": "gm_vs_ok"
+          }
+        },
+        {
+          "id": "rge_vs_ok",
+          "role": "variable",
+          "metadata": {
+            "entry": "rge_vs_ok"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "rge_vac_ok",
+          "role": "variable",
+          "metadata": {
+            "entry": "vacuum_ok"
+          }
+        },
+        {
+          "id": "rge_vac_v",
+          "role": "variable",
+          "metadata": {
+            "entry": "vacuum_potential"
+          }
+        },
+        {
+          "id": "rge_vac_neg",
+          "role": "variable",
+          "metadata": {
+            "entry": "flag_negative"
+          }
+        },
+        {
+          "id": "rge_vac_skip",
+          "role": "variable",
+          "metadata": {
+            "entry": "vacuum_skipped"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Operas",
+        "required_modules": [
+          "RGEGM",
+          "GMTreeVacuumStability",
+          "RGETreeVacuumStability"
+        ],
+        "operator": "gm_helper.checkvacuum_v2_detail",
+        "call_mode": "acall"
+      },
+      "layer": "layer_5"
+    },
+    {
+      "id": "bridge::rge_g83_gut::L4",
+      "kind": "bridge",
+      "role": "bridge_relay",
+      "label": "rge_g83_gut",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "bridge_in"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "bridge_out"
+        }
+      ],
+      "metadata": {
+        "source_layer": 3,
+        "target_layer": 5,
+        "relay_for": "rge_g83_gut"
+      },
+      "layer": "layer_4"
+    },
+    {
+      "id": "bridge::rge_scale::L4",
+      "kind": "bridge",
+      "role": "bridge_relay",
+      "label": "rge_scale",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "bridge_in"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "bridge_out"
+        }
+      ],
+      "metadata": {
+        "source_layer": 3,
+        "target_layer": 5,
+        "relay_for": "rge_scale"
+      },
+      "layer": "layer_4"
+    },
+    {
+      "id": "bridge::gm_vs_ok::L4",
+      "kind": "bridge",
+      "role": "bridge_relay",
+      "label": "gm_vs_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "bridge_in"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "bridge_out"
+        }
+      ],
+      "metadata": {
+        "source_layer": 3,
+        "target_layer": 5,
+        "relay_for": "gm_vs_ok"
+      },
+      "layer": "layer_4"
+    },
+    {
+      "id": "var::rge_vac_ok",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_vac_ok",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEVacuum"
+      },
+      "layer": "layer_5"
+    },
+    {
+      "id": "var::rge_vac_v",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_vac_v",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEVacuum"
+      },
+      "layer": "layer_5"
+    },
+    {
+      "id": "var::rge_vac_neg",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_vac_neg",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEVacuum"
+      },
+      "layer": "layer_5"
+    },
+    {
+      "id": "var::rge_vac_skip",
+      "kind": "variable",
+      "role": "observable",
+      "label": "rge_vac_skip",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "RGEVacuum"
+      },
+      "layer": "layer_5"
+    },
+    {
+      "id": "GMHiggsTools",
+      "kind": "module",
+      "role": "operas",
+      "label": "GMHiggsTools",
+      "in_ports": [
+        {
+          "id": "selection::rge_vac_ok",
+          "role": "selection",
+          "label": "rge_vac_ok",
+          "metadata": {
+            "selection": true
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "ht_ready",
+          "role": "variable",
+          "metadata": {
+            "entry": "ready"
+          }
+        },
+        {
+          "id": "ht_allowed",
+          "role": "variable",
+          "metadata": {
+            "entry": "allowed"
+          }
+        },
+        {
+          "id": "ht_hb_allowed",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_allowed"
+          }
+        },
+        {
+          "id": "ht_hb_selected_count",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_selected_count"
+          }
+        },
+        {
+          "id": "ht_hb_obsratio_max",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_obsratio_max"
+          }
+        },
+        {
+          "id": "ht_hb_expratio_max",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_expratio_max"
+          }
+        },
+        {
+          "id": "ht_hb_limit_id",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_limit_id"
+          }
+        },
+        {
+          "id": "ht_hb_reference",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_reference"
+          }
+        },
+        {
+          "id": "ht_hb_process",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_process"
+          }
+        },
+        {
+          "id": "ht_hb_particle",
+          "role": "variable",
+          "metadata": {
+            "entry": "hb_particle"
+          }
+        },
+        {
+          "id": "ht_hs_chisq",
+          "role": "variable",
+          "metadata": {
+            "entry": "hs_chisq"
+          }
+        },
+        {
+          "id": "ht_hs_loglike",
+          "role": "variable",
+          "metadata": {
+            "entry": "hs_loglike"
+          }
+        },
+        {
+          "id": "ht_cms_h5pp_vbf_allowed",
+          "role": "variable",
+          "metadata": {
+            "entry": "cms_h5pp_vbf_allowed"
+          }
+        },
+        {
+          "id": "ht_cms_h5pp_vbf_obsratio",
+          "role": "variable",
+          "metadata": {
+            "entry": "cms_h5pp_vbf_obsratio"
+          }
+        },
+        {
+          "id": "ht_coverage_complete",
+          "role": "variable",
+          "metadata": {
+            "entry": "coverage_complete"
+          }
+        },
+        {
+          "id": "ht_coverage_missing_count",
+          "role": "variable",
+          "metadata": {
+            "entry": "coverage_missing_count"
+          }
+        },
+        {
+          "id": "ht_coverage_missing",
+          "role": "variable",
+          "metadata": {
+            "entry": "coverage_missing"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Operas",
+        "required_modules": [
+          "RGEVacuum",
+          "HBDataSet",
+          "HSDataSet"
+        ],
+        "operator": "higgstools_helper.run_gm_higgstools",
+        "call_mode": "call",
+        "selection": {
+          "expression": "rge_vac_ok",
+          "variables": [
+            "rge_vac_ok"
+          ]
+        }
+      },
+      "selection": {
+        "expression": "rge_vac_ok",
+        "variables": [
+          "rge_vac_ok"
+        ]
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_ready",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_ready",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_allowed",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_allowed",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_allowed",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_allowed",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_selected_count",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_selected_count",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_obsratio_max",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_obsratio_max",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_expratio_max",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_expratio_max",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_limit_id",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_limit_id",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_reference",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_reference",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_process",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_process",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hb_particle",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hb_particle",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hs_chisq",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hs_chisq",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_hs_loglike",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_hs_loglike",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_cms_h5pp_vbf_allowed",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_cms_h5pp_vbf_allowed",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_cms_h5pp_vbf_obsratio",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_cms_h5pp_vbf_obsratio",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_coverage_complete",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_coverage_complete",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_coverage_missing_count",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_coverage_missing_count",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    },
+    {
+      "id": "var::ht_coverage_missing",
+      "kind": "variable",
+      "role": "observable",
+      "label": "ht_coverage_missing",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "GMHiggsTools"
+      },
+      "layer": "layer_6"
+    }
+  ],
+  "edges": [
+    {
+      "source": {
+        "node": "var::mh",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "mh",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::mH",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "mH",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::sinThetaH",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "sinThetaH",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::sinAlpha",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "sinAlpha",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::lambda2",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "lambda2",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::lambda3",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "lambda3",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::lambda4",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "lambda4",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::lambda5",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "lambda5",
+        "module": "GMFit",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::input::gmfit_json",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMFit",
+        "port": "gmfit_json"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "input": "gmfit_json",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "GMFit",
+        "port": "gmfit_output"
+      },
+      "target": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "output": "gmfit_output",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_mu2sq",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_mu2sq",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_lambda1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_lambda1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_lambda2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_lambda2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_lambda3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_lambda3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_lambda4",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_lambda4",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_lambda5",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_lambda5",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_m1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_m1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_m2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_m2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_vphi",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_vphi",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_vchi",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_vchi",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_alpha",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_alpha",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_sin_alpha",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_sin_alpha",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_sin_thetaH",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_sin_thetaH",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_mh",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_mh",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_mH",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_mH",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_mH3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_mH3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_mH5",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_mH5",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_kappa_V",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_kappa_V",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_kappa_f",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_kappa_f",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_kappa_gamma",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_kappa_gamma",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_kappa_Zgamma",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_kappa_Zgamma",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H_kappa_V",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H_kappa_V",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H_kappa_f",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H_kappa_f",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H_kappa_gamma",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H_kappa_gamma",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H_kappa_Zgamma",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H_kappa_Zgamma",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H30_kappa_W",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H30_kappa_W",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H30_kappa_Z",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H30_kappa_Z",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H30_kappa_f",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H30_kappa_f",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H50_kappa_W",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H50_kappa_W",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H50_kappa_Z",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H50_kappa_Z",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_H50_kappa_f",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_H50_kappa_f",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_h",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_h",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H50",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H50",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H5p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H5p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_H5pp",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_H5pp",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_width_top",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_width_top",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_bb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_bb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_tautau",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_tautau",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_mumu",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_mumu",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_ss",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_ss",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_cc",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_cc",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_tt",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_tt",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_gg",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_gg",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_gamgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_gamgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_Zgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_Zgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_WW",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_WW",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_ZZ",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_ZZ",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_W_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_W_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_Z_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_Z_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_H30_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_H30_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_H3p_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_H3p_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_H50_H50",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_H50_H50",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_H5p_H5p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_H5p_H5p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_h_H5pp_H5pp",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_h_H5pp_H5pp",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_bb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_bb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_tautau",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_tautau",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_mumu",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_mumu",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_ss",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_ss",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_cc",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_cc",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_tt",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_tt",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_gg",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_gg",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_gamgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_gamgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_Zgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_Zgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_WW",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_WW",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_ZZ",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_ZZ",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_W_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_W_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_Z_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_Z_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_h_h",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_h_h",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_H30_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_H30_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_H3p_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_H3p_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_H50_H50",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_H50_H50",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_H5p_H5p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_H5p_H5p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H_H5pp_H5pp",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H_H5pp_H5pp",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_bb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_bb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_tautau",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_tautau",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_mumu",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_mumu",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_ss",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_ss",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_cc",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_cc",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_tt",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_tt",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_gg",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_gg",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_gamgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_gamgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_Zgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_Zgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_Z_h",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_Z_h",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_Z_H",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_Z_H",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_Z_H50",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_Z_H50",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H30_W_H5p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H30_W_H5p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_cb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_cb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_taunu",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_taunu",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_munu",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_munu",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_us",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_us",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_cs",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_cs",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_tb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_tb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_ub",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_ub",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_W_h",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_W_h",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_W_H",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_W_H",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_Z_H5p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_Z_H5p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_W_H50",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_W_H50",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_W_H5pp",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_W_H5pp",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H3p_Wgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H3p_Wgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_gamgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_gamgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_Zgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_Zgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_WW",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_WW",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_ZZ",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_ZZ",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_Z_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_Z_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_W_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_W_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_H30_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_H30_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H50_H3p_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H50_H3p_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5p_WZ",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5p_WZ",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5p_Z_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5p_Z_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5p_W_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5p_W_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5p_H3p_H30",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5p_H3p_H30",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5p_Wgam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5p_Wgam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5pp_WWsamesign",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5pp_WWsamesign",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5pp_W_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5pp_W_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_H5pp_H3p_H3p",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_H5pp_H3p_H3p",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_top_Wb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_top_Wb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_br_top_H3pb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_br_top_H3pb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_unitarity",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_unitarity",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_bfb",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_bfb",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_posmsq",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_posmsq",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_min",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_min",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_inputok",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_inputok",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_bsmm_ok",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_bsmm_ok",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_sparam_ok",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_sparam_ok",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_bsg_loose_ok",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_bsg_loose_ok",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::GMFit::output::gmfit_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::gm_bsg_tight_ok",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "GMFit",
+        "variable": "gm_bsg_tight_ok",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda2",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda2",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda3",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda3",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda4",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda4",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda5",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda5",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_mh",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_mh",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_mH",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_mH",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_alpha",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_alpha",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_sin_thetaH",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_sin_thetaH",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_vphi",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_vphi",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_vchi",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_vchi",
+        "module": "SPhenoGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::input::spheno_input",
+        "port": "out"
+      },
+      "target": {
+        "node": "SPhenoGM",
+        "port": "spheno_input"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "input": "spheno_input",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "SPhenoGM",
+        "port": "spheno_output"
+      },
+      "target": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "output": "spheno_output",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::spheno_tparam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "variable": "spheno_tparam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::spheno_sparam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "variable": "spheno_sparam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::spheno_uparam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "variable": "spheno_uparam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::spheno_mh",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "variable": "spheno_mh",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SPhenoGM::output::spheno_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::spheno_mH",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SPhenoGM",
+        "variable": "spheno_mH",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda1",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda1",
+        "module": "RGEGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda2",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda2",
+        "module": "RGEGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda3",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda3",
+        "module": "RGEGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda4",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda4",
+        "module": "RGEGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda5",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "gm_lambda5",
+        "module": "RGEGM",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::input::rge_input",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGEGM",
+        "port": "rge_input"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "input": "rge_input",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "RGEGM",
+        "port": "rge_output"
+      },
+      "target": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "output": "rge_output",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_input_mode",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_input_mode",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_found_solution",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_found_solution",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_pass_gut",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_pass_gut",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_scale",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_scale",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_g83_gut",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_g83_gut",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_lambda_gut_1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_lambda_gut_1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_lambda_gut_2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_lambda_gut_2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_lambda_gut_3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_lambda_gut_3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_lambda_gut_4",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_lambda_gut_4",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_lambda_gut_5",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_lambda_gut_5",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_lam",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_lam",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_rho1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_rho1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_rho2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_rho2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_rho3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_rho3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_rho4",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_rho4",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_rho5",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_rho5",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_sigma1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_sigma1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_sigma2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_sigma2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_sigma3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_sigma3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::RGEGM::output::rge_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::rge_mz_sigma4",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "RGEGM",
+        "variable": "rge_mz_sigma4",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda1",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMTreeVacuumStability",
+        "port": "lambda1"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "input": "lambda1"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda2",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMTreeVacuumStability",
+        "port": "lambda2"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "input": "lambda2"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda3",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMTreeVacuumStability",
+        "port": "lambda3"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "input": "lambda3"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda4",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMTreeVacuumStability",
+        "port": "lambda4"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "input": "lambda4"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_lambda5",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMTreeVacuumStability",
+        "port": "lambda5"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "input": "lambda5"
+      }
+    },
+    {
+      "source": {
+        "node": "GMTreeVacuumStability",
+        "port": "gm_vs_ok"
+      },
+      "target": {
+        "node": "var::gm_vs_ok",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMTreeVacuumStability",
+        "output": "gm_vs_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_lambda_gut_1",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGETreeVacuumStability",
+        "port": "lambda1"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "input": "lambda1"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_lambda_gut_2",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGETreeVacuumStability",
+        "port": "lambda2"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "input": "lambda2"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_lambda_gut_3",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGETreeVacuumStability",
+        "port": "lambda3"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "input": "lambda3"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_lambda_gut_4",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGETreeVacuumStability",
+        "port": "lambda4"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "input": "lambda4"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_lambda_gut_5",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGETreeVacuumStability",
+        "port": "lambda5"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "input": "lambda5"
+      }
+    },
+    {
+      "source": {
+        "node": "RGETreeVacuumStability",
+        "port": "rge_vs_ok"
+      },
+      "target": {
+        "node": "var::rge_vs_ok",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGETreeVacuumStability",
+        "output": "rge_vs_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_g83_gut",
+        "port": "out"
+      },
+      "target": {
+        "node": "bridge::rge_g83_gut::L4",
+        "port": "in"
+      },
+      "role": "bridgeflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "payload"
+      }
+    },
+    {
+      "source": {
+        "node": "bridge::rge_g83_gut::L4",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGEVacuum",
+        "port": "payload"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "payload"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_scale",
+        "port": "out"
+      },
+      "target": {
+        "node": "bridge::rge_scale::L4",
+        "port": "in"
+      },
+      "role": "bridgeflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "scale"
+      }
+    },
+    {
+      "source": {
+        "node": "bridge::rge_scale::L4",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGEVacuum",
+        "port": "scale"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "scale"
+      }
+    },
+    {
+      "source": {
+        "node": "var::gm_vs_ok",
+        "port": "out"
+      },
+      "target": {
+        "node": "bridge::gm_vs_ok::L4",
+        "port": "in"
+      },
+      "role": "bridgeflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "gm_vs_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "bridge::gm_vs_ok::L4",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGEVacuum",
+        "port": "gm_vs_ok"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "gm_vs_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_vs_ok",
+        "port": "out"
+      },
+      "target": {
+        "node": "RGEVacuum",
+        "port": "rge_vs_ok"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "input": "rge_vs_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "RGEVacuum",
+        "port": "rge_vac_ok"
+      },
+      "target": {
+        "node": "var::rge_vac_ok",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "output": "rge_vac_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "RGEVacuum",
+        "port": "rge_vac_v"
+      },
+      "target": {
+        "node": "var::rge_vac_v",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "output": "rge_vac_v"
+      }
+    },
+    {
+      "source": {
+        "node": "RGEVacuum",
+        "port": "rge_vac_neg"
+      },
+      "target": {
+        "node": "var::rge_vac_neg",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "output": "rge_vac_neg"
+      }
+    },
+    {
+      "source": {
+        "node": "RGEVacuum",
+        "port": "rge_vac_skip"
+      },
+      "target": {
+        "node": "var::rge_vac_skip",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "RGEVacuum",
+        "output": "rge_vac_skip"
+      }
+    },
+    {
+      "source": {
+        "node": "var::rge_vac_ok",
+        "port": "out"
+      },
+      "target": {
+        "node": "GMHiggsTools",
+        "port": "selection::rge_vac_ok"
+      },
+      "role": "selectionflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "selection": true,
+        "variable": "rge_vac_ok"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_ready"
+      },
+      "target": {
+        "node": "var::ht_ready",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_ready"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_allowed"
+      },
+      "target": {
+        "node": "var::ht_allowed",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_allowed"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_allowed"
+      },
+      "target": {
+        "node": "var::ht_hb_allowed",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_allowed"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_selected_count"
+      },
+      "target": {
+        "node": "var::ht_hb_selected_count",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_selected_count"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_obsratio_max"
+      },
+      "target": {
+        "node": "var::ht_hb_obsratio_max",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_obsratio_max"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_expratio_max"
+      },
+      "target": {
+        "node": "var::ht_hb_expratio_max",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_expratio_max"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_limit_id"
+      },
+      "target": {
+        "node": "var::ht_hb_limit_id",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_limit_id"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_reference"
+      },
+      "target": {
+        "node": "var::ht_hb_reference",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_reference"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_process"
+      },
+      "target": {
+        "node": "var::ht_hb_process",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_process"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hb_particle"
+      },
+      "target": {
+        "node": "var::ht_hb_particle",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hb_particle"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hs_chisq"
+      },
+      "target": {
+        "node": "var::ht_hs_chisq",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hs_chisq"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_hs_loglike"
+      },
+      "target": {
+        "node": "var::ht_hs_loglike",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_hs_loglike"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_cms_h5pp_vbf_allowed"
+      },
+      "target": {
+        "node": "var::ht_cms_h5pp_vbf_allowed",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_cms_h5pp_vbf_allowed"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_cms_h5pp_vbf_obsratio"
+      },
+      "target": {
+        "node": "var::ht_cms_h5pp_vbf_obsratio",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_cms_h5pp_vbf_obsratio"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_coverage_complete"
+      },
+      "target": {
+        "node": "var::ht_coverage_complete",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_coverage_complete"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_coverage_missing_count"
+      },
+      "target": {
+        "node": "var::ht_coverage_missing_count",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_coverage_missing_count"
+      }
+    },
+    {
+      "source": {
+        "node": "GMHiggsTools",
+        "port": "ht_coverage_missing"
+      },
+      "target": {
+        "node": "var::ht_coverage_missing",
+        "port": "in"
+      },
+      "role": "dataflow",
+      "metadata": {
+        "module": "GMHiggsTools",
+        "output": "ht_coverage_missing"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "format": "jarvis-hep-standalone-project",
+  "version": 1,
+  "layout": [
+    "bin",
+    "data",
+    "deps"
+  ]
+}
