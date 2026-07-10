@@ -1,0 +1,59 @@
+DataSet:
+- name: df_samples_0
+  path: ../../outputs/FlexibleSUSY_Grid_MSSM1D_mu100_M2p2T_TB2/DATABASE/samples.0.csv
+  type: csv
+
+Figures:
+- name: scatter_M1__M1
+  enable: true
+  style:
+  - a4paper_2x1
+  - rectcmap
+  frame:
+    ax:
+      labels:
+        x: M1
+        y: DM
+      xlim: &id001
+      - 600
+      - 850
+      ylim: [0.0001, 10]
+      xscale: linear
+      yscale: log
+    axc:
+      label:
+        ylabel: LogL
+  layers:
+  - name: scatter
+    data:
+    - source: df_samples_0
+    axes: ax
+    method: scatter
+    coordinates:
+      x:
+        expr: M1
+      y:
+        expr: np.abs(mN2) - np.abs(mN1)
+      c:
+        expr: np.abs(mN2) - np.abs(mN1)
+    style:
+      marker: .
+      s: 2
+      cmap: jarvis_rainbow2_r
+      norm: log
+      vmin: 1e-4
+      vmax: 10
+      zorder: 1
+
+output:
+  dir: .
+  dpi: 200
+  formats:
+  - png
+
+project:
+  name: Grid_MSSM1D_FlexibleSUSY
+
+version: 0.3
+
+Functions: []

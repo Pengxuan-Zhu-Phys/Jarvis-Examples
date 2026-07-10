@@ -1,0 +1,484 @@
+{
+  "schema": "jarvisplot.scene/v1",
+  "scene_type": "flowchart",
+  "scene_id": "workflow_main",
+  "metadata": {
+    "producer": "Jarvis-HEP",
+    "producer_version": "1.7.5",
+    "workflow_name": "Grid_MSSM1D_FlexibleSUSY"
+  },
+  "layers": [
+    {
+      "id": "layer_1",
+      "index": 1,
+      "label": "Parameters",
+      "nodes": [
+        "Parameters",
+        "var::M1"
+      ]
+    },
+    {
+      "id": "layer_2",
+      "index": 2,
+      "label": "FlexibleSUSY",
+      "nodes": [
+        "FlexibleSUSY",
+        "file::FlexibleSUSY::input::flexiblesusy_input",
+        "file::FlexibleSUSY::output::flexiblesusy_output",
+        "var::mN1",
+        "var::mN2",
+        "var::mN3",
+        "var::mN4",
+        "var::mC1",
+        "var::mC2",
+        "var::mh1"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "Parameters",
+      "kind": "source",
+      "role": "parameter_source",
+      "label": "Parameters",
+      "in_ports": [],
+      "out_ports": [
+        {
+          "id": "M1",
+          "role": "parameter"
+        }
+      ],
+      "metadata": {
+        "module_type": "Parameter",
+        "required_modules": []
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "var::M1",
+      "kind": "variable",
+      "role": "parameter",
+      "label": "M1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "parameter"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "parameter"
+        }
+      ],
+      "metadata": {
+        "origin": "Parameters"
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "FlexibleSUSY",
+      "kind": "module",
+      "role": "calculator",
+      "label": "FlexibleSUSY",
+      "in_ports": [
+        {
+          "id": "flexiblesusy_input",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "flexiblesusy_output",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "Parameters"
+        ]
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::FlexibleSUSY::input::flexiblesusy_input",
+      "kind": "file",
+      "role": "input_file",
+      "label": "flexiblesusy_input",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::FlexibleSUSY::output::flexiblesusy_output",
+      "kind": "file",
+      "role": "output_file",
+      "label": "flexiblesusy_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN3",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN3",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN4",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN4",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mC1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mC1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mC2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mC2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mh1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mh1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "FlexibleSUSY"
+      },
+      "layer": "layer_2"
+    }
+  ],
+  "edges": [
+    {
+      "source": {
+        "node": "Parameters",
+        "port": "M1"
+      },
+      "target": {
+        "node": "var::M1",
+        "port": "in"
+      },
+      "role": "parameterflow"
+    },
+    {
+      "source": {
+        "node": "var::M1",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::FlexibleSUSY::input::flexiblesusy_input",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "M1",
+        "module": "FlexibleSUSY",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::input::flexiblesusy_input",
+        "port": "out"
+      },
+      "target": {
+        "node": "FlexibleSUSY",
+        "port": "flexiblesusy_input"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "input": "flexiblesusy_input",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "FlexibleSUSY",
+        "port": "flexiblesusy_output"
+      },
+      "target": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "output": "flexiblesusy_output",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mN1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mN2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN3",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mN3",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN4",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mN4",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mC1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mC1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mC2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mC2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::FlexibleSUSY::output::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mh1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "FlexibleSUSY",
+        "variable": "mh1",
+        "direction": "output"
+      }
+    }
+  ]
+}

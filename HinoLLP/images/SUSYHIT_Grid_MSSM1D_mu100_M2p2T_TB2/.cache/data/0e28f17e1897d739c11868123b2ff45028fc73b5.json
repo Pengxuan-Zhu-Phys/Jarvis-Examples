@@ -1,0 +1,34 @@
+{
+  "cache_file": "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/images/SUSYHIT_Grid_MSSM1D_mu100_M2p2T_TB2/.cache/data/0e28f17e1897d739c11868123b2ff45028fc73b5.pkl",
+  "cache_file_mtime_ns": 1783694772239983940,
+  "cache_file_sha1": "4360d6b7153a83d5387ef411802d983e739e31a3",
+  "cache_file_size": 64957,
+  "cache_key": "0e28f17e1897d739c11868123b2ff45028fc73b5",
+  "cache_schema": "jp-cache-v2",
+  "combine": "concat",
+  "demand_fingerprint": "4d476c9aa326f26d9fd74f71c422f571c9bea1a2",
+  "mode": "runtime",
+  "projection": [
+    "M1",
+    "WN2",
+    "__jp_row_idx__",
+    "mN1",
+    "mN2"
+  ],
+  "source": {
+    "fingerprint": {
+      "columns": {},
+      "full_load": false,
+      "group": null,
+      "md5": "a37a23734068a9a1542a2842a7ff0d90",
+      "mtime_ns": 1783691868922195127,
+      "name": "df_samples_0",
+      "path": "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/outputs/SUSYHIT_Grid_MSSM1D_mu100_M2p2T_TB2/DATABASE/samples.0.csv",
+      "size": 998263,
+      "transform": null,
+      "type": "csv"
+    },
+    "source": "df_samples_0"
+  },
+  "transform": null
+}

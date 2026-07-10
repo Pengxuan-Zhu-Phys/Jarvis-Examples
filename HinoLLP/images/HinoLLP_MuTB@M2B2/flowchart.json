@@ -1,0 +1,592 @@
+{
+  "schema": "jarvisplot.scene/v1",
+  "scene_type": "flowchart",
+  "scene_id": "workflow_main",
+  "metadata": {
+    "producer": "Jarvis-HEP",
+    "producer_version": "1.7.5",
+    "workflow_name": "Bridson_Higgsino_LLP_muTB_M2"
+  },
+  "layers": [
+    {
+      "id": "layer_1",
+      "index": 1,
+      "label": "Parameters",
+      "nodes": [
+        "Parameters",
+        "var::Mu",
+        "var::Tb",
+        "var::ratio"
+      ]
+    },
+    {
+      "id": "layer_2",
+      "index": 2,
+      "label": "SUSYHIT",
+      "nodes": [
+        "SUSYHIT",
+        "file::SUSYHIT::input::input_file1",
+        "file::SUSYHIT::output::output_file1",
+        "var::mN1",
+        "var::mN2",
+        "var::mC1",
+        "var::WC1",
+        "var::WN2",
+        "var::BRN22N1a",
+        "var::mh1"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "Parameters",
+      "kind": "source",
+      "role": "parameter_source",
+      "label": "Parameters",
+      "in_ports": [],
+      "out_ports": [
+        {
+          "id": "Mu",
+          "role": "parameter"
+        },
+        {
+          "id": "Tb",
+          "role": "parameter"
+        },
+        {
+          "id": "ratio",
+          "role": "nuisance"
+        }
+      ],
+      "metadata": {
+        "module_type": "Parameter",
+        "required_modules": []
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "var::Mu",
+      "kind": "variable",
+      "role": "parameter",
+      "label": "Mu",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "parameter"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "parameter"
+        }
+      ],
+      "metadata": {
+        "origin": "Parameters"
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "var::Tb",
+      "kind": "variable",
+      "role": "parameter",
+      "label": "Tb",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "parameter"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "parameter"
+        }
+      ],
+      "metadata": {
+        "origin": "Parameters"
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "var::ratio",
+      "kind": "variable",
+      "role": "nuisance",
+      "label": "ratio",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "nuisance"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "nuisance"
+        }
+      ],
+      "metadata": {
+        "origin": "Parameters"
+      },
+      "layer": "layer_1"
+    },
+    {
+      "id": "SUSYHIT",
+      "kind": "module",
+      "role": "calculator",
+      "label": "SUSYHIT",
+      "in_ports": [
+        {
+          "id": "input_file1",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "output_file1",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "Parameters"
+        ]
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::SUSYHIT::input::input_file1",
+      "kind": "file",
+      "role": "input_file",
+      "label": "input_file1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "file::SUSYHIT::output::output_file1",
+      "kind": "file",
+      "role": "output_file",
+      "label": "output_file1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mN2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mN2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mC1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mC1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::WC1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "WC1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::WN2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "WN2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::BRN22N1a",
+      "kind": "variable",
+      "role": "observable",
+      "label": "BRN22N1a",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    },
+    {
+      "id": "var::mh1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "mh1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SUSYHIT"
+      },
+      "layer": "layer_2"
+    }
+  ],
+  "edges": [
+    {
+      "source": {
+        "node": "Parameters",
+        "port": "Mu"
+      },
+      "target": {
+        "node": "var::Mu",
+        "port": "in"
+      },
+      "role": "parameterflow"
+    },
+    {
+      "source": {
+        "node": "Parameters",
+        "port": "Tb"
+      },
+      "target": {
+        "node": "var::Tb",
+        "port": "in"
+      },
+      "role": "parameterflow"
+    },
+    {
+      "source": {
+        "node": "Parameters",
+        "port": "ratio"
+      },
+      "target": {
+        "node": "var::ratio",
+        "port": "in"
+      },
+      "role": "parameterflow"
+    },
+    {
+      "source": {
+        "node": "var::Mu",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SUSYHIT::input::input_file1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "Mu",
+        "module": "SUSYHIT",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::Tb",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SUSYHIT::input::input_file1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "Tb",
+        "module": "SUSYHIT",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "var::ratio",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SUSYHIT::input::input_file1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "ratio",
+        "module": "SUSYHIT",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::input::input_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "SUSYHIT",
+        "port": "input_file1"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "input": "input_file1",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "SUSYHIT",
+        "port": "output_file1"
+      },
+      "target": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "output": "output_file1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "mN1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mN2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "mN2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mC1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "mC1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::WC1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "WC1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::WN2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "WN2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::BRN22N1a",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "BRN22N1a",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SUSYHIT::output::output_file1",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::mh1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SUSYHIT",
+        "variable": "mh1",
+        "direction": "output"
+      }
+    }
+  ]
+}

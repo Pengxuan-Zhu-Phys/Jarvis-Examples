@@ -21,3 +21,19 @@
 
 # OS junk, ignored everywhere, including inside the tracked folders
 .DS_Store
+
+# Local tool config, explicit even though /* already catches these
+/.claude/
+/.obsidian/
+
+# LaTeX build artifacts under TeX/ (compiled PDFs are kept tracked)
+TeX/.texpadtmp/
+TeX/**/*.aux
+TeX/**/*.log
+TeX/**/*.bbl
+TeX/**/*.blg
+TeX/**/*.synctex.gz
+TeX/**/*.out
+TeX/**/*.fls
+TeX/**/*.fdb_latexmk
+TeX/**/*.toc

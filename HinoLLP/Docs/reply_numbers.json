@@ -1,0 +1,27 @@
+{
+  "wp1": {
+    "locus_shift_pct": null,
+    "window_width_GeV_by_code": null,
+    "code_spread_MeV": null,
+    "scale_band_med_MeV": null,
+    "scale_band_max_MeV": null,
+    "width_uncert_factor": null
+  },
+  "wp2": {
+    "delta_BG_range": null,
+    "ratio_window_pct": null
+  },
+  "wp3": {
+    "eg_median_MeV_by_bench": null,
+    "eg_16_84_MeV_by_bench": null,
+    "eps_gamma_geo": null,
+    "frac_above_100MeV": null,
+    "frac_above_1GeV": null,
+    "reach_shift_GeV": null
+  },
+  "wp4": {
+    "nu_bg_events_ref": null,
+    "veto_ineff_ref": null,
+    "reach_shift_N5_GeV": null
+  }
+}
