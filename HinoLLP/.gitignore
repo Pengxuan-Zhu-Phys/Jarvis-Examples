@@ -1,0 +1,23 @@
+# Track only bin/, deps/, images/, TeX/, Docs/, plus the top-level project
+# files below. Everything else here is Jarvis-HEP run state (calculators/,
+# checkpoints/, logs/, outputs/, data/, tmp/) or local tool config, and is
+# ignored by default.
+
+# Ignore everything at the top level...
+/*
+
+# ...except the tracked folders (and everything inside them)
+!/bin/
+!/deps/
+!/images/
+!/TeX/
+!/Docs/
+
+# ...and these top-level project files
+!/README.md
+!/.gitignore
+!/jarvis.project.yaml
+!/.jarvis-project.json
+
+# OS junk, ignored everywhere, including inside the tracked folders
+.DS_Store
