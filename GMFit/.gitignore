@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Generated at runtime, not part of the example source
+calculators/
+checkpoints/
+outputs/
+logs/
+
+# Not staged yet (large, 1.9G) — remove this line when ready to commit deps
+deps/
