@@ -1,0 +1,1 @@
+src/composite_convergence_tester.o: src/composite_convergence_tester.cpp src/composite_convergence_tester.hpp src/convergence_tester.hpp

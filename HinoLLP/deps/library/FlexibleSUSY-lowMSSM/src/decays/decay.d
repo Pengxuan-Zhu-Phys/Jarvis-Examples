@@ -1,0 +1,1 @@
+src/decays/decay.o: src/decays/decay.cpp src/decays/decay.hpp src/error.hpp src/string_utils.hpp src/wrappers.hpp src/always_false.hpp src/cxx_qft/fields.hpp src/cxx_qft/vertices.hpp src/multiindex.hpp src/numerics2.hpp src/find_if.hpp src/eigen_tensor.hpp src/if.hpp src/logger.hpp src/sum.hpp src/which.hpp src/pp_map.hpp

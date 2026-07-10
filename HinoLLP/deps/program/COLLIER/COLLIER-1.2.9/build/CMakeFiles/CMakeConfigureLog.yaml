@@ -1,0 +1,3148 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/uname"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/uname"
+      - "/Users/p.zhu/.opencode/bin/uname"
+      - "/Users/p.zhu/.grok/bin/uname"
+      - "/Users/p.zhu/.pyenv/shims/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      The system is: Darwin - 25.5.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/gmake"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/gmake"
+      - "/Users/p.zhu/.opencode/bin/gmake"
+      - "/Users/p.zhu/.grok/bin/gmake"
+      - "/Users/p.zhu/.pyenv/shims/gmake"
+      - "/opt/homebrew/bin/gmake"
+      - "/opt/homebrew/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/bin/gmake"
+      - "/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/sbin/gmake"
+      - "/Library/Apple/usr/bin/gmake"
+      - "/Library/TeX/texbin/gmake"
+      - "/Applications/Codex.app/Contents/Resources/gmake"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/make"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/make"
+      - "/Users/p.zhu/.opencode/bin/make"
+      - "/Users/p.zhu/.grok/bin/make"
+      - "/Users/p.zhu/.pyenv/shims/make"
+      - "/opt/homebrew/bin/make"
+      - "/opt/homebrew/sbin/make"
+      - "/usr/local/bin/make"
+    found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/cc"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/cc"
+      - "/Users/p.zhu/.opencode/bin/cc"
+      - "/Users/p.zhu/.grok/bin/cc"
+      - "/Users/p.zhu/.pyenv/shims/cc"
+      - "/opt/homebrew/bin/cc"
+      - "/opt/homebrew/sbin/cc"
+      - "/usr/local/bin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is AppleClang, found in:
+        /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/4.3.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:296 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Detecting C compiler apple sysroot: "/usr/bin/cc" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 482 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/usr/bin/objcopy"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/objcopy"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/objcopy"
+      - "/Users/p.zhu/.opencode/bin/objcopy"
+      - "/Users/p.zhu/.grok/bin/objcopy"
+      - "/Users/p.zhu/.pyenv/shims/objcopy"
+      - "/opt/homebrew/bin/objcopy"
+      - "/opt/homebrew/sbin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/bin/objcopy"
+      - "/usr/sbin/objcopy"
+      - "/sbin/objcopy"
+      - "/Library/Apple/usr/bin/objcopy"
+      - "/Library/TeX/texbin/objcopy"
+      - "/Applications/Codex.app/Contents/Resources/objcopy"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/usr/bin/readelf"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/readelf"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/readelf"
+      - "/Users/p.zhu/.opencode/bin/readelf"
+      - "/Users/p.zhu/.grok/bin/readelf"
+      - "/Users/p.zhu/.pyenv/shims/readelf"
+      - "/opt/homebrew/bin/readelf"
+      - "/opt/homebrew/sbin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/bin/readelf"
+      - "/usr/sbin/readelf"
+      - "/sbin/readelf"
+      - "/Library/Apple/usr/bin/readelf"
+      - "/Library/TeX/texbin/readelf"
+      - "/Applications/Codex.app/Contents/Resources/readelf"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/dlltool"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/dlltool"
+      - "/Users/p.zhu/.opencode/bin/dlltool"
+      - "/Users/p.zhu/.grok/bin/dlltool"
+      - "/Users/p.zhu/.pyenv/shims/dlltool"
+      - "/opt/homebrew/bin/dlltool"
+      - "/opt/homebrew/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/Library/TeX/texbin/dlltool"
+      - "/Applications/Codex.app/Contents/Resources/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/usr/bin/addr2line"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/addr2line"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/addr2line"
+      - "/Users/p.zhu/.opencode/bin/addr2line"
+      - "/Users/p.zhu/.grok/bin/addr2line"
+      - "/Users/p.zhu/.pyenv/shims/addr2line"
+      - "/opt/homebrew/bin/addr2line"
+      - "/opt/homebrew/sbin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/bin/addr2line"
+      - "/usr/sbin/addr2line"
+      - "/sbin/addr2line"
+      - "/Library/Apple/usr/bin/addr2line"
+      - "/Library/TeX/texbin/addr2line"
+      - "/Applications/Codex.app/Contents/Resources/addr2line"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/tapi"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/tapi"
+      - "/Users/p.zhu/.opencode/bin/tapi"
+      - "/Users/p.zhu/.grok/bin/tapi"
+      - "/Users/p.zhu/.pyenv/shims/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/Library/TeX/texbin/tapi"
+      - "/Applications/Codex.app/Contents/Resources/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "g++"
+      - "cl"
+      - "bcc"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/usr/bin/"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/4.3.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:296 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/c++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 531 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:66 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:73 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/install_name_tool"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/install_name_tool"
+      - "/Users/p.zhu/.opencode/bin/install_name_tool"
+      - "/Users/p.zhu/.grok/bin/install_name_tool"
+      - "/Users/p.zhu/.pyenv/shims/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ"
+      binary: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b71d3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b71d3.dir/build.make CMakeFiles/cmTC_b71d3.dir/build
+        Building C object CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Apple clang version 21.0.0 (clang-2100.1.1.101)
+        Target: arm64-apple-darwin25.5.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=26.5 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ -target-linker-version 1267 -v -fcoverage-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 21.0.0 (clang-2100.1.1.101) default target arm64-apple-darwin25.5.0
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_b71d3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b71d3.dir/link.txt --verbose=1
+        Apple clang version 21.0.0 (clang-2100.1.1.101)
+        Target: arm64-apple-darwin25.5.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b71d3 -L/usr/local/lib -v CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1267
+        BUILD 16:38:58 Jun  8 2026
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+        TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+        Library search paths:
+        	/usr/local/lib
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
+        /usr/bin/cc  -arch arm64 -v -Wl,-v CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -o cmTC_b71d3
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b71d3/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b71d3.dir/build.make CMakeFiles/cmTC_b71d3.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Apple clang version 21.0.0 (clang-2100.1.1.101)]
+        ignore line: [Target: arm64-apple-darwin25.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=26.5 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ -target-linker-version 1267 -v -fcoverage-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-2lclcZ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 21.0.0 (clang-2100.1.1.101) default target arm64-apple-darwin25.5.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_b71d3]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b71d3.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 21.0.0 (clang-2100.1.1.101)]
+        ignore line: [Target: arm64-apple-darwin25.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_b71d3 -L/usr/local/lib -v CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [26.0.0] ==> ignore
+          arg [26.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_b71d3] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_b71d3.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Running the C compiler's linker: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1267
+      BUILD 16:38:58 Jun  8 2026
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+      TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht"
+      binary: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fc5f8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fc5f8.dir/build.make CMakeFiles/cmTC_fc5f8.dir/build
+        Building CXX object CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64 -fPIE   -v -Wl,-v -MD -MT CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 21.0.0 (clang-2100.1.1.101)
+        Target: arm64-apple-darwin25.5.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=26.5 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht -target-linker-version 1267 -v -fcoverage-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 21.0.0 (clang-2100.1.1.101) default target arm64-apple-darwin25.5.0
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+         /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+         /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_fc5f8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc5f8.dir/link.txt --verbose=1
+        Apple clang version 21.0.0 (clang-2100.1.1.101)
+        Target: arm64-apple-darwin25.5.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_fc5f8 -L/usr/local/lib -v CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1267
+        BUILD 16:38:58 Jun  8 2026
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+        TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+        Library search paths:
+        	/usr/local/lib
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
+        /usr/bin/c++  -arch arm64 -v -Wl,-v CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fc5f8
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+          add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/usr/local/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fc5f8/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fc5f8.dir/build.make CMakeFiles/cmTC_fc5f8.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64 -fPIE   -v -Wl -v -MD -MT CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 21.0.0 (clang-2100.1.1.101)]
+        ignore line: [Target: arm64-apple-darwin25.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=26.5 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht -target-linker-version 1267 -v -fcoverage-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-vKgGht -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 21.0.0 (clang-2100.1.1.101) default target arm64-apple-darwin25.5.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_fc5f8]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc5f8.dir/link.txt --verbose=1]
+        ignore line: [Apple clang version 21.0.0 (clang-2100.1.1.101)]
+        ignore line: [Target: arm64-apple-darwin25.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_fc5f8 -L/usr/local/lib -v CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [26.0.0] ==> ignore
+          arg [26.5] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fc5f8] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_fc5f8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:73 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1267
+      BUILD 16:38:58 Jun  8 2026
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+      TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:89 (_cmake_find_compiler)"
+      - "CMakeLists.txt:75 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_Fortran_COMPILER"
+    description: "Fortran compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "f95"
+      - "ftn"
+      - "ifx"
+      - "ifort"
+      - "nvfortran"
+      - "pgfortran"
+      - "lf95"
+      - "xlf"
+      - "fort"
+      - "flang"
+      - "lfortran"
+      - "frt"
+      - "nagfor"
+      - "gfortran"
+    candidate_directories:
+      - "/usr/bin/"
+    searched_directories:
+      - "/usr/bin/f95"
+      - "/usr/bin/ftn"
+      - "/usr/bin/ifx"
+      - "/usr/bin/ifort"
+      - "/usr/bin/nvfortran"
+      - "/usr/bin/pgfortran"
+      - "/usr/bin/lf95"
+      - "/usr/bin/xlf"
+      - "/usr/bin/fort"
+      - "/usr/bin/flang"
+      - "/usr/bin/lfortran"
+      - "/usr/bin/frt"
+      - "/usr/bin/nagfor"
+      - "/usr/bin/gfortran"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/p.zhu/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:89 (_cmake_find_compiler)"
+      - "CMakeLists.txt:75 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_Fortran_COMPILER"
+    description: "Fortran compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "f95"
+      - "ftn"
+      - "ifx"
+      - "ifort"
+      - "nvfortran"
+      - "pgfortran"
+      - "lf95"
+      - "xlf"
+      - "fort"
+      - "flang"
+      - "lfortran"
+      - "frt"
+      - "nagfor"
+      - "gfortran"
+    candidate_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/p.zhu/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/f95"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/f95"
+      - "/Users/p.zhu/.opencode/bin/f95"
+      - "/Users/p.zhu/.grok/bin/f95"
+      - "/Users/p.zhu/.pyenv/shims/f95"
+      - "/opt/homebrew/bin/f95"
+      - "/opt/homebrew/sbin/f95"
+      - "/usr/local/bin/f95"
+      - "/usr/bin/f95"
+      - "/bin/f95"
+      - "/usr/sbin/f95"
+      - "/sbin/f95"
+      - "/Library/Apple/usr/bin/f95"
+      - "/Library/TeX/texbin/f95"
+      - "/Applications/Codex.app/Contents/Resources/f95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/f95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/f95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/f95"
+      - "/opt/homebrew/bin/f95"
+      - "/opt/homebrew/sbin/f95"
+      - "/opt/homebrew/f95"
+      - "/usr/local/bin/f95"
+      - "/usr/local/sbin/f95"
+      - "/usr/local/f95"
+      - "/usr/bin/f95"
+      - "/usr/sbin/f95"
+      - "/usr/f95"
+      - "/bin/f95"
+      - "/sbin/f95"
+      - "/usr/X11R6/bin/f95"
+      - "/usr/X11R6/sbin/f95"
+      - "/usr/X11R6/f95"
+      - "/usr/pkg/bin/f95"
+      - "/usr/pkg/sbin/f95"
+      - "/usr/pkg/f95"
+      - "/opt/bin/f95"
+      - "/opt/sbin/f95"
+      - "/opt/f95"
+      - "/sw/bin/f95"
+      - "/sw/sbin/f95"
+      - "/sw/f95"
+      - "/opt/local/bin/f95"
+      - "/opt/local/sbin/f95"
+      - "/opt/local/f95"
+      - "/Users/p.zhu/Applications/f95"
+      - "/Applications/f95"
+      - "/Applications/Xcode.app/Contents/Applications/f95"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/f95"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/ftn"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/ftn"
+      - "/Users/p.zhu/.opencode/bin/ftn"
+      - "/Users/p.zhu/.grok/bin/ftn"
+      - "/Users/p.zhu/.pyenv/shims/ftn"
+      - "/opt/homebrew/bin/ftn"
+      - "/opt/homebrew/sbin/ftn"
+      - "/usr/local/bin/ftn"
+      - "/usr/bin/ftn"
+      - "/bin/ftn"
+      - "/usr/sbin/ftn"
+      - "/sbin/ftn"
+      - "/Library/Apple/usr/bin/ftn"
+      - "/Library/TeX/texbin/ftn"
+      - "/Applications/Codex.app/Contents/Resources/ftn"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/ftn"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/ftn"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/ftn"
+      - "/opt/homebrew/bin/ftn"
+      - "/opt/homebrew/sbin/ftn"
+      - "/opt/homebrew/ftn"
+      - "/usr/local/bin/ftn"
+      - "/usr/local/sbin/ftn"
+      - "/usr/local/ftn"
+      - "/usr/bin/ftn"
+      - "/usr/sbin/ftn"
+      - "/usr/ftn"
+      - "/bin/ftn"
+      - "/sbin/ftn"
+      - "/usr/X11R6/bin/ftn"
+      - "/usr/X11R6/sbin/ftn"
+      - "/usr/X11R6/ftn"
+      - "/usr/pkg/bin/ftn"
+      - "/usr/pkg/sbin/ftn"
+      - "/usr/pkg/ftn"
+      - "/opt/bin/ftn"
+      - "/opt/sbin/ftn"
+      - "/opt/ftn"
+      - "/sw/bin/ftn"
+      - "/sw/sbin/ftn"
+      - "/sw/ftn"
+      - "/opt/local/bin/ftn"
+      - "/opt/local/sbin/ftn"
+      - "/opt/local/ftn"
+      - "/Users/p.zhu/Applications/ftn"
+      - "/Applications/ftn"
+      - "/Applications/Xcode.app/Contents/Applications/ftn"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/ftn"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/ifx"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/ifx"
+      - "/Users/p.zhu/.opencode/bin/ifx"
+      - "/Users/p.zhu/.grok/bin/ifx"
+      - "/Users/p.zhu/.pyenv/shims/ifx"
+      - "/opt/homebrew/bin/ifx"
+      - "/opt/homebrew/sbin/ifx"
+      - "/usr/local/bin/ifx"
+      - "/usr/bin/ifx"
+      - "/bin/ifx"
+      - "/usr/sbin/ifx"
+      - "/sbin/ifx"
+      - "/Library/Apple/usr/bin/ifx"
+      - "/Library/TeX/texbin/ifx"
+      - "/Applications/Codex.app/Contents/Resources/ifx"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/ifx"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/ifx"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/ifx"
+      - "/opt/homebrew/bin/ifx"
+      - "/opt/homebrew/sbin/ifx"
+      - "/opt/homebrew/ifx"
+      - "/usr/local/bin/ifx"
+      - "/usr/local/sbin/ifx"
+      - "/usr/local/ifx"
+      - "/usr/bin/ifx"
+      - "/usr/sbin/ifx"
+      - "/usr/ifx"
+      - "/bin/ifx"
+      - "/sbin/ifx"
+      - "/usr/X11R6/bin/ifx"
+      - "/usr/X11R6/sbin/ifx"
+      - "/usr/X11R6/ifx"
+      - "/usr/pkg/bin/ifx"
+      - "/usr/pkg/sbin/ifx"
+      - "/usr/pkg/ifx"
+      - "/opt/bin/ifx"
+      - "/opt/sbin/ifx"
+      - "/opt/ifx"
+      - "/sw/bin/ifx"
+      - "/sw/sbin/ifx"
+      - "/sw/ifx"
+      - "/opt/local/bin/ifx"
+      - "/opt/local/sbin/ifx"
+      - "/opt/local/ifx"
+      - "/Users/p.zhu/Applications/ifx"
+      - "/Applications/ifx"
+      - "/Applications/Xcode.app/Contents/Applications/ifx"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/ifx"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/ifort"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/ifort"
+      - "/Users/p.zhu/.opencode/bin/ifort"
+      - "/Users/p.zhu/.grok/bin/ifort"
+      - "/Users/p.zhu/.pyenv/shims/ifort"
+      - "/opt/homebrew/bin/ifort"
+      - "/opt/homebrew/sbin/ifort"
+      - "/usr/local/bin/ifort"
+      - "/usr/bin/ifort"
+      - "/bin/ifort"
+      - "/usr/sbin/ifort"
+      - "/sbin/ifort"
+      - "/Library/Apple/usr/bin/ifort"
+      - "/Library/TeX/texbin/ifort"
+      - "/Applications/Codex.app/Contents/Resources/ifort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/ifort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/ifort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/ifort"
+      - "/opt/homebrew/bin/ifort"
+      - "/opt/homebrew/sbin/ifort"
+      - "/opt/homebrew/ifort"
+      - "/usr/local/bin/ifort"
+      - "/usr/local/sbin/ifort"
+      - "/usr/local/ifort"
+      - "/usr/bin/ifort"
+      - "/usr/sbin/ifort"
+      - "/usr/ifort"
+      - "/bin/ifort"
+      - "/sbin/ifort"
+      - "/usr/X11R6/bin/ifort"
+      - "/usr/X11R6/sbin/ifort"
+      - "/usr/X11R6/ifort"
+      - "/usr/pkg/bin/ifort"
+      - "/usr/pkg/sbin/ifort"
+      - "/usr/pkg/ifort"
+      - "/opt/bin/ifort"
+      - "/opt/sbin/ifort"
+      - "/opt/ifort"
+      - "/sw/bin/ifort"
+      - "/sw/sbin/ifort"
+      - "/sw/ifort"
+      - "/opt/local/bin/ifort"
+      - "/opt/local/sbin/ifort"
+      - "/opt/local/ifort"
+      - "/Users/p.zhu/Applications/ifort"
+      - "/Applications/ifort"
+      - "/Applications/Xcode.app/Contents/Applications/ifort"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/ifort"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/nvfortran"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/nvfortran"
+      - "/Users/p.zhu/.opencode/bin/nvfortran"
+      - "/Users/p.zhu/.grok/bin/nvfortran"
+      - "/Users/p.zhu/.pyenv/shims/nvfortran"
+      - "/opt/homebrew/bin/nvfortran"
+      - "/opt/homebrew/sbin/nvfortran"
+      - "/usr/local/bin/nvfortran"
+      - "/usr/bin/nvfortran"
+      - "/bin/nvfortran"
+      - "/usr/sbin/nvfortran"
+      - "/sbin/nvfortran"
+      - "/Library/Apple/usr/bin/nvfortran"
+      - "/Library/TeX/texbin/nvfortran"
+      - "/Applications/Codex.app/Contents/Resources/nvfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/nvfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/nvfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/nvfortran"
+      - "/opt/homebrew/bin/nvfortran"
+      - "/opt/homebrew/sbin/nvfortran"
+      - "/opt/homebrew/nvfortran"
+      - "/usr/local/bin/nvfortran"
+      - "/usr/local/sbin/nvfortran"
+      - "/usr/local/nvfortran"
+      - "/usr/bin/nvfortran"
+      - "/usr/sbin/nvfortran"
+      - "/usr/nvfortran"
+      - "/bin/nvfortran"
+      - "/sbin/nvfortran"
+      - "/usr/X11R6/bin/nvfortran"
+      - "/usr/X11R6/sbin/nvfortran"
+      - "/usr/X11R6/nvfortran"
+      - "/usr/pkg/bin/nvfortran"
+      - "/usr/pkg/sbin/nvfortran"
+      - "/usr/pkg/nvfortran"
+      - "/opt/bin/nvfortran"
+      - "/opt/sbin/nvfortran"
+      - "/opt/nvfortran"
+      - "/sw/bin/nvfortran"
+      - "/sw/sbin/nvfortran"
+      - "/sw/nvfortran"
+      - "/opt/local/bin/nvfortran"
+      - "/opt/local/sbin/nvfortran"
+      - "/opt/local/nvfortran"
+      - "/Users/p.zhu/Applications/nvfortran"
+      - "/Applications/nvfortran"
+      - "/Applications/Xcode.app/Contents/Applications/nvfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/nvfortran"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/pgfortran"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/pgfortran"
+      - "/Users/p.zhu/.opencode/bin/pgfortran"
+      - "/Users/p.zhu/.grok/bin/pgfortran"
+      - "/Users/p.zhu/.pyenv/shims/pgfortran"
+      - "/opt/homebrew/bin/pgfortran"
+      - "/opt/homebrew/sbin/pgfortran"
+      - "/usr/local/bin/pgfortran"
+      - "/usr/bin/pgfortran"
+      - "/bin/pgfortran"
+      - "/usr/sbin/pgfortran"
+      - "/sbin/pgfortran"
+      - "/Library/Apple/usr/bin/pgfortran"
+      - "/Library/TeX/texbin/pgfortran"
+      - "/Applications/Codex.app/Contents/Resources/pgfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/pgfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/pgfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/pgfortran"
+      - "/opt/homebrew/bin/pgfortran"
+      - "/opt/homebrew/sbin/pgfortran"
+      - "/opt/homebrew/pgfortran"
+      - "/usr/local/bin/pgfortran"
+      - "/usr/local/sbin/pgfortran"
+      - "/usr/local/pgfortran"
+      - "/usr/bin/pgfortran"
+      - "/usr/sbin/pgfortran"
+      - "/usr/pgfortran"
+      - "/bin/pgfortran"
+      - "/sbin/pgfortran"
+      - "/usr/X11R6/bin/pgfortran"
+      - "/usr/X11R6/sbin/pgfortran"
+      - "/usr/X11R6/pgfortran"
+      - "/usr/pkg/bin/pgfortran"
+      - "/usr/pkg/sbin/pgfortran"
+      - "/usr/pkg/pgfortran"
+      - "/opt/bin/pgfortran"
+      - "/opt/sbin/pgfortran"
+      - "/opt/pgfortran"
+      - "/sw/bin/pgfortran"
+      - "/sw/sbin/pgfortran"
+      - "/sw/pgfortran"
+      - "/opt/local/bin/pgfortran"
+      - "/opt/local/sbin/pgfortran"
+      - "/opt/local/pgfortran"
+      - "/Users/p.zhu/Applications/pgfortran"
+      - "/Applications/pgfortran"
+      - "/Applications/Xcode.app/Contents/Applications/pgfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/pgfortran"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/lf95"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/lf95"
+      - "/Users/p.zhu/.opencode/bin/lf95"
+      - "/Users/p.zhu/.grok/bin/lf95"
+      - "/Users/p.zhu/.pyenv/shims/lf95"
+      - "/opt/homebrew/bin/lf95"
+      - "/opt/homebrew/sbin/lf95"
+      - "/usr/local/bin/lf95"
+      - "/usr/bin/lf95"
+      - "/bin/lf95"
+      - "/usr/sbin/lf95"
+      - "/sbin/lf95"
+      - "/Library/Apple/usr/bin/lf95"
+      - "/Library/TeX/texbin/lf95"
+      - "/Applications/Codex.app/Contents/Resources/lf95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/lf95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/lf95"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lf95"
+      - "/opt/homebrew/bin/lf95"
+      - "/opt/homebrew/sbin/lf95"
+      - "/opt/homebrew/lf95"
+      - "/usr/local/bin/lf95"
+      - "/usr/local/sbin/lf95"
+      - "/usr/local/lf95"
+      - "/usr/bin/lf95"
+      - "/usr/sbin/lf95"
+      - "/usr/lf95"
+      - "/bin/lf95"
+      - "/sbin/lf95"
+      - "/usr/X11R6/bin/lf95"
+      - "/usr/X11R6/sbin/lf95"
+      - "/usr/X11R6/lf95"
+      - "/usr/pkg/bin/lf95"
+      - "/usr/pkg/sbin/lf95"
+      - "/usr/pkg/lf95"
+      - "/opt/bin/lf95"
+      - "/opt/sbin/lf95"
+      - "/opt/lf95"
+      - "/sw/bin/lf95"
+      - "/sw/sbin/lf95"
+      - "/sw/lf95"
+      - "/opt/local/bin/lf95"
+      - "/opt/local/sbin/lf95"
+      - "/opt/local/lf95"
+      - "/Users/p.zhu/Applications/lf95"
+      - "/Applications/lf95"
+      - "/Applications/Xcode.app/Contents/Applications/lf95"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/lf95"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/xlf"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/xlf"
+      - "/Users/p.zhu/.opencode/bin/xlf"
+      - "/Users/p.zhu/.grok/bin/xlf"
+      - "/Users/p.zhu/.pyenv/shims/xlf"
+      - "/opt/homebrew/bin/xlf"
+      - "/opt/homebrew/sbin/xlf"
+      - "/usr/local/bin/xlf"
+      - "/usr/bin/xlf"
+      - "/bin/xlf"
+      - "/usr/sbin/xlf"
+      - "/sbin/xlf"
+      - "/Library/Apple/usr/bin/xlf"
+      - "/Library/TeX/texbin/xlf"
+      - "/Applications/Codex.app/Contents/Resources/xlf"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/xlf"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/xlf"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/xlf"
+      - "/opt/homebrew/bin/xlf"
+      - "/opt/homebrew/sbin/xlf"
+      - "/opt/homebrew/xlf"
+      - "/usr/local/bin/xlf"
+      - "/usr/local/sbin/xlf"
+      - "/usr/local/xlf"
+      - "/usr/bin/xlf"
+      - "/usr/sbin/xlf"
+      - "/usr/xlf"
+      - "/bin/xlf"
+      - "/sbin/xlf"
+      - "/usr/X11R6/bin/xlf"
+      - "/usr/X11R6/sbin/xlf"
+      - "/usr/X11R6/xlf"
+      - "/usr/pkg/bin/xlf"
+      - "/usr/pkg/sbin/xlf"
+      - "/usr/pkg/xlf"
+      - "/opt/bin/xlf"
+      - "/opt/sbin/xlf"
+      - "/opt/xlf"
+      - "/sw/bin/xlf"
+      - "/sw/sbin/xlf"
+      - "/sw/xlf"
+      - "/opt/local/bin/xlf"
+      - "/opt/local/sbin/xlf"
+      - "/opt/local/xlf"
+      - "/Users/p.zhu/Applications/xlf"
+      - "/Applications/xlf"
+      - "/Applications/Xcode.app/Contents/Applications/xlf"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/xlf"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/fort"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fort"
+      - "/Users/p.zhu/.opencode/bin/fort"
+      - "/Users/p.zhu/.grok/bin/fort"
+      - "/Users/p.zhu/.pyenv/shims/fort"
+      - "/opt/homebrew/bin/fort"
+      - "/opt/homebrew/sbin/fort"
+      - "/usr/local/bin/fort"
+      - "/usr/bin/fort"
+      - "/bin/fort"
+      - "/usr/sbin/fort"
+      - "/sbin/fort"
+      - "/Library/Apple/usr/bin/fort"
+      - "/Library/TeX/texbin/fort"
+      - "/Applications/Codex.app/Contents/Resources/fort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/fort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/fort"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/fort"
+      - "/opt/homebrew/bin/fort"
+      - "/opt/homebrew/sbin/fort"
+      - "/opt/homebrew/fort"
+      - "/usr/local/bin/fort"
+      - "/usr/local/sbin/fort"
+      - "/usr/local/fort"
+      - "/usr/bin/fort"
+      - "/usr/sbin/fort"
+      - "/usr/fort"
+      - "/bin/fort"
+      - "/sbin/fort"
+      - "/usr/X11R6/bin/fort"
+      - "/usr/X11R6/sbin/fort"
+      - "/usr/X11R6/fort"
+      - "/usr/pkg/bin/fort"
+      - "/usr/pkg/sbin/fort"
+      - "/usr/pkg/fort"
+      - "/opt/bin/fort"
+      - "/opt/sbin/fort"
+      - "/opt/fort"
+      - "/sw/bin/fort"
+      - "/sw/sbin/fort"
+      - "/sw/fort"
+      - "/opt/local/bin/fort"
+      - "/opt/local/sbin/fort"
+      - "/opt/local/fort"
+      - "/Users/p.zhu/Applications/fort"
+      - "/Applications/fort"
+      - "/Applications/Xcode.app/Contents/Applications/fort"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/fort"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/flang"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/flang"
+      - "/Users/p.zhu/.opencode/bin/flang"
+      - "/Users/p.zhu/.grok/bin/flang"
+      - "/Users/p.zhu/.pyenv/shims/flang"
+      - "/opt/homebrew/bin/flang"
+      - "/opt/homebrew/sbin/flang"
+      - "/usr/local/bin/flang"
+      - "/usr/bin/flang"
+      - "/bin/flang"
+      - "/usr/sbin/flang"
+      - "/sbin/flang"
+      - "/Library/Apple/usr/bin/flang"
+      - "/Library/TeX/texbin/flang"
+      - "/Applications/Codex.app/Contents/Resources/flang"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/flang"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/flang"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/flang"
+      - "/opt/homebrew/bin/flang"
+      - "/opt/homebrew/sbin/flang"
+      - "/opt/homebrew/flang"
+      - "/usr/local/bin/flang"
+      - "/usr/local/sbin/flang"
+      - "/usr/local/flang"
+      - "/usr/bin/flang"
+      - "/usr/sbin/flang"
+      - "/usr/flang"
+      - "/bin/flang"
+      - "/sbin/flang"
+      - "/usr/X11R6/bin/flang"
+      - "/usr/X11R6/sbin/flang"
+      - "/usr/X11R6/flang"
+      - "/usr/pkg/bin/flang"
+      - "/usr/pkg/sbin/flang"
+      - "/usr/pkg/flang"
+      - "/opt/bin/flang"
+      - "/opt/sbin/flang"
+      - "/opt/flang"
+      - "/sw/bin/flang"
+      - "/sw/sbin/flang"
+      - "/sw/flang"
+      - "/opt/local/bin/flang"
+      - "/opt/local/sbin/flang"
+      - "/opt/local/flang"
+      - "/Users/p.zhu/Applications/flang"
+      - "/Applications/flang"
+      - "/Applications/Xcode.app/Contents/Applications/flang"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/flang"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/lfortran"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/lfortran"
+      - "/Users/p.zhu/.opencode/bin/lfortran"
+      - "/Users/p.zhu/.grok/bin/lfortran"
+      - "/Users/p.zhu/.pyenv/shims/lfortran"
+      - "/opt/homebrew/bin/lfortran"
+      - "/opt/homebrew/sbin/lfortran"
+      - "/usr/local/bin/lfortran"
+      - "/usr/bin/lfortran"
+      - "/bin/lfortran"
+      - "/usr/sbin/lfortran"
+      - "/sbin/lfortran"
+      - "/Library/Apple/usr/bin/lfortran"
+      - "/Library/TeX/texbin/lfortran"
+      - "/Applications/Codex.app/Contents/Resources/lfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/lfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/lfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lfortran"
+      - "/opt/homebrew/bin/lfortran"
+      - "/opt/homebrew/sbin/lfortran"
+      - "/opt/homebrew/lfortran"
+      - "/usr/local/bin/lfortran"
+      - "/usr/local/sbin/lfortran"
+      - "/usr/local/lfortran"
+      - "/usr/bin/lfortran"
+      - "/usr/sbin/lfortran"
+      - "/usr/lfortran"
+      - "/bin/lfortran"
+      - "/sbin/lfortran"
+      - "/usr/X11R6/bin/lfortran"
+      - "/usr/X11R6/sbin/lfortran"
+      - "/usr/X11R6/lfortran"
+      - "/usr/pkg/bin/lfortran"
+      - "/usr/pkg/sbin/lfortran"
+      - "/usr/pkg/lfortran"
+      - "/opt/bin/lfortran"
+      - "/opt/sbin/lfortran"
+      - "/opt/lfortran"
+      - "/sw/bin/lfortran"
+      - "/sw/sbin/lfortran"
+      - "/sw/lfortran"
+      - "/opt/local/bin/lfortran"
+      - "/opt/local/sbin/lfortran"
+      - "/opt/local/lfortran"
+      - "/Users/p.zhu/Applications/lfortran"
+      - "/Applications/lfortran"
+      - "/Applications/Xcode.app/Contents/Applications/lfortran"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/lfortran"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/frt"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/frt"
+      - "/Users/p.zhu/.opencode/bin/frt"
+      - "/Users/p.zhu/.grok/bin/frt"
+      - "/Users/p.zhu/.pyenv/shims/frt"
+      - "/opt/homebrew/bin/frt"
+      - "/opt/homebrew/sbin/frt"
+      - "/usr/local/bin/frt"
+      - "/usr/bin/frt"
+      - "/bin/frt"
+      - "/usr/sbin/frt"
+      - "/sbin/frt"
+      - "/Library/Apple/usr/bin/frt"
+      - "/Library/TeX/texbin/frt"
+      - "/Applications/Codex.app/Contents/Resources/frt"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/frt"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/frt"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/frt"
+      - "/opt/homebrew/bin/frt"
+      - "/opt/homebrew/sbin/frt"
+      - "/opt/homebrew/frt"
+      - "/usr/local/bin/frt"
+      - "/usr/local/sbin/frt"
+      - "/usr/local/frt"
+      - "/usr/bin/frt"
+      - "/usr/sbin/frt"
+      - "/usr/frt"
+      - "/bin/frt"
+      - "/sbin/frt"
+      - "/usr/X11R6/bin/frt"
+      - "/usr/X11R6/sbin/frt"
+      - "/usr/X11R6/frt"
+      - "/usr/pkg/bin/frt"
+      - "/usr/pkg/sbin/frt"
+      - "/usr/pkg/frt"
+      - "/opt/bin/frt"
+      - "/opt/sbin/frt"
+      - "/opt/frt"
+      - "/sw/bin/frt"
+      - "/sw/sbin/frt"
+      - "/sw/frt"
+      - "/opt/local/bin/frt"
+      - "/opt/local/sbin/frt"
+      - "/opt/local/frt"
+      - "/Users/p.zhu/Applications/frt"
+      - "/Applications/frt"
+      - "/Applications/Xcode.app/Contents/Applications/frt"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/frt"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/nagfor"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/nagfor"
+      - "/Users/p.zhu/.opencode/bin/nagfor"
+      - "/Users/p.zhu/.grok/bin/nagfor"
+      - "/Users/p.zhu/.pyenv/shims/nagfor"
+      - "/opt/homebrew/bin/nagfor"
+      - "/opt/homebrew/sbin/nagfor"
+      - "/usr/local/bin/nagfor"
+      - "/usr/bin/nagfor"
+      - "/bin/nagfor"
+      - "/usr/sbin/nagfor"
+      - "/sbin/nagfor"
+      - "/Library/Apple/usr/bin/nagfor"
+      - "/Library/TeX/texbin/nagfor"
+      - "/Applications/Codex.app/Contents/Resources/nagfor"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/nagfor"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/nagfor"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/nagfor"
+      - "/opt/homebrew/bin/nagfor"
+      - "/opt/homebrew/sbin/nagfor"
+      - "/opt/homebrew/nagfor"
+      - "/usr/local/bin/nagfor"
+      - "/usr/local/sbin/nagfor"
+      - "/usr/local/nagfor"
+      - "/usr/bin/nagfor"
+      - "/usr/sbin/nagfor"
+      - "/usr/nagfor"
+      - "/bin/nagfor"
+      - "/sbin/nagfor"
+      - "/usr/X11R6/bin/nagfor"
+      - "/usr/X11R6/sbin/nagfor"
+      - "/usr/X11R6/nagfor"
+      - "/usr/pkg/bin/nagfor"
+      - "/usr/pkg/sbin/nagfor"
+      - "/usr/pkg/nagfor"
+      - "/opt/bin/nagfor"
+      - "/opt/sbin/nagfor"
+      - "/opt/nagfor"
+      - "/sw/bin/nagfor"
+      - "/sw/sbin/nagfor"
+      - "/sw/nagfor"
+      - "/opt/local/bin/nagfor"
+      - "/opt/local/sbin/nagfor"
+      - "/opt/local/nagfor"
+      - "/Users/p.zhu/Applications/nagfor"
+      - "/Applications/nagfor"
+      - "/Applications/Xcode.app/Contents/Applications/nagfor"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/nagfor"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/gfortran"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/gfortran"
+      - "/Users/p.zhu/.opencode/bin/gfortran"
+      - "/Users/p.zhu/.grok/bin/gfortran"
+      - "/Users/p.zhu/.pyenv/shims/gfortran"
+    found: "/opt/homebrew/bin/gfortran"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/p.zhu/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:190 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:75 (enable_language)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeFortranCompilerId.F.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeFortranCompilerId.F.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:190 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:75 (enable_language)"
+    message: |
+      Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
+      Compiler: /opt/homebrew/bin/gfortran 
+      Build flags: 
+      Id flags: -v 
+      
+      The output was:
+      0
+      Driving: /opt/homebrew/bin/gfortran -v CMakeFortranCompilerId.F -mmacosx-version-min=26.0.0 -asm_macosx_version_min=26.0 -nodefaultexport -l gfortran
+      Using built-in specs.
+      COLLECT_GCC=/opt/homebrew/bin/gfortran
+      COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/lto-wrapper
+      Target: aarch64-apple-darwin25
+      Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-15 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 15.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin25 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk
+      Thread model: posix
+      Supported LTO compression algorithms: zlib zstd
+      gcc version 15.2.0 (Homebrew GCC 15.2.0_1) 
+      COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'a-'
+       /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/f951 CMakeFortranCompilerId.F -ffixed-form -cpp=/var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccHlZRBx.fi -quiet -v -iprefix /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/ -D__DYNAMIC__ CMakeFortranCompilerId.F -fPIC -quiet -dumpdir a- -dumpbase CMakeFortranCompilerId.F -dumpbase-ext .F -mmacosx-version-min=26.0.0 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -fintrinsic-modules-path /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude -o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmBxLZM.s
+      GNU Fortran (Homebrew GCC 15.2.0_1) version 15.2.0 (aarch64-apple-darwin25)
+      	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+      
+      warning: MPC header version 1.3.1 differs from library version 1.4.1.
+      GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+      ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"
+      ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include"
+      ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/local/include"
+      ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed"
+      ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"
+      #include "..." search starts here:
+      #include <...> search starts here:
+       /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude
+       /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include
+       /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed
+       /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include
+      End of search list.
+      COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'a-'
+       as -arch arm64 -v -mmacosx-version-min=26.0 -o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccs8RYlc.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmBxLZM.s
+      Apple clang version 21.0.0 (clang-2100.1.1.101)
+      Target: arm64-apple-darwin25.5.0
+      Thread model: posix
+      InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1as -triple arm64-apple-macosx26.0.0 -target-sdk-version=26.5 -filetype obj -main-file-name ccmBxLZM.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/4.3.3/CompilerIdFortran -dwarf-debug-producer "Apple clang version 21.0.0 (clang-2100.1.1.101)" -dwarf-version=5 -mrelocation-model pic -o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccs8RYlc.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmBxLZM.s
+      Reading specs from /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../libgfortran.spec
+      rename spec lib to liborig
+      COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'a-'
+      COMPILER_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/
+      LIBRARY_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../
+      COLLECT_GCC_OPTIONS='-v' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'a.'
+       /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/collect2 -demangle -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/ -dynamic -arch arm64 -macos_version_min 26.0.0 -o a.out -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../.. -lemutls_w -lheapt_w /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccs8RYlc.o -lgfortran -lgcc -lquadmath -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15 -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current
+      
+      
+      Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
+      
+      The Fortran compiler identification is GNU, found in:
+        /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/4.3.3/CompilerIdFortran/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:314 (include)"
+      - "CMakeLists.txt:75 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_Fortran_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-15.2"
+      - "gcc-ar-15"
+      - "gcc-ar15"
+      - "gcc-ar"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/p.zhu/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/opt/homebrew/bin/gcc-ar-15.2"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/gcc-ar-15.2"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/gcc-ar-15.2"
+      - "/Users/p.zhu/.opencode/bin/gcc-ar-15.2"
+      - "/Users/p.zhu/.grok/bin/gcc-ar-15.2"
+      - "/Users/p.zhu/.pyenv/shims/gcc-ar-15.2"
+      - "/opt/homebrew/sbin/gcc-ar-15.2"
+      - "/usr/local/bin/gcc-ar-15.2"
+      - "/usr/bin/gcc-ar-15.2"
+      - "/bin/gcc-ar-15.2"
+      - "/usr/sbin/gcc-ar-15.2"
+      - "/sbin/gcc-ar-15.2"
+      - "/Library/Apple/usr/bin/gcc-ar-15.2"
+      - "/Library/TeX/texbin/gcc-ar-15.2"
+      - "/Applications/Codex.app/Contents/Resources/gcc-ar-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/gcc-ar-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/gcc-ar-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/gcc-ar-15.2"
+      - "/opt/homebrew/bin/gcc-ar-15.2"
+      - "/opt/homebrew/sbin/gcc-ar-15.2"
+      - "/opt/homebrew/gcc-ar-15.2"
+      - "/usr/local/bin/gcc-ar-15.2"
+      - "/usr/local/sbin/gcc-ar-15.2"
+      - "/usr/local/gcc-ar-15.2"
+      - "/usr/bin/gcc-ar-15.2"
+      - "/usr/sbin/gcc-ar-15.2"
+      - "/usr/gcc-ar-15.2"
+      - "/bin/gcc-ar-15.2"
+      - "/sbin/gcc-ar-15.2"
+      - "/usr/X11R6/bin/gcc-ar-15.2"
+      - "/usr/X11R6/sbin/gcc-ar-15.2"
+      - "/usr/X11R6/gcc-ar-15.2"
+      - "/usr/pkg/bin/gcc-ar-15.2"
+      - "/usr/pkg/sbin/gcc-ar-15.2"
+      - "/usr/pkg/gcc-ar-15.2"
+      - "/opt/bin/gcc-ar-15.2"
+      - "/opt/sbin/gcc-ar-15.2"
+      - "/opt/gcc-ar-15.2"
+      - "/sw/bin/gcc-ar-15.2"
+      - "/sw/sbin/gcc-ar-15.2"
+      - "/sw/gcc-ar-15.2"
+      - "/opt/local/bin/gcc-ar-15.2"
+      - "/opt/local/sbin/gcc-ar-15.2"
+      - "/opt/local/gcc-ar-15.2"
+      - "/Users/p.zhu/Applications/gcc-ar-15.2"
+      - "/Applications/gcc-ar-15.2"
+      - "/Applications/Xcode.app/Contents/Applications/gcc-ar-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/gcc-ar-15.2"
+    found: "/opt/homebrew/bin/gcc-ar-15"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/p.zhu/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineFortranCompiler.cmake:314 (include)"
+      - "CMakeLists.txt:75 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_Fortran_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-15.2"
+      - "gcc-ranlib-15"
+      - "gcc-ranlib15"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/"
+      - "/Users/p.zhu/.opencode/bin/"
+      - "/Users/p.zhu/.grok/bin/"
+      - "/Users/p.zhu/.pyenv/shims/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Library/TeX/texbin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/p.zhu/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/opt/homebrew/bin/gcc-ranlib-15.2"
+      - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2/gcc-ranlib-15.2"
+      - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/gcc-ranlib-15.2"
+      - "/Users/p.zhu/.opencode/bin/gcc-ranlib-15.2"
+      - "/Users/p.zhu/.grok/bin/gcc-ranlib-15.2"
+      - "/Users/p.zhu/.pyenv/shims/gcc-ranlib-15.2"
+      - "/opt/homebrew/sbin/gcc-ranlib-15.2"
+      - "/usr/local/bin/gcc-ranlib-15.2"
+      - "/usr/bin/gcc-ranlib-15.2"
+      - "/bin/gcc-ranlib-15.2"
+      - "/usr/sbin/gcc-ranlib-15.2"
+      - "/sbin/gcc-ranlib-15.2"
+      - "/Library/Apple/usr/bin/gcc-ranlib-15.2"
+      - "/Library/TeX/texbin/gcc-ranlib-15.2"
+      - "/Applications/Codex.app/Contents/Resources/gcc-ranlib-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/gcc-ranlib-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/gcc-ranlib-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/gcc-ranlib-15.2"
+      - "/opt/homebrew/bin/gcc-ranlib-15.2"
+      - "/opt/homebrew/sbin/gcc-ranlib-15.2"
+      - "/opt/homebrew/gcc-ranlib-15.2"
+      - "/usr/local/bin/gcc-ranlib-15.2"
+      - "/usr/local/sbin/gcc-ranlib-15.2"
+      - "/usr/local/gcc-ranlib-15.2"
+      - "/usr/bin/gcc-ranlib-15.2"
+      - "/usr/sbin/gcc-ranlib-15.2"
+      - "/usr/gcc-ranlib-15.2"
+      - "/bin/gcc-ranlib-15.2"
+      - "/sbin/gcc-ranlib-15.2"
+      - "/usr/X11R6/bin/gcc-ranlib-15.2"
+      - "/usr/X11R6/sbin/gcc-ranlib-15.2"
+      - "/usr/X11R6/gcc-ranlib-15.2"
+      - "/usr/pkg/bin/gcc-ranlib-15.2"
+      - "/usr/pkg/sbin/gcc-ranlib-15.2"
+      - "/usr/pkg/gcc-ranlib-15.2"
+      - "/opt/bin/gcc-ranlib-15.2"
+      - "/opt/sbin/gcc-ranlib-15.2"
+      - "/opt/gcc-ranlib-15.2"
+      - "/sw/bin/gcc-ranlib-15.2"
+      - "/sw/sbin/gcc-ranlib-15.2"
+      - "/sw/gcc-ranlib-15.2"
+      - "/opt/local/bin/gcc-ranlib-15.2"
+      - "/opt/local/sbin/gcc-ranlib-15.2"
+      - "/opt/local/gcc-ranlib-15.2"
+      - "/Users/p.zhu/Applications/gcc-ranlib-15.2"
+      - "/Applications/gcc-ranlib-15.2"
+      - "/Applications/Xcode.app/Contents/Applications/gcc-ranlib-15.2"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/gcc-ranlib-15.2"
+    found: "/opt/homebrew/bin/gcc-ranlib-15"
+    search_context:
+      ENV{PATH}:
+        - "/Users/p.zhu/.codex/tmp/arg0/codex-arg0yrARS2"
+        - "/Users/p.zhu/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin"
+        - "/Users/p.zhu/.opencode/bin"
+        - "/Users/p.zhu/.grok/bin"
+        - "/Users/p.zhu/.pyenv/shims"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/TeX/texbin"
+        - "/Applications/Codex.app/Contents/Resources"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/p.zhu/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:75 (enable_language)"
+    checks:
+      - "Detecting Fortran compiler ABI info"
+    directories:
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8"
+      binary: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_Fortran_FLAGS: ""
+      CMAKE_Fortran_FLAGS_DEBUG: "-g"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_Fortran_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_55011/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_55011.dir/build.make CMakeFiles/cmTC_55011.dir/build
+        Building Fortran object CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o
+        /opt/homebrew/bin/gfortran   -fPIE   -v -Wl,-v -c /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/gfortran
+        Target: aarch64-apple-darwin25
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-15 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 15.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin25 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (Homebrew GCC 15.2.0_1) 
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/'
+         /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/f951 /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -cpp=/var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccLawjkS.fii -quiet -v -iprefix /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/ -D__DYNAMIC__ /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -fPIC -quiet -dumpdir CMakeFiles/cmTC_55011.dir/ -dumpbase CMakeFortranCompilerABI.F90.F90 -dumpbase-ext .F90 -mmacosx-version-min=26.0.0 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -fPIE -fintrinsic-modules-path /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude -o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s
+        GNU Fortran (Homebrew GCC 15.2.0_1) version 15.2.0 (aarch64-apple-darwin25)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        warning: MPC header version 1.3.1 differs from library version 1.4.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/local/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude
+         /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include
+         /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed
+         /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include
+        End of search list.
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/'
+         as -arch arm64 -v -mmacosx-version-min=26.0 -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s
+        Apple clang version 21.0.0 (clang-2100.1.1.101)
+        Target: arm64-apple-darwin25.5.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1as -triple arm64-apple-macosx26.0.0 -target-sdk-version=26.5 -filetype obj -main-file-name ccmMRtA5.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8 -dwarf-debug-producer "Apple clang version 21.0.0 (clang-2100.1.1.101)" -dwarf-version=5 -mrelocation-model pic -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.'
+        Linking Fortran executable cmTC_55011
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55011.dir/link.txt --verbose=1
+        Driving: /opt/homebrew/bin/gfortran -v -Wl,-v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -o cmTC_55011 -mmacosx-version-min=26.0.0 -asm_macosx_version_min=26.0 -nodefaultexport -l gfortran
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/gfortran
+        COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/lto-wrapper
+        Target: aarch64-apple-darwin25
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-15 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 15.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin25 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (Homebrew GCC 15.2.0_1) 
+        Reading specs from /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../libgfortran.spec
+        rename spec lib to liborig
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55011' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_55011-'
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55011' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_55011.'
+         /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/collect2 -demangle -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/ -dynamic -arch arm64 -macos_version_min 26.0.0 -o cmTC_55011 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../.. -lemutls_w -lheapt_w -v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lgcc -lquadmath -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15 -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current
+        collect2 version 15.2.0
+        /usr/bin/ld -demangle -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/ -dynamic -arch arm64 -macos_version_min 26.0.0 -o cmTC_55011 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../.. -lemutls_w -lheapt_w -v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lgcc -lquadmath -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15 -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current
+        @(#)PROGRAM:ld PROJECT:ld-1267
+        BUILD 16:38:58 Jun  8 2026
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+        TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+        Library search paths:
+        	/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15
+        	/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc
+        	/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks
+        /opt/homebrew/bin/gfortran -v -Wl,-v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -o cmTC_55011
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:75 (enable_language)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:75 (enable_language)"
+    message: |
+      Parsed Fortran implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude]
+          add: [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include]
+          add: [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude]
+        collapse include dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/include]
+        collapse include dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/include;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:75 (enable_language)"
+    message: |
+      Parsed Fortran implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_55011/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_55011.dir/build.make CMakeFiles/cmTC_55011.dir/build]
+        ignore line: [Building Fortran object CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o]
+        ignore line: [/opt/homebrew/bin/gfortran   -fPIE   -v -Wl -v -c /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/gfortran]
+        ignore line: [Target: aarch64-apple-darwin25]
+        ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran --program-suffix=-15 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 15.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin25 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (Homebrew GCC 15.2.0_1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/']
+        ignore line: [ /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/f951 /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -cpp=/var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccLawjkS.fii -quiet -v -iprefix /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/ -D__DYNAMIC__ /opt/homebrew/share/cmake/Modules/CMakeFortranCompilerABI.F90 -fPIC -quiet -dumpdir CMakeFiles/cmTC_55011.dir/ -dumpbase CMakeFortranCompilerABI.F90.F90 -dumpbase-ext .F90 -mmacosx-version-min=26.0.0 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -fPIE -fintrinsic-modules-path /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude -o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s]
+        ignore line: [GNU Fortran (Homebrew GCC 15.2.0_1) version 15.2.0 (aarch64-apple-darwin25)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [warning: MPC header version 1.3.1 differs from library version 1.4.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../../../../aarch64-apple-darwin25/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/finclude]
+        ignore line: [ /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include]
+        ignore line: [ /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/include-fixed]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/']
+        ignore line: [ as -arch arm64 -v -mmacosx-version-min=26.0 -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s]
+        ignore line: [Apple clang version 21.0.0 (clang-2100.1.1.101)]
+        ignore line: [Target: arm64-apple-darwin25.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1as -triple arm64-apple-macosx26.0.0 -target-sdk-version=26.5 -filetype obj -main-file-name ccmMRtA5.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -fdebug-compilation-dir=/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/COLLIER/COLLIER-1.2.9/build/CMakeFiles/CMakeScratch/TryCompile-D1bxv8 -dwarf-debug-producer "Apple clang version 21.0.0 (clang-2100.1.1.101)" -dwarf-version=5 -mrelocation-model pic -o CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o /var/folders/rz/jq3y3vy92s1b_6fsw7wvs6k40000gn/T//ccmMRtA5.s]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-c' '-o' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o' '-mmacosx-version-min=26.0.0'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.']
+        ignore line: [Linking Fortran executable cmTC_55011]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55011.dir/link.txt --verbose=1]
+        ignore line: [Driving: /opt/homebrew/bin/gfortran -v -Wl -v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -o cmTC_55011 -mmacosx-version-min=26.0.0 -asm_macosx_version_min=26.0 -nodefaultexport -l gfortran]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/gfortran]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/lto-wrapper]
+        ignore line: [Target: aarch64-apple-darwin25]
+        ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran --program-suffix=-15 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 15.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin25 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (Homebrew GCC 15.2.0_1) ]
+        ignore line: [Reading specs from /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../libgfortran.spec]
+        ignore line: [rename spec lib to liborig]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55011' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_55011-']
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55011' '-mmacosx-version-min=26.0.0' '-asm_macosx_version_min=26.0' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_55011.']
+        link line: [ /opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/collect2 -demangle -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/ -dynamic -arch arm64 -macos_version_min 26.0.0 -o cmTC_55011 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../.. -lemutls_w -lheapt_w -v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lgcc -lquadmath -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15 -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current]
+          arg [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin25/15/collect2] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-macos_version_min] ==> ignore
+          arg [26.0.0] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_55011] ==> ignore
+          arg [-L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15] ==> dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15]
+          arg [-L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc] ==> dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc]
+          arg [-L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../..] ==> dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../..]
+          arg [-lemutls_w] ==> lib [emutls_w]
+          arg [-lheapt_w] ==> lib [heapt_w]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o] ==> ignore
+          arg [-lgfortran] ==> lib [gfortran]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lquadmath] ==> lib [quadmath]
+          arg [-lSystem] ==> lib [System]
+          arg [-no_compact_unwind] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@loader_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current] ==> ignore
+        ignore line: [collect2 version 15.2.0]
+        ignore line: [/usr/bin/ld -demangle -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/ -dynamic -arch arm64 -macos_version_min 26.0.0 -o cmTC_55011 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15 -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../.. -lemutls_w -lheapt_w -v CMakeFiles/cmTC_55011.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lgcc -lquadmath -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15 -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current]
+        linker tool for 'Fortran': /usr/bin/ld
+        Library search paths: [;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks]
+        remove lib [System]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin25/15/../../..] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current] ==> [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks]
+        implicit libs: [emutls_w;heapt_w;gfortran;gcc;quadmath]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin25/15;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/15.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestFortranCompiler.cmake:20 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:75 (enable_language)"
+    message: |
+      Running the Fortran compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1267
+      BUILD 16:38:58 Jun  8 2026
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
+      TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.0.2.6)
+...

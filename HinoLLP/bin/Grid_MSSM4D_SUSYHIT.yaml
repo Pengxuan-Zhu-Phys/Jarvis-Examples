@@ -1,0 +1,84 @@
+Scan:
+  name: "SUSYHIT_Grid_MSSM4D"
+  save_dir: "&J/outputs"
+
+Sampling:
+  Method: "Grid"
+  Variables:
+    - name: M1
+      description: "Bino mass parameter."
+      distribution:
+        type: Flat
+        parameters: {min: 1200, max: 1800, num: 5}
+    - name: M2
+      description: "Wino mass parameter."
+      distribution:
+        type: Flat
+        parameters: {min: -4500, max: -3000, num: 5}
+    - name: Mu
+      description: "Higgsino mass parameter."
+      distribution:
+        type: Flat
+        parameters: {min: 120, max: 150, num: 5}
+    - name: Tb
+      description: "tan(beta)."
+      distribution:
+        type: Flat
+        parameters: {min: 3, max: 4, num: 5}
+
+EnvReqs:
+  OS:
+    - name: linux
+      version: ">=5.10.0"
+    - name: Darwin
+      version: ">=10.14"
+  Check_default_dependencies:
+    required: true
+    default_yaml_path: "&J/deps/environment_default.yaml"
+
+Calculators:
+  make_paraller: 2
+  path: "&J/calculators/susyhit"
+  Modules:
+    - name: SUSYHIT
+      required_modules: []
+      clone_shadow: true
+      path: "&J/calculators/susyhit/@PackID"
+      source: "&J/deps/program/susyhit"
+      installation:
+        - "cp ${source}/susyhit.tar.gz ${path}"
+        - "cd ${path}"
+        - "tar -zxvf susyhit.tar.gz"
+        - "make"
+      initialization:
+        - "cp ${source}/suspect2_lha_llp_temp02.in ${path}/suspect2_lha.in"
+        - "rm -f ${path}/susyhit_slha.out"
+      execution:
+        path: "&J/calculators/susyhit/@PackID"
+        commands:
+          - "./run suspect2_lha.in"
+        input:
+          - name: susyhit_input
+            path: "&J/calculators/susyhit/@PackID/suspect2_lha.in"
+            type: "SLHA"
+            actions:
+              - type: "Replace"
+                variables:
+                  - {name: "M1", placeholder: ">>>>>M1<<<<<"}
+                  - {name: "M2", placeholder: ">>>>>M2<<<<<"}
+                  - {name: "Mu", placeholder: ">>>>>Mu<<<<<"}
+                  - {name: "Tb", placeholder: ">>>>>Tb<<<<<"}
+            save: true
+        output:
+          - name: susyhit_output
+            path: "&J/calculators/susyhit/@PackID/susyhit_slha.out"
+            type: "SLHA"
+            save: true
+            variables:
+              - {name: mN1, block: MASS, entry: 1000022}
+              - {name: mN2, block: MASS, entry: 1000023}
+              - {name: mC1, block: MASS, entry: 1000024}
+              - {name: WC1, block: DECAY, entry: 1000024}
+              - {name: WN2, block: DECAY, entry: 1000023}
+              - {name: BRN22N1a, block: DECAY, entry: [1000023, 1000022, 22]}
+              - {name: mh1, block: MASS, entry: 25}

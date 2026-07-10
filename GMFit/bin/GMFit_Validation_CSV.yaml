@@ -1,0 +1,342 @@
+Scan:
+  name: "GMFit_Validation_CSV"
+  save_dir: "&J/outputs"
+
+Sampling:
+  Method: "CSV"
+  CSV:
+    path: "&J/data/gmfit_validation_points.csv"
+    uuid_column: "uuid"
+    variables:
+      - "mh"
+      - "mH"
+      - "sinThetaH"
+      - "sinAlpha"
+      - "lambda2"
+      - "lambda3"
+      - "lambda4"
+      - "lambda5"
+  LogLikelihood:
+    - {name: "LogL_accept", expression: "gm_unitarity * gm_bfb * gm_posmsq * gm_min * gm_inputok * gm_vs_ok * rge_pass_gut * rge_vs_ok * Heaviside(rge_vac_ok) * Max(Heaviside(3 - Abs(gm_mh - 125)), Heaviside(3 - Abs(gm_mH - 125)))"}
+
+EnvReqs:
+  OS:
+    - name: linux
+      version: ">=3.10.0"
+    - name: Darwin
+      version: ">=10.14"
+  Check_default_dependencies:
+    required: true
+    default_yaml_path: "&J/deps/environment_default.yaml"
+
+LibDeps:
+  path: "&J/deps/library"
+  make_paraller: 2
+  Modules:
+    - name: "LoopTools"
+      required_modules: []
+      installed: False
+      installation:
+        path: "&J/deps/library/LoopTools-2.16"
+        source: "&J/deps/LoopTools-2.16.tar.gz"
+        commands:
+          - "mkdir -p ${LibDeps:path}"
+          - "cd ${LibDeps:path}"
+          - "cp ${source} ./"
+          - "tar -xzf LoopTools-2.16.tar.gz"
+          - "cd ${path}"
+          - "./configure --prefix=\"${path}\""
+          - "make -j${LibDeps:make_paraller}"
+          - "make install"
+
+    - name: "FeynHiggs"
+      required_modules:
+        - "LoopTools"
+      installed: False
+      installation:
+        path: "&J/deps/library/FeynHiggs-2.19.0"
+        source: "&J/deps/FeynHiggs-2.19.0.tar.gz"
+        commands:
+          - "mkdir -p ${LibDeps:path}"
+          - "cd ${LibDeps:path}"
+          - "cp ${source} ./"
+          - "tar -xzf FeynHiggs-2.19.0.tar.gz"
+          - "cd ${path}"
+          - "./configure --prefix=\"${path}\""
+          - "make -j${LibDeps:make_paraller}"
+          - "make install"
+
+    - name: "HiggsBounds"
+      required_modules:
+        - "FeynHiggs"
+      installed: False
+      installation:
+        path: "&J/deps/library/HiggsBounds-5.3.2beta"
+        source: "&J/deps/HiggsBounds-5.3.2beta.tar.gz"
+        commands:
+          - "mkdir -p ${LibDeps:path}"
+          - "cd ${LibDeps:path}"
+          - "cp ${source} ./"
+          - "tar -xzf HiggsBounds-5.3.2beta.tar.gz"
+          - "cd ${path}"
+          - "./configure --fhpath=${LibDeps:path}/FeynHiggs-2.19.0"
+          - "make -j${LibDeps:make_paraller}"
+
+    - name: "HiggsSignals"
+      required_modules:
+        - "FeynHiggs"
+        - "HiggsBounds"
+      installed: False
+      installation:
+        path: "&J/deps/library/HiggsSignals-2.2.3beta"
+        source: "&J/deps/HiggsSignals-2.2.3beta.tar.gz"
+        commands:
+          - "mkdir -p ${LibDeps:path}"
+          - "cd ${LibDeps:path}"
+          - "cp ${source} ./"
+          - "tar -xzf HiggsSignals-2.2.3beta.tar.gz"
+          - "cd ${path}"
+          - "./configure --hbpath=${LibDeps:path}/HiggsBounds-5.3.2beta --fhpath=${LibDeps:path}/FeynHiggs-2.19.0"
+          - "make -j${LibDeps:make_paraller}"
+
+Calculators:
+  make_paraller: 2
+  path: "&J/calculators"
+  Modules:
+    - name: GMFit
+      required_modules:
+        - "LoopTools"
+        - "HiggsSignals"
+      clone_shadow: True
+      path: &gmfit_path "&J/calculators/GMFit/@PackID"
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps/gmcalc1.5.3J"
+      deps_source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps"
+      installation:
+        - "mkdir -p ${path}"
+        - "cp -r ${source} ${path}/gmcalc1.5.3"
+        - "ln -sfn gmcalc1.5.3/src ${path}/src"
+        - "make -C ${path}/gmcalc1.5.3 gmmg5 gmscan gmpoint gmhb5 gmhb5-nolt LT=${LibDeps:path}/LoopTools-2.16 HS2=${LibDeps:path}/HiggsSignals-2.2.3beta HB5=${LibDeps:path}/HiggsBounds-5.3.2beta LIB=build"
+      initialization:
+        - "rm -f ${path}/input_json_set5.json ${path}/gm_out.dat"
+        - "cp ${deps_source}/gmfit_input_set5.json ${path}/input_json_set5.json"
+      execution:
+        path: *gmfit_path
+        commands:
+          - "./gmcalc1.5.3/gmhb5.x ./input_json_set5.json"
+        input:
+          - name: gmfit_json
+            path: "&J/calculators/GMFit/@PackID/input_json_set5.json"
+            type: "JSON"
+            actions:
+              - type: "Dump"
+                variables:
+                  - {name: "INPUTSET", expression: "5"}
+                  - {name: "mh", expression: "mh"}
+                  - {name: "mH", expression: "mH"}
+                  - {name: "sinThetaH", expression: "sinThetaH"}
+                  - {name: "sinAlpha", expression: "sinAlpha"}
+                  - {name: "lambda2", expression: "lambda2"}
+                  - {name: "lambda3", expression: "lambda3"}
+                  - {name: "lambda4", expression: "lambda4"}
+                  - {name: "lambda5", expression: "lambda5"}
+            save: true
+        output:
+          - name: gmfit_output
+            path: "&J/calculators/GMFit/@PackID/gm_out.dat"
+            type: "xSLHA"
+            save: true
+            variables:
+              - {name: gm_mu2sq, block: GM_SCALARPOT, entry: 1}
+              - {name: gm_lambda1, block: GM_SCALARPOT, entry: 3}
+              - {name: gm_lambda2, block: GM_SCALARPOT, entry: 4}
+              - {name: gm_lambda3, block: GM_SCALARPOT, entry: 5}
+              - {name: gm_lambda4, block: GM_SCALARPOT, entry: 6}
+              - {name: gm_lambda5, block: GM_SCALARPOT, entry: 7}
+              - {name: gm_m1, block: GM_SCALARPOT, entry: 8}
+              - {name: gm_m2, block: GM_SCALARPOT, entry: 9}
+              - {name: gm_vphi, block: GM_PHYSICAL, entry: 1}
+              - {name: gm_vchi, block: GM_PHYSICAL, entry: 2}
+              - {name: gm_alpha, block: GM_PHYSICAL, entry: 7}
+              - {name: gm_sin_alpha, block: GM_PHYSICAL, entry: 8}
+              - {name: gm_sin_thetaH, block: GM_PHYSICAL, entry: 10}
+              - {name: gm_mh, block: GM_PHYSICAL, entry: 3}
+              - {name: gm_mH, block: GM_PHYSICAL, entry: 4}
+              - {name: gm_mH3, block: GM_PHYSICAL, entry: 5}
+              - {name: gm_mH5, block: GM_PHYSICAL, entry: 6}
+              - {name: gm_kappa_V, block: GM_HCOUPS_h, entry: 1}
+              - {name: gm_kappa_f, block: GM_HCOUPS_h, entry: 2}
+              - {name: gm_kappa_gamma, block: GM_HCOUPS_h, entry: 3}
+              - {name: gm_kappa_Zgamma, block: GM_HCOUPS_h, entry: 5}
+              - {name: gm_unitarity, block: GM_CONSTRAINTS, entry: 1}
+              - {name: gm_bfb, block: GM_CONSTRAINTS, entry: 2}
+              - {name: gm_posmsq, block: GM_CONSTRAINTS, entry: 3}
+              - {name: gm_min, block: GM_CONSTRAINTS, entry: 4}
+              - {name: gm_inputok, block: GM_CONSTRAINTS, entry: 5}
+              - {name: gm_bsmm_ok, block: GM_INDIRECT, entry: 2}
+              - {name: gm_sparam_ok, block: GM_INDIRECT, entry: 4}
+              - {name: gm_bsg_loose_ok, block: GM_INDIRECT, entry: 5}
+              - {name: gm_bsg_tight_ok, block: GM_INDIRECT, entry: 6}
+              - {name: gm_hb_all_ok, block: HB_RESULTS, entry: 1}
+              - {name: gm_h_ok, block: HB_PARTICLE_RESULTS, entry: 1}
+              - {name: gm_H_ok, block: HB_PARTICLE_RESULTS, entry: 4}
+              - {name: gm_H3_ok, block: HB_PARTICLE_RESULTS, entry: 7}
+              - {name: gm_H5_ok, block: HB_PARTICLE_RESULTS, entry: 10}
+              - {name: gm_H3p_ok, block: HB_PARTICLE_RESULTS, entry: 13}
+              - {name: gm_H5p_ok, block: HB_PARTICLE_RESULTS, entry: 16}
+              - {name: gm_chisq_mu, block: HS_RESULTS, entry: 1}
+              - {name: gm_chisq_mh, block: HS_RESULTS, entry: 2}
+              - {name: gm_chisq, block: HS_RESULTS, entry: 3}
+              - {name: gm_pvalue, block: HS_RESULTS, entry: 5}
+
+    - name: SPhenoGM
+      required_modules:
+        - "GMFit"
+      clone_shadow: True
+      path: &spheno_path "&J/calculators/SPhenoGM/@PackID"
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps/SPheno-4.0.5"
+      deps_source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps"
+      installation:
+        - "mkdir -p ${path}"
+        - "cp -r ${source} ${path}/SPheno-4.0.5"
+        - "make -C ${path}/SPheno-4.0.5/Georgi-Machacek F90=gfortran version=400.00 bin/SPhenoGM"
+      initialization:
+        - "rm -f ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5 ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/SPheno.spc.GM"
+        - "cp ${deps_source}/LesHouches.in.GM_set5 ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5"
+      execution:
+        path: "&J/calculators/SPhenoGM/@PackID/SPheno-4.0.5/Georgi-Machacek/Input_Files"
+        commands:
+          - "../../bin/SPhenoGM LesHouches.in.GM_set5 SPheno.spc.GM"
+        input:
+          - name: spheno_input
+            path: "&J/calculators/SPhenoGM/@PackID/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5"
+            type: "SLHA"
+            actions:
+              - type: "Replace"
+                variables:
+                  - {name: spheno_lambda2_in, placeholder: "__SPHENO_LAMBDA2__", expression: "gm_lambda2"}
+                  - {name: spheno_lambda3_in, placeholder: "__SPHENO_LAMBDA3__", expression: "gm_lambda3"}
+                  - {name: spheno_lambda4_in, placeholder: "__SPHENO_LAMBDA4__", expression: "gm_lambda4"}
+                  - {name: spheno_lambda5_in, placeholder: "__SPHENO_LAMBDA5__", expression: "gm_lambda5"}
+                  - {name: spheno_mh_in, placeholder: "__SPHENO_MH__", expression: "gm_mh"}
+                  - {name: spheno_mH_in, placeholder: "__SPHENO_MH_HEAVY__", expression: "gm_mH"}
+                  - {name: spheno_alpha_deg_in, placeholder: "__SPHENO_ALPHA_DEG__", expression: "180*gm_alpha/pi"}
+                  - {name: spheno_sH_in, placeholder: "__SPHENO_SH__", expression: "gm_sin_thetaH"}
+                  - {name: spheno_vdoub_in, placeholder: "__SPHENO_VDOUB__", expression: "gm_vphi"}
+                  - {name: spheno_veta_in, placeholder: "__SPHENO_VETA__", expression: "gm_vchi"}
+                  - {name: spheno_vphi_in, placeholder: "__SPHENO_VPHI__", expression: "gm_vchi"}
+            save: true
+        output:
+          - name: spheno_output
+            path: "&J/calculators/SPhenoGM/@PackID/SPheno-4.0.5/Georgi-Machacek/Input_Files/SPheno.spc.GM"
+            type: "xSLHA"
+            save: true
+            variables:
+              - {name: spheno_tparam, block: SPhenoLowEnergy, entry: 1}
+              - {name: spheno_sparam, block: SPhenoLowEnergy, entry: 2}
+              - {name: spheno_uparam, block: SPhenoLowEnergy, entry: 3}
+              - {name: spheno_mh, block: MASS, entry: 35}
+              - {name: spheno_mH, block: MASS, entry: 36}
+
+    - name: RGEGM
+      required_modules:
+        - "GMFit"
+      clone_shadow: True
+      path: &rge_path "&J/calculators/RGEGM/@PackID"
+      source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps/RGE"
+      installation:
+        - "mkdir -p ${path}"
+        - "cp -r ${source} ${path}/RGE"
+        - "make -C ${path}/RGE clean all"
+      initialization:
+        - "rm -f ${path}/RGE/RGE_output.json ${path}/RGE/rge_input_runtime.json ${path}/RGE/get_high_lam.txt ${path}/RGE/rgeout.txt ${path}/RGE/scale_out.txt ${path}/RGE/fort.10"
+        - "cp ${path}/RGE/rge_input_template.json ${path}/RGE/rge_input_runtime.json"
+      execution:
+        path: "&J/calculators/RGEGM/@PackID/RGE"
+        commands:
+          - "./RGE.out ./rge_input_runtime.json"
+        input:
+          - name: rge_input
+            path: "&J/calculators/RGEGM/@PackID/RGE/rge_input_runtime.json"
+            type: "JSON"
+            actions:
+              - type: "Dump"
+                variables:
+                  - {name: "lambda_1", expression: "gm_lambda1"}
+                  - {name: "lambda_2", expression: "gm_lambda2"}
+                  - {name: "lambda_3", expression: "gm_lambda3"}
+                  - {name: "lambda_4", expression: "gm_lambda4"}
+                  - {name: "lambda_5", expression: "gm_lambda5"}
+            save: true
+        output:
+          - name: rge_output
+            path: "&J/calculators/RGEGM/@PackID/RGE/RGE_output.json"
+            type: "JSON"
+            save: true
+            variables:
+              - {name: rge_input_mode, entry: "rge_input_mode"}
+              - {name: rge_found_solution, entry: "rge_found_solution"}
+              - {name: rge_pass_gut, entry: "rge_pass_gut"}
+              - {name: rge_scale, entry: "rge_scale"}
+              - {name: rge_g83_gut, entry: "rge_g83_gut"}
+              - {name: rge_lambda_gut_1, entry: "rge_lambda_gut_1"}
+              - {name: rge_lambda_gut_2, entry: "rge_lambda_gut_2"}
+              - {name: rge_lambda_gut_3, entry: "rge_lambda_gut_3"}
+              - {name: rge_lambda_gut_4, entry: "rge_lambda_gut_4"}
+              - {name: rge_lambda_gut_5, entry: "rge_lambda_gut_5"}
+              - {name: rge_mz_lam, entry: "rge_mz_transformed.lam"}
+              - {name: rge_mz_rho1, entry: "rge_mz_transformed.rho1"}
+              - {name: rge_mz_rho2, entry: "rge_mz_transformed.rho2"}
+              - {name: rge_mz_rho3, entry: "rge_mz_transformed.rho3"}
+              - {name: rge_mz_rho4, entry: "rge_mz_transformed.rho4"}
+              - {name: rge_mz_rho5, entry: "rge_mz_transformed.rho5"}
+              - {name: rge_mz_sigma1, entry: "rge_mz_transformed.sigma1"}
+              - {name: rge_mz_sigma2, entry: "rge_mz_transformed.sigma2"}
+              - {name: rge_mz_sigma3, entry: "rge_mz_transformed.sigma3"}
+              - {name: rge_mz_sigma4, entry: "rge_mz_transformed.sigma4"}
+
+Operas:
+  make_paraller: 2
+  Modules:
+    - name: GMTreeVacuumStability
+      operator: "gm_helper.check_tree_level_vacuum_stability"
+      call_mode: call
+      required_modules:
+        - "GMFit"
+      input:
+        - {name: lambda1, entry: "gm_lambda1"}
+        - {name: lambda2, entry: "gm_lambda2"}
+        - {name: lambda3, entry: "gm_lambda3"}
+        - {name: lambda4, entry: "gm_lambda4"}
+        - {name: lambda5, entry: "gm_lambda5"}
+      output:
+        - {name: gm_vs_ok, entry: "vs_ok"}
+    - name: RGETreeVacuumStability
+      operator: "gm_helper.check_tree_level_vacuum_stability"
+      call_mode: call
+      required_modules:
+        - "RGEGM"
+      input:
+        - {name: lambda1, entry: "rge_lambda_gut_1"}
+        - {name: lambda2, entry: "rge_lambda_gut_2"}
+        - {name: lambda3, entry: "rge_lambda_gut_3"}
+        - {name: lambda4, entry: "rge_lambda_gut_4"}
+        - {name: lambda5, entry: "rge_lambda_gut_5"}
+      output:
+        - {name: rge_vs_ok, entry: "vs_ok"}
+    - name: RGEVacuum
+      operator: "gm_helper.checkvacuum_v2_detail"
+      call_mode: acall
+      required_modules:
+        - "RGEGM"
+        - "GMTreeVacuumStability"
+        - "RGETreeVacuumStability"
+      input:
+        - {name: payload, entry: "rge_g83_gut"}
+        - {name: scale, entry: "rge_scale"}
+        - {name: gm_vs_ok, entry: "gm_vs_ok"}
+        - {name: rge_vs_ok, entry: "rge_vs_ok"}
+      output:
+        - {name: rge_vac_ok, entry: "vacuum_ok"}
+        - {name: rge_vac_v, entry: "vacuum_potential"}
+        - {name: rge_vac_neg, entry: "flag_negative"}
+        - {name: rge_vac_skip, entry: "vacuum_skipped"}

@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/TeX/.texpadtmp/1short_draft.aux
+The style file: ../CitationStyle.bst
+Database file #1: 1short_draftNotes.bib
+Database file #2: ../ref_type1.bib
+Warning--empty author in CMS-PAS-EXO-23-017
+Warning--empty author in CMS:2025twk
+You've used 96 entries,
+            2269 wiz_defined-function locations,
+            1271 strings with 22729 characters,
+and the built_in function-call counts, 30224 in all, are:
+= -- 3111
+> -- 1328
+< -- 0
++ -- 382
+- -- 286
+* -- 2664
+:= -- 4274
+add.period$ -- 97
+call.type$ -- 96
+change.case$ -- 98
+chr.to.int$ -- 0
+cite$ -- 98
+duplicate$ -- 1595
+empty$ -- 2491
+format.name$ -- 286
+if$ -- 7963
+int.to.chr$ -- 0
+int.to.str$ -- 96
+missing$ -- 339
+newline$ -- 292
+num.names$ -- 94
+pop$ -- 229
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1355
+stack$ -- 0
+substring$ -- 868
+swap$ -- 851
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 192
+width$ -- 98
+write$ -- 1038
+(There were 2 warnings)

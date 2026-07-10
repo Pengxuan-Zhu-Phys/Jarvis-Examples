@@ -1,0 +1,37 @@
+
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:16:22.655 - [WARNING] >>> 
+Initializating Library -> FlexibleSUSY-lowMSSM 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:16:22.656 - [INFO] >>> 
+No existing installation found for FlexibleSUSY-lowMSSM. 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:16:22.670 - [INFO] >>> 
+ Run command -> 
+	sh /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/FlexibleSUSY/jarvis_build_lowMSSM_once.sh /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/FlexibleSUSY /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM 4 
+ in path -> 
+	/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library 
+ Screen output -> 
+ FlexibleSUSY lowMSSM already built -> /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM/models/lowMSSM/run_lowMSSM.x
+
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:16:22.688 - [INFO] >>> 
+Configuration for FlexibleSUSY-lowMSSM has been written to /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM_config.yaml 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:36.017 - [WARNING] >>> 
+Initializating Library -> FlexibleSUSY-lowMSSM 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:36.018 - [INFO] >>> 
+FlexibleSUSY-lowMSSM has found and correctly installed. 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:36.018 - [INFO] >>> 
+FlexibleSUSY-lowMSSM is already installed with matching configuration. 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:36.032 - [WARNING] >>> 
+Configuration for FlexibleSUSY-lowMSSM has not changed.  
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:40.481 - [WARNING] >>> 
+Skipping installation of FlexibleSUSY-lowMSSM. 
+·•· Library.FlexibleSUSY-lowMSSM 
+	- 07-10 23:17:40.482 - [INFO] >>> 
+Configuration for FlexibleSUSY-lowMSSM has been written to /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM_config.yaml 

@@ -1,0 +1,1 @@
+src/gm2calc_interface.o: src/gm2calc_interface.cpp src/gm2calc_interface.hpp src/logger.hpp src/wrappers.hpp config/config.h src/eigen_tensor.hpp src/error.hpp src/if.hpp src/sum.hpp src/which.hpp src/pp_map.hpp

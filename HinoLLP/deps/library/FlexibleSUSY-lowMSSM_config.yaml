@@ -1,0 +1,12 @@
+installation:
+  commands:
+  - cmd: sh /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/FlexibleSUSY/jarvis_build_lowMSSM_once.sh
+      /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/FlexibleSUSY
+      /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM
+      4
+    cwd: /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library
+  path: /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/library/FlexibleSUSY-lowMSSM
+  source: /Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/HinoLLP/deps/program/FlexibleSUSY
+installed: true
+name: FlexibleSUSY-lowMSSM
+required_modules: []
