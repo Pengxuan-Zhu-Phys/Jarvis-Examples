@@ -1,17 +1,9 @@
-# A/B benchmark: thread execution (v1-default path, closest to legacy Jarvis-HEP).
-# Compare with Example_Bridson_process.yaml using: Jarvis <file> --benchmark 60
+# Historical thread-path card name retained; V2 always uses internal Redis + spawn Workers.
+# Scheduling: EnvReqs.V2 (override defaults here if needed):
+#   EnvReqs.V2: { workers: 14, batch_size: 1 }
 Scan:
   name: "EggBox_Bridson_thread"
   save_dir: "&J/outputs"
-
-Runtime:
-  mode: thread
-  workers: 14
-  batch_size: 1
-  Subprocess:
-    max_concurrency: 16
-    max_pending: 64
-    log_policy: logger
 
 Sampling:
   Method: "Bridson"

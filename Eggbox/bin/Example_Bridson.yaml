@@ -2,13 +2,8 @@ Scan:
   name: "EggBox_Bridson_newIO"
   save_dir: "&J/outputs"
 
-Runtime:
-  mode: process
-  batch_size: 1
-  Subprocess:
-    max_concurrency: 16
-    max_pending: 64
-    log_policy: logger
+# Scheduling: EnvReqs.V2 via deps/environment_default.yaml (workers / batch_size).
+# No top-level Runtime — V2 rejects it; process/thread modes are V1-only.
 
 Sampling:
   Method: "Bridson" 

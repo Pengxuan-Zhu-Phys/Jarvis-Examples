@@ -1,4 +1,10 @@
 EnvReqs:
+  # V2 reads this optional default layer through the V1-compatible
+  # Check_default_dependencies.default_yaml_path entry in each task YAML.
+  V2:
+    workers: 1
+    batch_size: 256
+
   CERN_ROOT:
     required: true
     version: ">=6.20"

@@ -1,5 +1,5 @@
 Scan: 
-  name: "EggBox_Bridson_05"
+  name: "EggBox_Bridson_V2"
   save_dir: "&J/outputs"
 
 Sampling:
@@ -37,6 +37,7 @@ EnvReqs:
   Check_default_dependencies:
     required: True 
     default_yaml_path:  "&J/deps/environment_default.yaml"
+  # EnvReqs.V2 defaults live in environment_default.yaml (workers / batch_size).
 
 Operas:
   make_paraller: 16
