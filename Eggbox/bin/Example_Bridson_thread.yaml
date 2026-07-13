@@ -1,6 +1,6 @@
-# Historical thread-path card name retained; V2 always uses internal Redis + spawn Workers.
-# Scheduling: EnvReqs.V2 (override defaults here if needed):
-#   EnvReqs.V2: { workers: 14, batch_size: 1 }
+# Historical card name only ("thread" is not a runtime mode).
+# Same external-calculator path as Example_Bridson_process; denser Bridson grid.
+# Scheduling: EnvReqs.V2 via deps/environment_default.yaml (override V2 knobs if needed).
 Scan:
   name: "EggBox_Bridson_thread"
   save_dir: "&J/outputs"

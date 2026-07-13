@@ -1,5 +1,6 @@
-# Eggbox process-calculator card (external subprocess via Calculators).
-# Scheduling: EnvReqs.V2 via deps/environment_default.yaml — no top-level Runtime.
+# Eggbox external-calculator card (Calculators + subprocess), not Operas.
+# File name keeps historical "process"; Runtime.mode is gone on V1 and V2.
+# Scheduling: EnvReqs.V2 via deps/environment_default.yaml.
 Scan:
   name: "EggBox_Bridson_process"
   save_dir: "&J/outputs"

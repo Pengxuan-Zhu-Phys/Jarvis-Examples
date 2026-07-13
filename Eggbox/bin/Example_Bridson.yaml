@@ -3,7 +3,7 @@ Scan:
   save_dir: "&J/outputs"
 
 # Scheduling: EnvReqs.V2 via deps/environment_default.yaml (workers / batch_size).
-# No top-level Runtime — V2 rejects it; process/thread modes are V1-only.
+# No top-level Runtime block (dead surface on both V1 and V2).
 
 Sampling:
   Method: "Bridson" 
