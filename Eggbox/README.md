@@ -25,9 +25,22 @@ Jarvis bin/quickstart_csv_operas.yaml
 - `.jarvis-project.json` / `jarvis.project.yaml`: project-root markers
 - `bin/`: runnable YAML entry cards
 - `data/`: project input datasets
-- `deps/`: project-local dependency baseline (`environment_default.yaml`)
+- `deps/`: project-local dependency baseline (`environment_default.yaml` includes `EnvReqs.V2`)
 
-Runtime directories are created automatically on first run:
+### Card naming (Eggbox Bridson)
+
+Historical file names keep `process` / `thread` / `Operas` suffixes; **these are not
+runtime modes**. V1 and V2 never switch execution via `Runtime.mode` (that block is
+removed from current cards). Prefer these names in docs and reviews:
+
+| Prefer saying | File | Workflow |
+|---------------|------|----------|
+| **Calculator card** | `bin/Example_Bridson_process.yaml` (also `Example_Bridson.yaml`, denser `Example_Bridson_thread.yaml`) | `Calculators` + external program + Portal IO (JSON) |
+| **Operas card** | `bin/Example_Bridson_Operas.yaml` | in-process `Operas` operator (`helper.eggbox2d`) |
+
+Scheduling knobs for V2: `EnvReqs.V2` (defaults in `deps/environment_default.yaml`).
+
+Output directories are created automatically on first run:
 
 - `outputs/<scan>/DATABASE`: HDF5, CSV, schema, run metadata
 - `outputs/<scan>/SAMPLE`: per-sample artifacts and sample-local logs
