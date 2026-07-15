@@ -1,9 +1,50 @@
 EnvReqs:
   # V2 reads this optional default layer through the V1-compatible
   # Check_default_dependencies.default_yaml_path entry in each task YAML.
+  # Only EnvReqs.V2 is merged by the V2 loader; task YAML overrides win.
   V2:
-    workers: 1
+    workers: 8
     batch_size: 256
+
+    # SAMPLE layout: SAMPLE/<bucket_id>/<uuid>/  (V1 sample_directory parity)
+    sample_directory:
+      enabled: true
+      limit: 200
+      width: 6
+      pack: true
+      start_bucket: 1
+
+    # Handoff: direct by default — no staging/ intermediate hop.
+    # Use strategy: mv_to_staging only when a heavy Archiver needs the buffer.
+    cleanup:
+      strategy: direct
+
+    # Layer-2 archive: DATABASE writes + sealed-bucket tar.gz packing.
+    archiver:
+      mode: process
+      handoff: direct
+      pack_buckets: true
+      batch_size: 200
+      flush_interval_sec: 1.0
+      delete_after_archive: true
+
+    # Optional Redis broker override (default: 127.0.0.1:6379 / db 0).
+    # redis:
+    #   host: 127.0.0.1
+    #   port: 6379
+    #   db: 0
+
+    # Optional factory / worker policy.
+    # factory:
+    #   monitor_hz: 120
+    #   watchdog:
+    #     enabled: true
+    #     stale_sec: 30
+    #     poll_interval_sec: 1.0
+    #     max_sample_retries: 3
+    # worker:
+    #   force_serial_layers: false
+    #   sample_artifacts: auto
 
   CERN_ROOT:
     required: true
