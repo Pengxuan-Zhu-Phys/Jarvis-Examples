@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "library_name": "official Jarvis library",
+  "library_source": {
+    "provider": "Jarvis-Examples",
+    "index_url": "https://raw.githubusercontent.com/Pengxuan-Zhu-Phys/Jarvis-Examples/main/catalog/official_project_library.json",
+    "notes": "Catalog lives in Jarvis-Examples only (no PyPI package). Public projects need no key; restricted entries require JARVIS_PROJECT_FETCH_KEY or `Jarvis2 project fetch NAME --key`."
+  },
+  "projects": [
+    {
+      "name": "Eggbox",
+      "category": "sampling",
+      "summary": "Bridson + Jarvis-Operas standalone example (public).",
+      "entrypoint": "bin/Example_Bridson_Operas.yaml",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/Eggbox_repro_pack_20260508_001.tar.gz",
+      "archive_root": ".",
+      "access": "public",
+      "requires_key": false,
+      "encryption": {
+        "scheme": "none"
+      },
+      "compatibility_notes": "Open example; run with Jarvis2 after fetch."
+    }
+  ]
+}
