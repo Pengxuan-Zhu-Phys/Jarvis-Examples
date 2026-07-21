@@ -1,0 +1,124 @@
+Scan: 
+  name: "iDM_Bridson"
+  save_dir: "&J/outputs"
+
+Sampling:
+  Method: "Bridson" 
+  Variables:
+    # - name: MAd
+    #   description: "Variable mAd following a Flat distribution for sampling."
+    #   distribution:
+    #     type: Flat
+    #     parameters:
+    #       min: 0.1
+    #       max: 5.0
+    #       length: 100
+
+    - name: MChi
+      description: "Variable mChi following a Flat distribution for sampling."
+      distribution:
+        type: Flat
+        parameters:
+          min: 100
+          max: 1000
+          length: 100
+
+    # - name: DeltaM
+    #   description: "Variable DeltaM following a Flat distribution for sampling."
+    #   distribution:
+    #     type: Flat
+    #     parameters:
+    #       min: 0
+    #       max: 5.0
+    #       length: 100
+
+    # - name: Epsilon
+    #   description: "Variable Epsilon following a Flat distribution for sampling."
+    #   distribution:
+    #     type: Flat
+    #     parameters:
+    #       min: 0
+    #       max: 5.0
+    #       length: 100
+
+    - name: GChi
+      description: "Variable GChi following a Flat distribution for sampling."
+      distribution:
+        type: Log
+        parameters:
+          min: 0.0001
+          max: 10.0
+          length: 100
+
+  Radius: 1
+  MaxAttempt:  30
+  LogLikelihood: 
+    - {name: "LogL_Z",  expression: "LogGauss(z, 100, 10)"}
+
+EnvReqs:
+  OS: 
+    - name: linux 
+      version: ">=3.10.0"
+    - name: Darwin
+      version: ">=10.0"
+  Check_default_dependencies:
+    required: True 
+    default_yaml_path:  "&J/deps/environment_default.yaml"
+
+Calculators:
+  make_paraller: 16
+  path: "&J/calculators"
+  Modules:
+    - name: MicroOMEGAs 
+      required_modules: [] 
+      clone_shadow: True
+      path: &microomegas_path "&J/calculators/microOMEGAs/@PackID"  # Define Anchor point
+      source: "&J/deps/microOMEGAs"
+      installation:
+          - "mkdir -p ${path}"
+          - "cp -R ${source}/. ${path}"
+          - "cd ${path}/DP && make clean && make main=main.cpp"
+      initialization:
+          - "rm -f ${path}/DP/output.json"
+      execution:
+        path: "&J/calculators/microOMEGAs/@PackID/DP"
+        commands:
+          - "./main input.json output.json"
+        input:
+          - name: inpjson
+            path: "&J/calculators/microOMEGAs/@PackID/DP/input.json"
+            type: "JSON"
+            actions:
+              - type: "Dump"
+                variables:
+                  - { name: "MchiD", expression: "MChi" }
+                  - { name: "MAD", expression: "1000.0" }
+                  - { name: "deltaM", expression: "0.1" }
+                  - { name: "gchiD", expression: "GChi" }
+                  - { name: "epsilon", expression: "0.01" }
+            save: True
+        output:
+          - name: oupjson
+            path: "&J/calculators/microOMEGAs/@PackID/DP/output.json"
+            type: "JSON"
+            save: True
+            variables:
+              - {name: Omega_h2, entry: "relic_density.Omega_h2"}
+              - {name: Xf, entry: "relic_density.Xf"}
+              - {name: sigma_v_cm3_per_s, entry: "indirect_detection.sigma_v_cm3_per_s"}
+              - {name: SIp_pb, entry: "direct_detection.SIp_pb"}
+              - {name: SDp_pb, entry: "direct_detection.SDp_pb"}
+              - {name: SIn_pb, entry: "direct_detection.SIn_pb"}
+              - {name: SDn_pb, entry: "direct_detection.SDn_pb"}
+
+Utils:
+  interpolations_1D:
+    - name: XenonSD2019
+      file: "&J/data/reference/Xenon1T2019SD_p.csv"
+      logY: True
+      logX: False 
+      kind: "cubic"
+    - name: inter1P
+      x_values: [1, 2, 3, 4, 5]
+      y_values: [2, 1.8, 1.5, 1.2, 0.8]
+      kind: "cubic"

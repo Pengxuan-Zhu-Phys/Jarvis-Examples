@@ -1,0 +1,121 @@
+# =============================================================================
+# iDM Vector — AdaptiveBridson (2D relic-density contour)
+# =============================================================================
+# Traces the isocontour of micrOMEGAs Omega_h2 ≈ 0.12 in the (mDM, gchiD) plane.
+# Engine: AdaptiveBridson (gen-0 Bridson-like fill → edge refine on level set).
+#
+# From the iDM project root:
+#   Jarvis2 run bin/iDM_Vector_AdaptiveBridson_Omega.yaml
+#   # or smoke:
+#   Jarvis2 check bin/iDM_Vector_AdaptiveBridson_Omega.yaml
+#
+# Products (under outputs/iDM_Vector_AdaptiveBridson_Omega/):
+#   DATABASE/samples.hdf5
+#   levelset / contour artefacts as emitted by AdaptiveBridson
+#   SAMPLE/…  (calculator shadows when save: true)
+# =============================================================================
+
+Scan:
+  name: "iDM_Vector_AdaptiveBridson_Omega"
+  save_dir: "&J/outputs"
+  sample_directory:
+    limit: 200
+    width: 6
+    archive_samples: true
+
+Sampling:
+  Method: "AdaptiveBridson"
+  Seed: 21
+
+  # 2D parameter plane (same axes as iDM_Vector_Bridson for comparison).
+  Variables:
+    - name: MChi
+      description: "Dark-matter mass mDM [GeV]."
+      distribution:
+        type: Flat
+        parameters: {min: 100, max: 1000, length: 100}
+    - name: GChi
+      description: "Dark coupling gchiD."
+      distribution:
+        type: Log
+        parameters: {min: 0.0001, max: 10.0, length: 100}
+
+  # Level-set on relic density (Planck-scale Ωh² ≈ 0.12).
+  AdaptiveBridson:
+    target_expression: "Omega_h2"
+    target_value: 0.12
+    # Relative/absolute closeness to the contour (tune if micrOMEGAs is noisy).
+    contour_precision: 0.02
+    function_tolerance: 0.08
+    # Unit-cube gen-0 spacing (Bridson-like); smaller → denser seed cloud.
+    initial_radius: 0.10
+    refinement_factor: 0.5
+    max_generations: 20
+    max_points: 1500
+    max_new_per_generation: 200
+    # neighbor_graph: auto     # delaunay (d≤3) / knn
+    # knn_k: 8
+
+  # Optional hard prior cuts in physical space (expression language).
+  # selection: "MChi > 120"
+
+  LogLikelihood:
+    # Soft preference near the contour (optional; level set uses Omega_h2 directly).
+    - {name: "LogL_Omega", expression: "LogGauss(Omega_h2, 0.12, 0.02)"}
+
+EnvReqs:
+  OS:
+    - {name: linux, version: ">=3.10.0"}
+    - {name: Darwin, version: ">=10.0"}
+  Check_default_dependencies:
+    required: true
+    default_yaml_path: "&J/deps/environment_default.yaml"
+  V2:
+    # Modest pool: AdaptiveBridson is feedback-driven (batch per generation).
+    workers: 4
+    batch_size: 32
+
+Calculators:
+  make_paraller: 8
+  path: "&J/calculators"
+  Modules:
+    - name: MicroOMEGAs_Vector
+      required_modules: []
+      clone_shadow: true
+      path: "&J/calculators/microOMEGAs_vector/@PackID"
+      source: "&J/deps/microOMEGAs"
+      installation:
+        - "mkdir -p ${path}"
+        - "cp -R ${source}/. ${path}"
+        - "cd ${path}/vector-iDM && make clean && make main=main.cpp"
+      initialization:
+        - "rm -f ${path}/vector-iDM/output.json"
+      execution:
+        path: "&J/calculators/microOMEGAs_vector/@PackID/vector-iDM"
+        commands: ["./main input.json output.json"]
+        input:
+          - name: inpjson
+            path: "&J/calculators/microOMEGAs_vector/@PackID/vector-iDM/input.json"
+            type: JSON
+            actions:
+              - type: Dump
+                variables:
+                  - {name: mDM, expression: "MChi"}
+                  - {name: MAD, expression: "1000.0"}
+                  - {name: deltaM, expression: "0.1"}
+                  - {name: gchiD, expression: "GChi"}
+                  - {name: epsilon, expression: "0.01"}
+            save: true
+        output:
+          - name: oupjson
+            path: "&J/calculators/microOMEGAs_vector/@PackID/vector-iDM/output.json"
+            type: JSON
+            save: true
+            variables:
+              - {name: Omega_h2, entry: "relicDensity.Omega_h2"}
+              - {name: Xf, entry: "relicDensity.Xf"}
+              - {name: sigma_v_cm3_per_s, entry: "indirectDetection.sigmaV_cm3_s"}
+              - {name: SIp_pb, entry: "directDetection.crossSections.elastic.protonSI_pb"}
+              - {name: SDp_pb, entry: "directDetection.crossSections.elastic.protonSD_pb"}
+              - {name: SIn_pb, entry: "directDetection.crossSections.elastic.neutronSI_pb"}
+              - {name: SDn_pb, entry: "directDetection.crossSections.elastic.neutronSD_pb"}

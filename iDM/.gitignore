@@ -1,0 +1,25 @@
+# OS / editor files
+.DS_Store
+.vscode/
+
+# Jarvis runtime state and generated artifacts
+.jarvis/
+.cache/
+calculators/
+checkpoints/
+outputs/
+logs/
+images/
+reports/
+exports/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments and temporary working files
+.venv/
+venv/
+tmp/
+tmp_check/

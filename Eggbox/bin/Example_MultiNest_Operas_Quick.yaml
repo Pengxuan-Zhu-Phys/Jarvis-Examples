@@ -1,31 +1,47 @@
+# Jarvis-HEP V2 smoke card — Eggbox MultiNest (quick)
+#
+# Method: MultiNest → always static NestedSampler (not Fortran MultiNest).
+# Compare: bin/Example_Dynesty_Operas_Quick.yaml  (DynamicNestedSampler)
+#
+# Run from the Eggbox project root:
+#   Jarvis2 run bin/Example_MultiNest_Operas_Quick.yaml
+#
+# Expect under outputs/<scan>/:
+#   DATABASE/samples.hdf5
+#   DATABASE/multinest_result.csv
+#   DATABASE/sampler_summary.json
+
 Scan:
   name: "EggBox_MultiNest_Operas_Quick"
   save_dir: "&J/outputs"
+  sample_directory:
+    limit: 200
+    width: 6
+    archive_samples: true
 
 Sampling:
-  Method: "MultiNest"
+  Method: "MultiNest"            # always static NestedSampler
+  Seed: 21
   Variables:
     - name: xx
-      description: "Variable X following a Flat distribution for sampling."
+      description: "Variable X (Flat) for Eggbox."
       distribution:
         type: Flat
-        parameters:
-          min: 0
-          max: 5.0
-
+        parameters: {min: 0.0, max: 5.0}
     - name: yy
-      description: "Variable Y following a Flat distribution for sampling."
+      description: "Variable Y (Flat) for Eggbox."
       distribution:
         type: Flat
-        parameters:
-          min: 0
-          max: 5.0
+        parameters: {min: 0.0, max: 5.0}
+
   Bounds:
-    nlive: 48
-    rseed: 21
+    # Laptop smoke: modest nlive; looser dlogz than Dynesty Quick (no dynamic batches).
+    nlive: 40
+    dlogz: 0.5                   # static NestedSampler evidence stop
     run_nested:
-      maxcall: 120
-      print_progress: False
+      print_progress: true
+      # maxcall: 50000
+      # maxiter: 2000
 
   LogLikelihood:
     - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
@@ -39,6 +55,10 @@ EnvReqs:
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
+  # Keep workers modest for Quick (bucket-lock stampede at live-point init).
+  V2:
+    workers: 4
+    batch_size: 16
 
 Operas:
   make_paraller: 4
