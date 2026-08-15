@@ -1,6 +1,5 @@
 Scan:
   name: "SPheno_Grid_MSSM4D"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Grid"
@@ -37,7 +36,7 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 1
+  make_parallel: 1
   path: "&J/calculators/spheno"
   Modules:
     - name: SPheno

@@ -1,13 +1,10 @@
 Scan:
   name: "GMFit_Random"
-  save_dir: "&J/outputs"
-  sample_directory:
-    limit: 200
-    width: 6
-    archive_samples: true
 
 Sampling:
   Method: "Random"
+  Bounds:
+    point_number: 200
   Variables:
     - name: mh
       description: "Light Higgs mass input for INPUTSET 5."
@@ -65,7 +62,6 @@ Sampling:
         parameters:
           min: -0.10
           max: 0.25
-  Point number: 200
   LogLikelihood:
     - {name: "LogL_accept", expression: "gm_unitarity * gm_bfb * gm_posmsq * gm_min * gm_inputok * gm_vs_ok * rge_pass_gut * rge_vs_ok * Heaviside(rge_vac_ok) * Max(Heaviside(3 - Abs(gm_mh - 125)), Heaviside(3 - Abs(gm_mH - 125)))"}
 
@@ -81,7 +77,7 @@ EnvReqs:
 
 LibDeps:
   path: "&J/deps/library"
-  make_paraller: 2
+  make_parallel: 2
   Modules:
     - name: "LoopTools"
       required_modules: []
@@ -95,7 +91,7 @@ LibDeps:
           - "tar -xvzf LoopTools-2.16.tar.gz"
           - "cd ${path}"
           - "./configure --prefix=\"${path}\""
-          - "make -j${LibDeps:make_paraller}"
+          - "make -j${LibDeps:make_parallel}"
           - "make install"
 
     - name: "FeynHiggs" 
@@ -111,7 +107,7 @@ LibDeps:
           - "tar -xvzf FeynHiggs-2.19.0.tar.gz"
           - "cd ${path}"
           - "./configure --prefix=\"${path}\""
-          - "make -j${LibDeps:make_paraller}"
+          - "make -j${LibDeps:make_parallel}"
           - "make install"
 
     - name: "HiggsBounds"
@@ -127,7 +123,7 @@ LibDeps:
           - "tar -xvzf HiggsBounds-5.3.2beta.tar.gz"
           - "cd ${path}"
           - "./configure --fhpath=${LibDeps:path}/FeynHiggs-2.19.0"
-          - "make -j${LibDeps:make_paraller}"
+          - "make -j${LibDeps:make_parallel}"
 
     - name: "HiggsSignals"
       required_modules:
@@ -143,7 +139,7 @@ LibDeps:
           - "tar -xvzf HiggsSignals-2.2.3beta.tar.gz"
           - "cd ${path}"
           - "./configure --hbpath=${LibDeps:path}/HiggsBounds-5.3.2beta --fhpath=${LibDeps:path}/FeynHiggs-2.19.0"
-          - "make -j${LibDeps:make_paraller}"
+          - "make -j${LibDeps:make_parallel}"
 
     - name: "HiggsTools"
       required_modules: []
@@ -159,12 +155,12 @@ LibDeps:
           - "mkdir build"
           - "cd build"
           - "cmake .. "
-          - "make -j${LibDeps:make_paraller}"
+          - "make -j${LibDeps:make_parallel}"
           - "cd .." 
           - "python -m pip install ."
 
 Calculators:
-  make_paraller: 2
+  make_parallel: 2
   path: "&J/calculators/"
   Modules:
     - name: GMFit
@@ -174,7 +170,6 @@ Calculators:
       clone_shadow: True
       path: &gmfit_path "&J/calculators/GMFit/@PackID"
       source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps/gmcalc1.5.3J"
-      deps_source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps"
       installation:
         - "mkdir -p ${path}"
         - "cp -r ${source} ${path}/gmcalc1.5.3"
@@ -182,7 +177,7 @@ Calculators:
         - "make -C ${path}/gmcalc1.5.3 gmmg5 gmscan gmpoint gmhb5 gmhb5-nolt LT=${LibDeps:path}/LoopTools-2.16 HS2=${LibDeps:path}/HiggsSignals-2.2.3beta HB5=${LibDeps:path}/HiggsBounds-5.3.2beta LIB=build"
       initialization:
         - "rm -f ${path}/input_json_set5.json ${path}/gm_out.dat"
-        - "cp ${deps_source}/gmfit_input_set5.json ${path}/input_json_set5.json"
+        - "cp ${source}/../gmfit_input_set5.json ${path}/input_json_set5.json"
       execution:
         path: *gmfit_path
         commands:
@@ -258,14 +253,13 @@ Calculators:
       clone_shadow: True
       path: &spheno_path "&J/calculators/SPhenoGM/@PackID"
       source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps/SPheno-4.0.5"
-      deps_source: "/Users/p.zhu/Jarvis-Workshop/Jarvis-Examples/GMFit/deps"
       installation:
         - "mkdir -p ${path}"
         - "cp -r ${source} ${path}/SPheno-4.0.5"
         - "make -C ${path}/SPheno-4.0.5/Georgi-Machacek F90=gfortran version=400.00 bin/SPhenoGM"
       initialization:
         - "rm -f ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5 ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/SPheno.spc.GM"
-        - "cp ${deps_source}/LesHouches.in.GM_set5 ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5"
+        - "cp ${source}/../LesHouches.in.GM_set5 ${path}/SPheno-4.0.5/Georgi-Machacek/Input_Files/LesHouches.in.GM_set5"
       execution:
         path: "&J/calculators/SPhenoGM/@PackID/SPheno-4.0.5/Georgi-Machacek/Input_Files"
         commands:
@@ -359,7 +353,6 @@ Calculators:
               - {name: rge_mz_sigma4, entry: "rge_mz_transformed.sigma4"}
 
 Operas:
-  make_paraller: 2
   Modules:
     - name: GMTreeVacuumStability
       operator: "gm_helper.check_tree_level_vacuum_stability"

@@ -1,6 +1,5 @@
 Scan:
   name: "FlexibleSUSY_Grid_MSSM4D"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Grid"
@@ -38,7 +37,7 @@ EnvReqs:
 
 LibDeps:
   path: "&J/deps/library"
-  make_paraller: 4
+  make_parallel: 4
   Modules:
     - name: FlexibleSUSY-lowMSSM
       required_modules: []
@@ -47,10 +46,10 @@ LibDeps:
         path: "&J/deps/library/FlexibleSUSY-lowMSSM"
         source: "&J/deps/program/FlexibleSUSY"
         commands:
-          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_paraller}"
+          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_parallel}"
 
 Calculators:
-  make_paraller: 4
+  make_parallel: 4
   path: "&J/calculators/flexiblesusy"
   Modules:
     - name: FlexibleSUSY

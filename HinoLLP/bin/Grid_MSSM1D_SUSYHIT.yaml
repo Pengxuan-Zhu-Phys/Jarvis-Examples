@@ -1,7 +1,6 @@
 Scan:
   # name: "SUSYHIT_Grid_MSSM4D"
   name: "SUSYHIT_Grid_MSSM1D_mu100_M2p2T_TB2"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Grid"
@@ -38,7 +37,7 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 4
+  make_parallel: 4
   path: "&J/calculators/susyhit"
   Modules:
     - name: SUSYHIT

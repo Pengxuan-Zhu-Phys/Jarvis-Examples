@@ -1,9 +1,12 @@
 Scan:
   name: "HinoLLP_MuTB@M2B2_SPheno"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Bridson"
+  Bounds:
+    radius: 1
+    max_attempt: 30
+    max_worker: 12
   Variables:
     - name: Mu
       description: "Variable X following a Flat distribution for sampling."
@@ -24,28 +27,25 @@ Sampling:
           length: 70.87
 
   Nuisance:
-    Method: Profile1D
-    Variables:
+    method: Profile1D
+    variables:
       - name: ratio
         description: "ratio of M2/M1"
         distribution: {type: Flat, parameters: {min: -3, max: -2}}
 
-    LogLikelihood:
+    log_likelihood:
       - {name: "LogLNP_wN2", expression: "Abs(log(WN2) + 30.3)"}
       - {name: "LogLNP_mN1Penalty", expression: "100.0 * (1 + sign(mN1))/2"}
 
-    TargetMode: "min"
+    target_mode: "min"
 
-    PassCondition:
+    pass_condition:
       - {name: "N1LSP", expression: "Abs(mN1) < Abs(mC1)"}
       - {name: "mN1Plus", expression: "mN1 < 0"}
       - {name: "LLN2", expression: "LogLNP_wN2 < 0.01"}
 
-    MaxAttempt: 100
+    max_attempt: 100
 
-  Radius: 1
-  MaxAttempt: 30
-  MaxWorker: 12
   LogLikelihood:
     - {name: "LogL_comp", expression: "-100 * log(abs(mN2) - abs(mN1))"}
 
@@ -60,7 +60,7 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 1
+  make_parallel: 1
   path: "&J/calculators/spheno"
   Modules:
     - name: SPheno

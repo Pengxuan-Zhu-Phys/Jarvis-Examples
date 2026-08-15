@@ -33,6 +33,20 @@
         "var::mC2",
         "var::mh1"
       ]
+    },
+    {
+      "id": "layer_3",
+      "index": 3,
+      "label": "SDECAY",
+      "nodes": [
+        "SDECAY",
+        "file::SDECAY::input::flexiblesusy_spectrum",
+        "var::flexiblesusy_output",
+        "file::SDECAY::output::sdecay_output",
+        "var::WC1",
+        "var::WN2",
+        "var::BRN22N1a"
+      ]
     }
   ],
   "nodes": [
@@ -306,6 +320,171 @@
         "producer": "FlexibleSUSY"
       },
       "layer": "layer_2"
+    },
+    {
+      "id": "SDECAY",
+      "kind": "module",
+      "role": "calculator",
+      "label": "SDECAY",
+      "in_ports": [
+        {
+          "id": "flexiblesusy_spectrum",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "sdecay_output",
+          "role": "file",
+          "metadata": {
+            "file_type": "SLHA"
+          }
+        }
+      ],
+      "metadata": {
+        "module_type": "Calculator",
+        "required_modules": [
+          "FlexibleSUSY"
+        ]
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::SDECAY::input::flexiblesusy_spectrum",
+      "kind": "file",
+      "role": "input_file",
+      "label": "flexiblesusy_spectrum",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "input",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::flexiblesusy_output",
+      "kind": "variable",
+      "role": "observable",
+      "label": "flexiblesusy_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "consumer": "SDECAY"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "file::SDECAY::output::sdecay_output",
+      "kind": "file",
+      "role": "output_file",
+      "label": "sdecay_output",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "file_input"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "file_output"
+        }
+      ],
+      "metadata": {
+        "direction": "output",
+        "file_type": "SLHA"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::WC1",
+      "kind": "variable",
+      "role": "observable",
+      "label": "WC1",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SDECAY"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::WN2",
+      "kind": "variable",
+      "role": "observable",
+      "label": "WN2",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SDECAY"
+      },
+      "layer": "layer_3"
+    },
+    {
+      "id": "var::BRN22N1a",
+      "kind": "variable",
+      "role": "observable",
+      "label": "BRN22N1a",
+      "in_ports": [
+        {
+          "id": "in",
+          "role": "observable"
+        }
+      ],
+      "out_ports": [
+        {
+          "id": "out",
+          "role": "observable"
+        }
+      ],
+      "metadata": {
+        "producer": "SDECAY"
+      },
+      "layer": "layer_3"
     }
   ],
   "edges": [
@@ -477,6 +656,102 @@
       "metadata": {
         "module": "FlexibleSUSY",
         "variable": "mh1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "var::flexiblesusy_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "file::SDECAY::input::flexiblesusy_spectrum",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "variable": "flexiblesusy_output",
+        "module": "SDECAY",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SDECAY::input::flexiblesusy_spectrum",
+        "port": "out"
+      },
+      "target": {
+        "node": "SDECAY",
+        "port": "flexiblesusy_spectrum"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SDECAY",
+        "input": "flexiblesusy_spectrum",
+        "direction": "input"
+      }
+    },
+    {
+      "source": {
+        "node": "SDECAY",
+        "port": "sdecay_output"
+      },
+      "target": {
+        "node": "file::SDECAY::output::sdecay_output",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SDECAY",
+        "output": "sdecay_output",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SDECAY::output::sdecay_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::WC1",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SDECAY",
+        "variable": "WC1",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SDECAY::output::sdecay_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::WN2",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SDECAY",
+        "variable": "WN2",
+        "direction": "output"
+      }
+    },
+    {
+      "source": {
+        "node": "file::SDECAY::output::sdecay_output",
+        "port": "out"
+      },
+      "target": {
+        "node": "var::BRN22N1a",
+        "port": "in"
+      },
+      "role": "fileflow",
+      "metadata": {
+        "module": "SDECAY",
+        "variable": "BRN22N1a",
         "direction": "output"
       }
     }

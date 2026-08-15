@@ -1,2 +1,13 @@
 .vscode
 .DS_Store
+
+# Local projects and generated workspace content
+/2HDM-PT/
+/Eggbox-V1/
+/GMFit/.obsidian/
+/GMFit/Docs/
+/GMFit/deps/
+/HinoLLP/deps/program/susyhit/prepare_sdecay_input.py
+/NMSSM/
+/Program/
+/QIDDM/

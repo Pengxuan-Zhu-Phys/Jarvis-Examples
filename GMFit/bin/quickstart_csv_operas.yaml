@@ -1,14 +1,9 @@
 Scan:
   name: "quickstart_csv_operas"
-  save_dir: "&J/outputs"
-  sample_directory:
-    limit: 200
-    width: 6
-    archive_samples: true
 
 Sampling:
   Method: "CSV"
-  CSV:
+  Bounds:
     path: "&J/data/points.csv"
     uuid_column: "uuid"
     variables: ["x", "y"]
@@ -26,7 +21,6 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Operas:
-  make_paraller: 8
   Modules:
     - name: EggBox
       operator: "helper.eggbox2d"

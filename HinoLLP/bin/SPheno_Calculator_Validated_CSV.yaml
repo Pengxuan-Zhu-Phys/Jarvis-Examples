@@ -1,10 +1,9 @@
 Scan:
   name: "SPheno_Calculator_Validated_Std"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "CSV"
-  CSV:
+  Bounds:
     path: "&J/data/susyhit_standard_points.csv"
     uuid_column: "uuid"
     variables: ["Mu", "Tb", "ratio"]
@@ -22,7 +21,7 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 1
+  make_parallel: 1
   path: "&J/calculators/spheno"
   Modules:
     - name: SPheno

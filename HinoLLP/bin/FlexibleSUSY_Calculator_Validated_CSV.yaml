@@ -1,10 +1,9 @@
 Scan:
   name: "FlexibleSUSY_Calculator_Validated_Std"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "CSV"
-  CSV:
+  Bounds:
     path: "&J/data/susyhit_standard_points.csv"
     uuid_column: "uuid"
     variables: ["Mu", "Tb", "ratio"]
@@ -23,7 +22,7 @@ EnvReqs:
 
 LibDeps:
   path: "&J/deps/library"
-  make_paraller: 4
+  make_parallel: 4
   Modules:
     - name: FlexibleSUSY-lowMSSM
       required_modules: []
@@ -32,10 +31,10 @@ LibDeps:
         path: "&J/deps/library/FlexibleSUSY-lowMSSM"
         source: "&J/deps/program/FlexibleSUSY"
         commands:
-          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_paraller}"
+          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_parallel}"
 
 Calculators:
-  make_paraller: 4
+  make_parallel: 4
   path: "&J/calculators/flexiblesusy"
   Modules:
     - name: FlexibleSUSY

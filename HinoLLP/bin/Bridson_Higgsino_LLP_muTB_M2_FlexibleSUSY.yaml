@@ -1,9 +1,12 @@
 Scan:
   name: "HinoLLP_MuTB@M2B2_FlexibleSUSY"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Bridson"
+  Bounds:
+    radius: 1
+    max_attempt: 30
+    max_worker: 12
   Variables:
     - name: Mu
       description: "Higgsino mass parameter."
@@ -24,28 +27,25 @@ Sampling:
           length: 70.87
 
   Nuisance:
-    Method: Profile1D
-    Variables:
+    method: Profile1D
+    variables:
       - name: ratio
         description: "ratio of M2/M1"
         distribution: {type: Flat, parameters: {min: -3, max: -2}}
 
-    LogLikelihood:
+    log_likelihood:
       - {name: "LogLNP_mass_gap", expression: "Abs(Abs(mN2) - Abs(mN1))"}
       - {name: "LogLNP_mN1Penalty", expression: "100.0 * (1 + sign(mN1))/2"}
 
-    TargetMode: "min"
+    target_mode: "min"
 
-    PassCondition:
+    pass_condition:
       - {name: "N1LSP", expression: "Abs(mN1) < Abs(mC1)"}
       - {name: "mN1Plus", expression: "mN1 < 0"}
       - {name: "CompressedN12", expression: "LogLNP_mass_gap < 10.0"}
 
-    MaxAttempt: 100
+    max_attempt: 100
 
-  Radius: 1
-  MaxAttempt: 30
-  MaxWorker: 12
   LogLikelihood:
     - {name: "LogL_comp", expression: "-100 * log(abs(mN2) - abs(mN1))"}
 
@@ -61,7 +61,7 @@ EnvReqs:
 
 LibDeps:
   path: "&J/deps/library"
-  make_paraller: 4
+  make_parallel: 4
   Modules:
     - name: FlexibleSUSY-lowMSSM
       required_modules: []
@@ -70,10 +70,10 @@ LibDeps:
         path: "&J/deps/library/FlexibleSUSY-lowMSSM"
         source: "&J/deps/program/FlexibleSUSY"
         commands:
-          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_paraller}"
+          - "sh ${source}/jarvis_build_lowMSSM_once.sh ${source} ${path} ${LibDeps:make_parallel}"
 
 Calculators:
-  make_paraller: 4
+  make_parallel: 4
   path: "&J/calculators/flexiblesusy"
   Modules:
     - name: FlexibleSUSY

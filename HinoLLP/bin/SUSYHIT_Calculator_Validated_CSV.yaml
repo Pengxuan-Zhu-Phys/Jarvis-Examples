@@ -1,10 +1,9 @@
 Scan:
   name: "SUSYHIT_Calculator_Validated_Std"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "CSV"
-  CSV:
+  Bounds:
     path: "&J/data/susyhit_standard_points.csv"
     uuid_column: "uuid"
     variables: ["Mu", "Tb", "ratio"]
@@ -22,7 +21,7 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 4
+  make_parallel: 4
   path: "&J/calculators/susyhit"
   Modules:
     - name: SUSYHIT
@@ -34,7 +33,7 @@ Calculators:
         - "cp ${source}/susyhit.tar.gz ${path}"
         - "cd ${path}"
         - "tar -zxvf susyhit.tar.gz"
-        - "make -j${Calculators:make_paraller}"
+        - "make -j${Calculators:make_parallel}"
       initialization:
         - "cp ${source}/suspect2_lha_llp_temp02.in ${path}/suspect2_lha.in"
         - "rm -f ${path}/susyhit_slha.out"

@@ -19,7 +19,12 @@
 \ProvidesClass{ar2rc}[2020/08/04 Author response to reviewer comment class]
 \LoadClass{article}
 
-\RequirePackage[includeheadfoot,top=20mm, bottom=20mm, footskip=2.5cm]{geometry}
+\RequirePackage[
+  includeheadfoot,
+  top=20mm,bottom=20mm,
+  left=25mm,right=25mm,
+  footskip=2cm
+]{geometry}
 
 % Typography
 \RequirePackage[T1]{fontenc}
@@ -55,37 +60,36 @@
 \renewmdenv[leftmargin=0.4em, rightmargin=0.4em%
 innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
 
-% Left-bar block quote for reviewer comments (RC/RCpar/RC*): a gray vertical
-% rule, height-matched to the quoted text, with the "RC:" label hanging
-% outside (to the left of) the rule. An RC followed immediately by RCpar (or
-% an RCpar followed by another RCpar) is treated as one module: neighbouring
-% rules bleed into the inter-paragraph gap and meet, while the first and last
-% rules stop at the module boundaries. The rule is smashed vertically so its
-% bleed does not enlarge the text spacing it is meant to bridge.
-\newsavebox{\RCbox}
+% Breakable left-bar blocks for reviewer comments (RC/RCpar/RC*). An RC
+% followed immediately by RCpar (or an RCpar followed by another RCpar) is
+% treated as one module. Adjacent frames have no external gap, and their inner
+% margins provide the normal paragraph spacing while keeping the rule joined.
+% Unlike a minipage, mdframed can split a long reviewer paragraph across pages.
 \newlength{\RCgap}
 \setlength{\RCgap}{0.3\baselineskip}
-% Compute the flexible skip value first, then copy it into a plain \dimen so it
-% can be used safely in the rule dimensions below. In a \dimexpr, an integer
-% factor is written directly before the dimension (for example, 2\RCbleed),
-% without a multiplication sign.
-\newlength{\RCbleedskip}
-\setlength{\RCbleedskip}{\RCgap}
-\addtolength{\RCbleedskip}{0.5\parskip}
-% A small overlap prevents a hairline gap from device-pixel rounding where
-% two continuation rules meet.
-\addtolength{\RCbleedskip}{0.5pt}
-\newdimen\RCbleed
-\RCbleed=\RCbleedskip\relax
-% #1 = top bleed, #2 = bottom bleed, #3 = quoted text.
-\long\def\RCquote#1#2#3{%
-  \sbox{\RCbox}{\begin{minipage}[t]{\dimexpr\linewidth-9pt\relax}#3\end{minipage}}%
-  {\color{black!50}%
-   \smash{\rule[-\dimexpr\dp\RCbox+#2\relax]{1pt}{\dimexpr\ht\RCbox+\dp\RCbox+#1+#2\relax}}}%
-  \hspace{8pt}%
-  \usebox{\RCbox}%
+\newlength{\RCbeforegap}
+\setlength{\RCbeforegap}{\RCgap}
+\addtolength{\RCbeforegap}{2mm}
+\newlength{\RCcontinuationskip}
+\setlength{\RCcontinuationskip}{\RCgap}
+\addtolength{\RCcontinuationskip}{0.5\parskip}
+% #1 = inner top gap, #2 = inner bottom gap, #3 = optional label,
+% #4 = quoted text.
+\long\def\RCquote#1#2#3#4{%
+  \begin{mdframed}[
+    leftline=true,rightline=false,topline=false,bottomline=false,
+    linewidth=1pt,linecolor=black!50,
+    leftmargin=0pt,rightmargin=0pt,
+    innerleftmargin=8pt,innerrightmargin=0pt,
+    innertopmargin=#1,innerbottommargin=#2,
+    skipabove=0pt,skipbelow=0pt,
+    splittopskip=\topskip,splitbottomskip=\topskip
+  ]%
+  #3#4%
+  \end{mdframed}%
 }
 \newcommand{\RCvspace}{\vspace{\RCgap}}
+\newcommand{\RCbeforevspace}{\vspace{\RCbeforegap}}
 
 % Table styles
 \let\oldtabular=\tabular
@@ -103,18 +107,22 @@ innerleftmargin=0.6em,innerrightmargin=0.6em]{quote}
 %% Define that \RC and \AR should start and format the whole paragraph
 \RequirePackage{suffix}
 \long\def\RC#1\par{%
-  \RCvspace\noindent\makebox[0pt][r]{\textbf{RC:}\hspace{4mm}}%
+  \RCbeforevspace
   \@ifnextchar\RCpar
-    {\RCquote{0pt}{\RCbleed}{#1}\par\RCvspace}% continued module
-    {\RCquote{0pt}{0pt}{#1}\par\RCvspace}% complete module
+    {\RCquote{0pt}{\RCcontinuationskip}%
+      {\makebox[0pt][r]{\textbf{RC:}\hspace{\dimexpr8pt+4mm\relax}}}{#1}}%
+    {\RCquote{0pt}{0pt}%
+      {\makebox[0pt][r]{\textbf{RC:}\hspace{\dimexpr8pt+4mm\relax}}}{#1}\RCvspace}%
 } %\RC
 \long\def\RCpar#1\par{%
-  \RCvspace\noindent
+  % mdframed paragraphs contribute one \parskip between adjacent frames;
+  % remove it here because the joined module carries its spacing internally.
+  \vspace{-\parskip}%
   \@ifnextchar\RCpar
-    {\RCquote{\RCbleed}{\RCbleed}{#1}\par\RCvspace}% continued module
-    {\RCquote{\RCbleed}{0pt}{#1}\par\RCvspace}% end of module
+    {\RCquote{\RCcontinuationskip}{\RCcontinuationskip}{}{#1}}%
+    {\RCquote{\RCcontinuationskip}{0pt}{}{#1}\RCvspace}% end of module
 } %\RCpar
-\WithSuffix\long\def\RC*#1\par{\RCvspace\noindent\RCquote{0pt}{0pt}{#1}\par\RCvspace} %\RC*
+\WithSuffix\long\def\RC*#1\par{\RCvspace\RCquote{0pt}{0pt}{}{#1}\RCvspace} %\RC*
 \long\def\AR#1\par{\makebox[0pt][r]{AR:\hspace{10pt}}#1\par} %\AR
 \WithSuffix\long\def\AR*#1\par{#1\par} %\AR*
 
