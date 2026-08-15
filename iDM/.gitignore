@@ -1,9 +1,13 @@
 # OS / editor files
 .DS_Store
 .vscode/
+.idea/
+*.swp
+*.swo
 
 # Jarvis runtime state and generated artifacts
 .jarvis/
+.jarvis-pack/
 .cache/
 calculators/
 checkpoints/
@@ -13,13 +17,22 @@ images/
 reports/
 exports/
 
+# Local model/calculator dependencies
+# deps/environment_default.yaml remains trackable; these are local bundles or links.
+deps/models/
+deps/microOMEGAs
+
 # Python and test caches
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
 
 # Local environments and temporary working files
 .venv/
 venv/
 tmp/
 tmp_check/
+*.local
