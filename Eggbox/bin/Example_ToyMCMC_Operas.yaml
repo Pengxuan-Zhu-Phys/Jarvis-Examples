@@ -1,31 +1,31 @@
-# Bridson Eggbox scan using the released Jarvis-Operas helper.
-# CLI sources: Jarvis man sampler.Bridson --json; Jarvis man operas --json;
+# ToyMCMC Eggbox scan using the released Jarvis-Operas helper.
+# CLI sources: Jarvis man sampler.ToyMCMC --json; Jarvis man operas --json;
 #              Jarvis operas info helper.eggbox2d
 Scan:
-  name: "EggBox_Bridson_Operas"
+  name: "EggBox_ToyMCMC_Operas"
 
 Sampling:
-  Method: "Bridson"
+  Method: "ToyMCMC"
   Bounds:
-    radius: 1
-    max_attempt: 30
+    num_chains: 4
+    num_iters: 2000
+    proposal_scale: 0.2
+    seed: 0
   Variables:
-    - name: xx
+    - name: x
       description: "Eggbox x coordinate with logarithmic sampling."
       distribution:
         type: Log
         parameters:
           min: 0.1
           max: 5.0
-          length: 110
-    - name: yy
+    - name: y
       description: "Eggbox y coordinate with flat sampling."
       distribution:
         type: Flat
         parameters:
           min: 0.0
           max: 5.0
-          length: 110
   LogLikelihood:
     - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
 
@@ -34,7 +34,7 @@ EnvReqs:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
   V2:
-    workers: 16
+    workers: 4
 
 Operas:
   Modules:
@@ -43,7 +43,7 @@ Operas:
       call_mode: call
       required_modules: []
       input:
-        - {name: x, expression: "xx * Pi"}
-        - {name: y, expression: "yy * Pi"}
+        - {name: x, expression: "x * Pi"}
+        - {name: y, expression: "y * Pi"}
       output:
         - {name: z, entry: z}

@@ -14,15 +14,9 @@
 
 Scan:
   name: "EggBox_Dynesty_Operas_Quick"
-  save_dir: "&J/outputs"
-  sample_directory:
-    limit: 200
-    width: 6
-    archive_samples: true
 
 Sampling:
   Method: "Dynesty"              # always DynamicNestedSampler
-  Seed: 21
   Variables:
     - name: xx
       description: "Variable X (Flat) for Eggbox."
@@ -36,6 +30,7 @@ Sampling:
         parameters: {min: 0.0, max: 5.0}
 
   Bounds:
+    seed: 21
     # Laptop smoke: small nlive; raise for production.
     nlive: 40
     dlogz: 0.001                 # → DynamicNestedSampler dlogz_init
@@ -63,7 +58,6 @@ EnvReqs:
     batch_size: 16
 
 Operas:
-  make_paraller: 4
   Modules:
     - name: EggBox
       operator: "helper.eggbox2d"

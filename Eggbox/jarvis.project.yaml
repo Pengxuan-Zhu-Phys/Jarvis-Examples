@@ -1,6 +1,7 @@
 project:
   format: jarvis-hep-standalone-project
   version: 1
+  runtime: jarvis2
   output_root: outputs
   artifact_roots:
     outputs: outputs
@@ -10,4 +11,4 @@ project:
   path_markers:
     task_root: '&J'
   defaults:
-    main_config: bin/quickstart_mcmc_operas.yaml
+    main_config: bin/quickstart_bridson_operas.yaml

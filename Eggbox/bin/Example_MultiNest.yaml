@@ -1,144 +1,66 @@
+# MultiNest Eggbox scan using a project-local external Calculator and JSON Portal IO.
+# CLI sources: Jarvis man sampler.Random --json; Jarvis man example.calculator --json;
+#              Jarvis man calculator.execution.{input,output} --type JSON --json
 Scan:
-  name: "EggBox_MultiNest_01"
-  save_dir: "&J/outputs"
+  name: "EggBox_MultiNest_Calculator"
 
 Sampling:
   Method: "MultiNest"
+  Bounds:
+    nlive: 40
+    dlogz: 0.5
+    run_nested:
+      print_progress: true
   Variables:
     - name: x
-      description: "Variable X following a Flat distribution for sampling."
+      description: "Eggbox x coordinate with logarithmic sampling."
       distribution:
-        type: Flat
+        type: Log
         parameters:
-          min: 0
+          min: 0.1
           max: 5.0
-
     - name: y
-      description: "Variable Y following a Flat distribution for sampling."
+      description: "Eggbox y coordinate with flat sampling."
       distribution:
         type: Flat
         parameters:
-          min: 0
+          min: 0.0
           max: 5.0
-  Bounds:
-    nlive: 160
-    rseed: 21
-    run_nested:
-      maxcall: 4000
-      print_progress: True
-
   LogLikelihood:
-    - {name: "LogL_Z", expression: "(2 + z)**5"}
+    - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
 
 EnvReqs:
-  OS:
-    - name: linux
-      version: ">=5.10.0"
-    - name: Darwin
-      version: ">=10.14"
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
-
-LibDeps:
-  path: "&J/deps/library"
-  make_paraller: 16
-  Modules:
-    - name: "Delphes"
-      required_modules: []
-      installed: False
-      installation:
-        path: "&J/deps/library/Delphes"
-        source: "&J/deps/library/source/Delphes-3.5.0.tar.gz"
-        commands:
-          - "cd ${LibDeps:path}"
-          - "rm -rf Delphes*"
-          - "cp ${source} ./"
-          - "tar -xzf Delphes-3.5.0.tar.gz"
-          - "mv ./Delphes-3.5.0 ${path}"
-          - "cd ${path}"
-          - "source @{ROOT path}/bin/thisroot.sh"
-          - "./configure"
-          - "make -j${LibDeps:make_paraller}"
-
-    - name: "HepMC"
-      required_modules: []
-      installed: False
-      installation:
-        path: "&J/deps/library/HepMC"
-        source: "&J/deps/library/source/HepMC-2.06.09.tar.gz"
-        commands:
-          - "cd ${LibDeps:path}"
-          - "rm -rf HepMC*"
-          - "cp ${source} ./"
-          - "tar -xzf HepMC-2.06.09.tar.gz"
-          - "cd ${LibDeps:path}/HepMC-2.06.09"
-          - "./bootstrap"
-          - "./configure --with-momentum=GEV --with-length=MM --prefix=${path}"
-          - "make -j${LibDeps:make_paraller}"
-          - "make install"
-
-    - name: "Pythia8"
-      required_modules:
-        - "HepMC"
-      installed: False
-      installation:
-        path: "&J/deps/library/Pythia8"
-        source: "&J/deps/library/source/pythia8230.tgz"
-        commands:
-          - "cd ${LibDeps:path}"
-          - "mkdir Pythia8"
-          - "cd ${LibDeps:path}/Source"
-          - "tar -zxvf pythia8230.tgz"
-          - "cd ${LibDeps:path}/Source/pythia8230"
-          - "./configure --with-hepmc2=${LibDeps:path}/HepMC --prefix=${path}"
-          - "make -j${LibDeps:make_paraller}"
-          - "make install"
+  V2:
+    workers: 16
 
 Calculators:
-  make_paraller: 16
-  path: "&J/calculators/runtime/program"
+  Pools:
+    EggBox: 16
   Modules:
     - name: EggBox
       required_modules: []
-      clone_shadow: True
-      path: &eggbox_path "&J/calculators/runtime/program/EggBox/@PackID"
-      source: "&J/deps/assets/inertial/EggBox"
-      installation:
-        - "cp -r ${source}/* ${path}"
-      initialization:
-        - "cp -r ${source}/input.json ${path}/input.json"
-        - "rm -f output.json"
+      clone_shadow: false
+      path: "&J/deps/assets/inertial/EggBox"
       execution:
-        path: *eggbox_path
+        path: "@Sdir"
         commands:
-          - "./eggbox.py"
+          - cmd: 'python3 "&J/deps/assets/inertial/EggBox/eggbox.py"'
+            cwd: "@Sdir"
         input:
           - name: inpjson
-            path: "&J/calculators/runtime/program/EggBox/@PackID/input.json"
-            type: "JSON"
+            path: "@Sdir/input.json"
+            type: JSON
             actions:
-              - type: "Dump"
+              - type: Dump
                 variables:
-                  - {name: "xx", expression: "x * Pi"}
-                  - {name: "yy", expression: "y * Pi"}
-            save: True
+                  - {name: xx, expression: "x * Pi"}
+                  - {name: yy, expression: "y * Pi"}
         output:
-          - name: oupjson
-            path: "&J/calculators/runtime/program/EggBox/@PackID/output.json"
-            type: "JSON"
-            save: True
+          - name: outjson
+            path: "@Sdir/output.json"
+            type: JSON
             variables:
-              - {name: z}
-
-Utils:
-  interpolations_1D:
-    - name: XenonSD2019
-      file: "&J/data/reference/Xenon1T2019SD_p.csv"
-      logY: True
-      logX: False
-      kind: "cubic"
-    - name: inter1P
-      x_values: [1, 2, 3, 4, 5]
-      y_values: [2, 1.8, 1.5, 1.2, 0.8]
-      kind: "cubic"
+              - {name: z, entry: z}

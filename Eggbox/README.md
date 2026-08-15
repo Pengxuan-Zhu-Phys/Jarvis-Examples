@@ -1,60 +1,106 @@
-# Jarvis-HEP Standalone Project
+# Jarvis-HEP V2 Project
 
-This folder was created by:
-
-```bash
-Jarvis --mkproject <PROJECT_NAME>
-```
-
-## Quick Start
-
-Run the built-in toy workflow:
+Created with:
 
 ```bash
-Jarvis bin/quickstart_mcmc_operas.yaml
-```
-
-Run CSV replay example:
-
-```bash
-Jarvis bin/quickstart_csv_operas.yaml
+Jarvis project create <name>
 ```
 
 ## Layout
 
-- `.jarvis-project.json` / `jarvis.project.yaml`: project-root markers
-- `bin/`: runnable YAML entry cards
-- `data/`: project input datasets
-- `deps/`: project-local dependency baseline (`environment_default.yaml` includes `EnvReqs.V2`)
+| Path | Role |
+|------|------|
+| `bin/` | Task YAML cards |
+| `bin/sampling/` | Nested sampling `Sampling:` templates (Dynesty / MultiNest) |
+| `data/` | Small input tables / fixtures |
+| `deps/` | Default environment policy (`environment_default.yaml`) |
+| `jarvis.project.yaml` | Project descriptor (`&J` root) |
+| `.jarvis-project.json` | Machine-readable layout marker |
 
-### Card naming (Eggbox Bridson)
+Runtime directories (`outputs/`, `logs/`, `images/`, `checkpoints/`) appear on first run.
 
-Historical file names keep `process` / `thread` / `Operas` suffixes; **these are not
-runtime modes**. V1 and V2 never switch execution via `Runtime.mode` (that block is
-removed from current cards). Prefer these names in docs and reviews:
+## Quick start
 
-| Prefer saying | File | Workflow |
-|---------------|------|----------|
-| **Calculator card** | `bin/Example_Bridson_process.yaml` (also `Example_Bridson.yaml`, denser `Example_Bridson_thread.yaml`) | `Calculators` + external program + Portal IO (JSON) |
-| **Operas card** | `bin/Example_Bridson_Operas.yaml` | in-process `Operas` operator (`helper.eggbox2d`) |
+```bash
+cd <project>
+Jarvis run bin/quickstart_bridson_operas.yaml
+# or
+Jarvis bin/quickstart_bridson_operas.yaml
+```
 
-Scheduling knobs for V2: `EnvReqs.V2` (defaults in `deps/environment_default.yaml`).
+CSV operas smoke:
 
-Output directories are created automatically on first run:
+```bash
+Jarvis run bin/quickstart_csv_operas.yaml
+```
 
-- `outputs/<scan>/DATABASE`: HDF5, CSV, schema, run metadata
-- `outputs/<scan>/SAMPLE`: per-sample artifacts and sample-local logs
-- `logs/<scan>/`: Jarvis / sampler / factory logs
-- `images/<scan>/`: plots, generated plotting YAML, and workflow flowcharts
+### Look up YAML while editing
 
-The `_paper.yaml` files under `images/` are preserved Jarvis-PLOT configurations
-for reproducing the arXiv figures. Newly generated Jarvis-PLOT YAML files may
-use default names; the `_paper.yaml` files are kept stable to avoid being
-overwritten.
+`Jarvis man` documents **task-card YAML** (keys, paths, copy-paste examples that should validate).
+List-valued YAML fields are queried by field name alone; the Keys table reports `list`.
+For Portal adapter runtime or Operas operator catalogs, use their CLIs:
 
-Add optional project directories such as `calculators/`, `configs/`, `scripts/`,
-`assets/`, and `docs/` only when your workflow actually needs them.
+```bash
+Jarvis man yaml.Calculators.Modules.execution
+Jarvis man calculator.execution.output --type JSON
+Jarvis man operas
+Jarvis man example.calculator
+Jarvis man yaml.EnvReqs.V2
+Jarvis portal man JSON          # runtime adapter behaviour
+Jarvis operas info helper.eggbox2d
+Jarvis validate bin/quickstart_bridson_operas.yaml
+```
 
-Path rules:
-- `&J/...` resolves against project root.
-- Use `deps/` for project-local bundled defaults such as `&J/deps/environment_default.yaml`.
+### Nested sampling templates
+
+Under `bin/sampling/` (copy the `Sampling:` block into your card):
+
+| Template | Notes |
+|----------|--------|
+| `Sampling_Dynesty_Simple.yaml` | Dynesty = DynamicNestedSampler (everyday) |
+| `Sampling_Dynesty_Full.yaml` | Dynesty full dynamic `run_nested` + constructor |
+| `Sampling_MultiNest_Simple.yaml` | MultiNest = static NestedSampler (everyday) |
+| `Sampling_MultiNest_Full.yaml` | MultiNest full static surface only |
+
+See `bin/sampling/README.md`.
+
+## Scheduling defaults
+
+`deps/environment_default.yaml` supplies `EnvReqs.V2` (workers, SAMPLE buckets, archiver,
+and `checkpoint_heartbeat_sec`).  The heartbeat defaults to 30 seconds; lower it for
+expensive samples when you want a tighter resume replay bound.
+Override in the task YAML or edit the defaults file. There is **no** top-level `Runtime`
+block on V2 — use `EnvReqs.V2` instead.
+
+## Package for sharing
+
+```bash
+Jarvis project pack . --share
+Jarvis project pack . --repro
+Jarvis project pack . --full
+Jarvis project pack . --man    # write a pack manifest only
+```
+
+### Restricted (encrypted) release — CLI only
+
+Do **not** run `openssl` by hand. Use:
+
+```bash
+# Pack + encrypt → *.tar.gz.jenc
+Jarvis project pack . --repro --encrypt --key 'YOUR_KEY'
+
+# Or encrypt an existing tarball
+Jarvis project encrypt path/to/archive.tar.gz --key 'YOUR_KEY'
+```
+
+Collaborators fetch with:
+
+```bash
+Jarvis project list
+Jarvis project fetch YourProjectName --key 'YOUR_KEY'
+# or: export JARVIS_PROJECT_FETCH_KEY='YOUR_KEY'
+```
+
+Official catalog (public list + restricted entries) lives in
+**Jarvis-Examples** `catalog/official_project_library.json` — not a PyPI package.
+See `Jarvis-Books/Jarvis-HEP V2/components/project_tools.md` and `INSTALL.md`.

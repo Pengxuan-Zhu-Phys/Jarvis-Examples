@@ -1,12 +1,111 @@
+# Jarvis-HEP V2 default runtime policy for scaffolded projects.
+# Loaded via EnvReqs.Check_default_dependencies.default_yaml_path.
 EnvReqs:
-  # V2 reads this optional default layer through the V1-compatible
-  # Check_default_dependencies.default_yaml_path entry in each task YAML.
-  # Only EnvReqs.V2 is merged by the V2 loader; task YAML overrides win.
+  # V1-compatible preflight checks.  Set CERN_ROOT.required to true for
+  # calculators that use ROOT; Jarvis then checks root-config/version before
+  # Redis, Workers, or Archiver are started.
+  Python:
+    version: ">=3.10"
+    # Baseline carried over from Jarvis-HEP V1/Eggbox.  Keep this list in
+    # sync with the package metadata and update the floor when V2 requires a
+    # newer compatible release.
+    Dependencies:
+      - name: dill
+        required: true
+        version: ">=0.3.8"
+      - name: emoji
+        required: true
+        version: ">=2.10.1"
+      - name: h5py
+        required: true
+        version: ">=3.8"
+      - name: jsonschema
+        required: true
+        version: ">=4.18"
+      - name: loguru
+        required: true
+        version: ">=0.7.0"
+      - name: matplotlib
+        required: true
+        version: ">=3.3"
+      - name: mpmath
+        required: true
+        version: ">=1.3.0"
+      - name: networkx
+        required: true
+        version: ">=3.2.1"
+      - name: numpy
+        required: true
+        version: ">=1.24"
+      - name: pandas
+        required: true
+        version: ">=2.1.0"
+      - name: pillow
+        required: true
+        version: ">=10.0.0"
+      - name: prettytable
+        required: true
+        version: ">=3.10.0"
+      - name: psutil
+        required: true
+        version: ">=5.9.0"
+      - name: pyslha
+        required: true
+        version: ">=3.2.5"
+      - name: pyyaml
+        required: true
+        version: ">=6.0"
+      - name: scipy
+        required: true
+        version: ">=1.10"
+      - name: setproctitle
+        required: true
+        version: ">=1.3.3"
+      - name: shapely
+        required: true
+        version: ">=2.0.0"
+      - name: sympy
+        required: true
+        version: ">=1.12"
+      - name: torch
+        required: true
+        version: ">=2.0.0"
+      - name: tqdm
+        required: true
+        version: ">=4.0.0"
+      - name: xmltodict
+        required: true
+        version: ">=0.13.0"
+      - name: xslha
+        required: true
+        version: ">=1.0.0"
+      # V2 ecosystem packages promoted to core install dependencies.
+      - name: Jarvis-HEP-Portal
+        required: true
+        version: ">=1.5.1"
+      - name: Jarvis-Operas
+        required: true
+        version: ">=1.4.1"
+      - name: JarvisPLOT
+        required: true
+        version: ">=1.3.3"
+      - name: typer
+        required: true
+        version: ">=0.25.0"
+  CERN_ROOT:
+    required: false
+    version: ">=6.20"
+    get_path_command: "root-config --prefix"
+    Dependencies:
+      - name: minuit2
+        required: false
+        check_command: "root-config --has-minuit2"
+        expected_output: "yes"
+
   V2:
-    workers: 8
+    workers: 4
     batch_size: 256
 
-    # SAMPLE layout: SAMPLE/<bucket_id>/<uuid>/  (V1 sample_directory parity)
     sample_directory:
       enabled: true
       limit: 200
@@ -14,117 +113,30 @@ EnvReqs:
       pack: true
       start_bucket: 1
 
-    # Handoff: direct by default — no staging/ intermediate hop.
-    # Use strategy: mv_to_staging only when a heavy Archiver needs the buffer.
-    cleanup:
-      strategy: direct
-
-    # Layer-2 archive: DATABASE writes + sealed-bucket tar.gz packing.
     archiver:
       mode: process
-      handoff: direct
       pack_buckets: true
       batch_size: 200
       flush_interval_sec: 1.0
+      # Seal and convert each HDF5 shard after 1 GiB (bytes).
+      max_hdf5_bytes: 1073741824
       delete_after_archive: true
 
-    # Optional Redis broker override (default: 127.0.0.1:6379 / db 0).
-    # redis:
-    #   host: 127.0.0.1
-    #   port: 6379
-    #   db: 0
+    # Per-project Redis broker. If this port is occupied, Jarvis selects a
+    # free replacement and writes it back here before the scan begins.
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      db: 0
 
-    # Optional factory / worker policy.
-    # factory:
-    #   monitor_hz: 120
-    #   watchdog:
-    #     enabled: true
-    #     stale_sec: 30
-    #     poll_interval_sec: 1.0
-    #     max_sample_retries: 3
-    # worker:
-    #   force_serial_layers: false
-    #   sample_artifacts: auto
+    # Reserved monitor interface; runtime monitor behavior is not active yet.
+    monitor:
+      hz: 120
 
-  CERN_ROOT:
-    required: true
-    version: ">=6.20"
-    get_path_command: "root-config --prefix"
-    Dependencies:
-    - name: minuit2
-      required: false
-      check_command: "root-config --has-minuit2"
-      expected_output: "yes"
-
-  Python:
-    version: ">=3.10"
-    Dependencies:
-    - name: dill
-      required: true
-      version: ">=0.3.8"
-    - name: emoji
-      required: true
-      version: ">=2.10.1"
-    - name: h5py
-      required: true
-      version: ">=3.10"
-    - name: jsonschema
-      required: true
-      version: ">=4.0"
-    - name: loguru
-      required: true
-      version: ">=0.7.0"
-    - name: matplotlib
-      required: true
-      version: ">=3.3"
-    - name: mpmath
-      required: true
-      version: ">=1.3.0"
-    - name: networkx
-      required: true
-      version: ">=3.2.1"
-    - name: numpy
-      required: true
-      version: ">=1.18.0"
-    - name: pandas
-      required: true
-      version: ">=2.1.0"
-    - name: pillow
-      required: true
-      version: ">=10.0.0"
-    - name: prettytable
-      required: true
-      version: ">=3.10.0"
-    - name: psutil
-      required: true
-      version: ">=5.9.0"
-    - name: pyslha
-      required: true
-      version: ">=3.2.5"
-    - name: pyyaml
-      required: true
-      version: ">=5.1"
-    - name: scipy
-      required: true
-      version: ">=1.4.0"
-    - name: setproctitle
-      required: true
-      version: ">=1.3.3"
-    - name: shapely
-      required: true
-      version: ">=2.0.0"
-    - name: sympy
-      required: true
-      version: ">=1.10.0"
-    - name: torch
-      required: true
-      version: ">=2.0.0"
-    - name: tqdm
-      required: true
-      version: ">=4.0.0"
-    - name: xmltodict
-      required: true
-      version: ">=0.13.0"
-    - name: xslha
-      required: true
-      version: ">=1.0.0"
+    # Jarvis check (CSV fixed points, else n_samples from Method).
+    # timeout_sec: max wait for samples to archive (deadline; Jarvis check --timeout overrides).
+    # Runtime always forces workers=1, SAMPLE/test/, no tar pack.
+    check_modules:
+      data: "&J/data/check_modules_points.csv"
+      n_samples: 10
+      timeout_sec: 120

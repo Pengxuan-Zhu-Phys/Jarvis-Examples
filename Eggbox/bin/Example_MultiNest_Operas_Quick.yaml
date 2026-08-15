@@ -13,15 +13,9 @@
 
 Scan:
   name: "EggBox_MultiNest_Operas_Quick"
-  save_dir: "&J/outputs"
-  sample_directory:
-    limit: 200
-    width: 6
-    archive_samples: true
 
 Sampling:
   Method: "MultiNest"            # always static NestedSampler
-  Seed: 21
   Variables:
     - name: xx
       description: "Variable X (Flat) for Eggbox."
@@ -35,6 +29,7 @@ Sampling:
         parameters: {min: 0.0, max: 5.0}
 
   Bounds:
+    seed: 21
     # Laptop smoke: modest nlive; looser dlogz than Dynesty Quick (no dynamic batches).
     nlive: 40
     dlogz: 0.5                   # static NestedSampler evidence stop
@@ -61,7 +56,6 @@ EnvReqs:
     batch_size: 16
 
 Operas:
-  make_paraller: 4
   Modules:
     - name: EggBox
       operator: "helper.eggbox2d"

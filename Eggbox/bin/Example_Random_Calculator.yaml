@@ -1,13 +1,14 @@
-# Grid Eggbox scan using a project-local external Calculator and JSON Portal IO.
+# Random Eggbox scan using a project-local external Calculator and JSON Portal IO.
 # CLI sources: Jarvis man sampler.Random --json; Jarvis man example.calculator --json;
 #              Jarvis man calculator.execution.{input,output} --type JSON --json
 Scan:
-  name: "EggBox_Grid"
+  name: "EggBox_Random_Calculator"
 
 Sampling:
-  Method: "Grid"
+  Method: "Random"
   Bounds:
-    seed: 21
+    point_number: 10000
+    seed: 0
   Variables:
     - name: x
       description: "Eggbox x coordinate with logarithmic sampling."
@@ -16,7 +17,6 @@ Sampling:
         parameters:
           min: 0.1
           max: 5.0
-          num: 100
     - name: y
       description: "Eggbox y coordinate with flat sampling."
       distribution:
@@ -24,17 +24,15 @@ Sampling:
         parameters:
           min: 0.0
           max: 5.0
-          num: 100
   LogLikelihood:
     - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
-  selection: "(2.0 * x < y)"
 
 EnvReqs:
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
   V2:
-    workers: 16
+    workers: 10
 
 Calculators:
   Pools:

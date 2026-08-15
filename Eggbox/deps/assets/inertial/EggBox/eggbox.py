@@ -1,22 +1,20 @@
-#!/usr/bin/env python3 
-# Author: Pengxuan Zhu 
-# Email: zhupx99@icloud.com
+#!/usr/bin/env python3
 
-import json 
-import time 
-from numpy import sin, cos 
-# read input from inp.dat
-with open("input.json", 'r') as f1: 
-    data = json.loads(f1.read())
-
+import json
 from random import random
 
-f = {
-    "z" :   (sin(data["xx"]) * cos(data["yy"]) + 2) ** 5,
-    "Time": random()
+from numpy import cos, sin
+
+
+with open("input.json", "r", encoding="utf-8") as input_file:
+    data = json.load(input_file)
+
+result = {
+    "z": (sin(data["xx"]) * cos(data["yy"]) + 2) ** 5,
+    "Time": random(),
 }
 
-print("TestFunction: input is \n{}\nOutput is \n{}".format(data, f))
+print(f"TestFunction: input is \n{data}\nOutput is \n{result}")
 
-with open("output.json",'w') as f1:
-    json.dump(f, f1) 
+with open("output.json", "w", encoding="utf-8") as output_file:
+    json.dump(result, output_file)
