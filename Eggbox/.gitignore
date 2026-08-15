@@ -1,14 +1,39 @@
-# OS
+# OS / editor files
 .DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# Jarvis runtime state / agent artifacts
+# Jarvis runtime state and generated artifacts
 .jarvis/
-
-# Runtime cache (function/data cache used during runs)
+.jarvis-pack/
 .cache/
-
-# Generated at runtime, not part of the example source
 calculators/
 checkpoints/
 outputs/
 logs/
+images/
+reports/
+exports/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and temporary working files
+.venv/
+venv/
+tmp/
+tmp_check/
+*.local
+
+# Dependency-local build/cache products; keep source files under deps/ trackable.
+deps/**/__pycache__/
+deps/**/.cache/
+deps/**/build/
+deps/**/dist/
