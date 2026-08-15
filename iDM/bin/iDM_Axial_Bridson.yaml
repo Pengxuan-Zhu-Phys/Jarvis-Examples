@@ -1,12 +1,14 @@
 Scan:
   name: "iDM_Axial_Bridson"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Bridson"
+  Bounds:
+    radius: 1
+    max_attempt: 30
   Variables:
     - name: MChi
-      description: "Dark-matter mass MchiD [GeV]; shared with the vector scan."
+      description: "Dark-matter mass mDM [GeV]; shared with the vector scan."
       distribution:
         type: Flat
         parameters: {min: 100, max: 1000, length: 100}
@@ -15,8 +17,6 @@ Sampling:
       distribution:
         type: Log
         parameters: {min: 0.0001, max: 10.0, length: 100}
-  Radius: 1
-  MaxAttempt: 30
   LogLikelihood:
     - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
 
@@ -29,28 +29,30 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 16
+  Pools:
+    MicroOMEGAs_Axial: 16
   path: "&J/calculators"
   Modules:
     - name: MicroOMEGAs_Axial
       required_modules: []
       clone_shadow: true
-      path: "&J/calculators/microOMEGAs_axial/@PackID"
+      path: "&J/calculators/microOMEGAs/@PackID"
       # Same micrOMEGAs 7 base package as the vector scan; axial-iDM differs
       # only in its axial DM-current model files.
       source: "&J/deps/microOMEGAs"
       installation:
         - "mkdir -p ${path}"
         - "cp -R ${source}/. ${path}"
-        - "cd ${path}/axial-iDM && make clean && make main=main.cpp"
+        - "cd axial-iDM"
+        - "make main=main.cpp"
       initialization:
         - "rm -f ${path}/axial-iDM/output.json"
       execution:
-        path: "&J/calculators/microOMEGAs_axial/@PackID/axial-iDM"
+        path: "&J/calculators/microOMEGAs/@PackID/axial-iDM"
         commands: ["./main input.json output.json"]
         input:
           - name: inpjson
-            path: "&J/calculators/microOMEGAs_axial/@PackID/axial-iDM/input.json"
+            path: "&J/calculators/microOMEGAs/@PackID/axial-iDM/input.json"
             type: JSON
             actions:
               - type: Dump
@@ -63,7 +65,7 @@ Calculators:
             save: true
         output:
           - name: oupjson
-            path: "&J/calculators/microOMEGAs_axial/@PackID/axial-iDM/output.json"
+            path: "&J/calculators/microOMEGAs/@PackID/axial-iDM/output.json"
             type: JSON
             save: true
             variables:

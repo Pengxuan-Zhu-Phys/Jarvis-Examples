@@ -81,3 +81,37 @@ EnvReqs:
     - name: xslha
       required: true
       version: ">=1.0.0"
+
+  # Jarvis-HEP V2 runtime policy. Task cards may override workers and
+  # batch_size here through their own EnvReqs.V2 block.
+  V2:
+    workers: 4
+    batch_size: 256
+
+    sample_directory:
+      enabled: true
+      limit: 200
+      width: 6
+      pack: true
+      start_bucket: 1
+
+    archiver:
+      mode: process
+      pack_buckets: true
+      batch_size: 200
+      flush_interval_sec: 1.0
+      max_hdf5_bytes: 1073741824
+      delete_after_archive: true
+
+    redis:
+      host: 127.0.0.1
+      port: 6380
+      db: 0
+
+    monitor:
+      hz: 120
+
+    check_modules:
+      data: "&J/data/check_modules_points.csv"
+      n_samples: 10
+      timeout_sec: 120

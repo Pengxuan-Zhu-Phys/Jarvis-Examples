@@ -1,9 +1,11 @@
 Scan:
   name: "iDM_Vector_Bridson"
-  save_dir: "&J/outputs"
 
 Sampling:
   Method: "Bridson"
+  Bounds:
+    radius: 1
+    max_attempt: 30
   Variables:
     - name: MChi
       description: "Dark-matter mass mDM [GeV]; shared with the axial scan."
@@ -15,8 +17,6 @@ Sampling:
       distribution:
         type: Log
         parameters: {min: 0.0001, max: 10.0, length: 100}
-  Radius: 1
-  MaxAttempt: 30
   LogLikelihood:
     - {name: "LogL_Z", expression: "LogGauss(z, 100, 10)"}
 
@@ -29,7 +29,8 @@ EnvReqs:
     default_yaml_path: "&J/deps/environment_default.yaml"
 
 Calculators:
-  make_paraller: 16
+  Pools:
+    MicroOMEGAs_Vector: 16
   path: "&J/calculators"
   Modules:
     - name: MicroOMEGAs_Vector

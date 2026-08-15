@@ -1,19 +1,15 @@
 # =============================================================================
-# iDM Vector — AdaptiveBridson (2D relic-density contour densify)
+# iDM Axial — AdaptiveBridson (2D relic-density contour densify)
 # =============================================================================
-# Approach Omega_h2 ≈ 0.12 in the (MChi, Y) plane:
-#   gen-0 Bridson (r0)
-#   → absolute outer/core bands (|Ω−T|); densify centers = cores only
-#   → same-r_g fill: root-corr + endpoints + MST bridge + local Bridson
-#   → t_min/t_max gate on 2*r_g ball about best; shrink r_g when fill quiet
-#   → stop when band thin + cores cover contour (or min_radius / budgets)
+# Same AdaptiveBridson settings as iDM_Vector_AdaptiveBridson_Omega.yaml;
+# calculator model is axial-iDM instead of vector-iDM.
 #
 # Design (full flow): Jarvis-Books/Jarvis-HEP V2/DESIGN_ADAPTIVE_BRIDSON_LIVE_BAND.md
 # YAML recipes:       Jarvis-Books/Jarvis-HEP V2/YAML-Example/ADAPTIVE_BRIDSON.md
 #
 # From the iDM project root:
-#   Jarvis run bin/iDM_Vector_AdaptiveBridson_Omega.yaml
-#   Jarvis convert bin/iDM_Vector_AdaptiveBridson_Omega.yaml
+#   Jarvis run bin/iDM_Axial_AdaptiveBridson_Omega.yaml
+#   Jarvis convert bin/iDM_Axial_AdaptiveBridson_Omega.yaml
 #
 # Products (under outputs/<Scan.name>/):
 #   DATABASE/samples.hdf5  (+ samples.csv via convert)
@@ -22,7 +18,7 @@
 # =============================================================================
 
 Scan:
-  name: "iDM_Vector_AdaptiveBridson_OmegaV7"
+  name: "iDM_Axial_AdaptiveBridson_OmegaV7"
 
 Sampling:
   Method: "AdaptiveBridson"
@@ -47,27 +43,25 @@ Sampling:
     target_expression: "Omega_h2"
     target_value: 0.12
 
-    # Public tuning is intentionally limited to these two controls.
-    outer_half_width: 0.04        # discovery support: |Ω−T| ≤ 0.02
+    # Public tuning is intentionally limited to these controls.
+    initial_radius: 0.03          # initial u-space Bridson radius
+    outer_half_width: 0.02        # discovery support: |Ω−T| ≤ 0.02
     min_radius: 0.002             # u-space Euclidean floor = 1/500
 
     # Internally derived/defaulted:
     # core_half_width = threshold = outer_half_width / 8 = 0.0025;
-    # r0=0.10, shrink×0.5 on coverage, bridge on, endpoint annulus [1,2.5]r_g;
+    # shrink×0.5 on coverage, bridge on, endpoint annulus [1,2.5]r_g;
     # max_generations=16, max_points=50000, max_new/pass=4000, k_ref=30.
 
   # The kinetic-field redefinition requires epsilon^2 < cos(theta_W)^2.
   # With R=3 and alpha_D=0.1 this excludes only the endpoint y >= 9.6e-4.
-  selection: "Y < 9.5e-4"
+  # selection: "Y < 9.5e-4"
 
   LogLikelihood:
     # Soft preference near the band (optional; AdaptiveBridson uses Omega_h2).
     - {name: "LogL_Omega", expression: "LogGauss(Omega_h2, 0.1200, 0.0012)"}
 
 EnvReqs:
-  OS:
-    - {name: linux, version: ">=3.10.0"}
-    - {name: Darwin, version: ">=10.0"}
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
@@ -96,14 +90,14 @@ Calculators:
         - "cd Axial-iDM"
         - "make main=main.cpp"
       initialization:
-        - "rm -f ${path}/vector-iDM/output.json"
+        - "rm -f ${path}/Axial-iDM/output.json"
       execution:
-        path: "&J/calculators/microOMEGAs/@PackID/vector-iDM"
+        path: "&J/calculators/microOMEGAs/@PackID/Axial-iDM"
         commands:
           - "./main input.json output.json"
         input:
           - name: inpjson
-            path: "&J/calculators/microOMEGAs/@PackID/vector-iDM/input.json"
+            path: "&J/calculators/microOMEGAs/@PackID/Axial-iDM/input.json"
             type: JSON
             actions:
               - type: Dump
@@ -118,7 +112,7 @@ Calculators:
             save: true
         output:
           - name: oupjson
-            path: "&J/calculators/microOMEGAs/@PackID/vector-iDM/output.json"
+            path: "&J/calculators/microOMEGAs/@PackID/Axial-iDM/output.json"
             type: JSON
             save: true
             variables:

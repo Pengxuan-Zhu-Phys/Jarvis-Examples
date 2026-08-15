@@ -4,20 +4,21 @@ Vector / axial inelastic DM scans driven by micrOMEGAs (project-local `deps/`).
 
 ## Quick start (V2)
 
-From this project root (needs `Jarvis2` on `PATH` and local Redis):
+From this project root (needs `Jarvis` on `PATH` and the declared local dependencies):
 
 ```bash
 # Space-filling Bridson scan (2D mDM–gchiD)
-Jarvis2 run bin/iDM_Vector_Bridson.yaml
+Jarvis run bin/iDM_Vector_Bridson.yaml
 
-# AdaptiveBridson: trace Ωh² ≈ 0.12 contour in the same plane
-Jarvis2 run bin/iDM_Vector_AdaptiveBridson_Omega.yaml
+# AdaptiveBridson: live-band densify toward Ωh² ≈ 0.12 (MChi–Y plane)
+Jarvis run bin/iDM_Vector_AdaptiveBridson_Omega.yaml
 
 # Module smoke only (CSV points if present, else ~10 sampler draws)
-Jarvis2 check bin/iDM_Vector_AdaptiveBridson_Omega.yaml
+Jarvis check bin/iDM_Vector_AdaptiveBridson_Omega.yaml --timeout 600
 ```
 
-`Method: AdaptiveBridson` (gen-0 Bridson-like fill → level-set refine).
+`Method: AdaptiveBridson` — gen-0 Bridson → best/Voronoi band → local-core densify
+until `(t_max - t_min) < threshold` (see card comments).
 
 
 ## Layout
@@ -40,3 +41,28 @@ Add optional project directories such as `calculators/`, `configs/`, `scripts/`,
 Path rules:
 - `&J/...` resolves against project root.
 - Use `deps/` for project-local bundled defaults such as `&J/deps/environment_default.yaml`.
+
+## V2 migration notes
+
+All task cards use the current Jarvis-HEP V2 layout. Runtime worker settings are
+under `EnvReqs.V2`, sampler-specific settings are under `Sampling.Bounds`, and
+calculator concurrency is declared in `Calculators.Pools`. The unused V1
+`Utils.interpolations_1D` block was removed from `bin/Bridson.yaml`; current
+custom interpolation workflows should use the Opera `interp1.*` interface.
+
+For a card-level validation and smoke test:
+
+```bash
+Jarvis validate --strict --json bin/iDM_Vector_Bridson.yaml
+Jarvis check bin/iDM_Vector_Bridson.yaml --timeout 600
+```
+
+The smoke test may require ROOT, the project-local micrOMEGAs build, and the
+Jarvis-managed Redis broker.
+
+The representative check run on 2026-08-14 reached Redis, worker, archiver,
+and sample creation successfully, but all 10 samples failed in the external
+micrOMEGAs build because the linked source tree did not provide
+`CalcHEP_src/FlagsForMake` in the per-sample calculator pack. This is a local
+CalcHEP/micrOMEGAs build prerequisite, not a V2 schema validation failure;
+rerun the check after the base micrOMEGAs tree has been compiled successfully.
