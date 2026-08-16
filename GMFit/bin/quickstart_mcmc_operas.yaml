@@ -34,6 +34,8 @@ EnvReqs:
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
+  V2:
+    workers: 4
 
 Operas:
   Modules:

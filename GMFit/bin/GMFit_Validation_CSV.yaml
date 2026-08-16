@@ -27,6 +27,12 @@ EnvReqs:
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
+  V2:
+    workers: 2
+    check_modules:
+      data: "&J/data/gmfit_validation_points.csv"
+      n_samples: 2
+      timeout_sec: 120
 
 LibDeps:
   path: "&J/deps/library"
@@ -99,7 +105,10 @@ LibDeps:
           - "make -j${LibDeps:make_parallel}"
 
 Calculators:
-  make_parallel: 2
+  Pools:
+    GMFit: 2
+    SPhenoGM: 2
+    RGEGM: 2
   path: "&J/calculators"
   Modules:
     - name: GMFit

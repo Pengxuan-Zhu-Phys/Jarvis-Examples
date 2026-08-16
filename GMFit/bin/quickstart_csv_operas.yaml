@@ -19,6 +19,12 @@ EnvReqs:
   Check_default_dependencies:
     required: true
     default_yaml_path: "&J/deps/environment_default.yaml"
+  V2:
+    workers: 4
+    check_modules:
+      data: "&J/data/points.csv"
+      n_samples: 8
+      timeout_sec: 120
 
 Operas:
   Modules:
