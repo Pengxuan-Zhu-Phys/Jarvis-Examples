@@ -24,9 +24,9 @@
     {
       "name": "iDM",
       "category": "dark-matter",
-      "summary": "Vector and axial inelastic-dark-matter relic-density scans with AdaptiveBridson (restricted share package).",
+      "summary": "Vector and axial inelastic-dark-matter relic-density scans with AdaptiveBridson (restricted reproducible package).",
       "entrypoint": "bin/iDM_Vector_AdaptiveBridson_Omega.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/iDM_share_081906_01.tar.gz.jenc",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/iDM_repro_081907_01.tar.gz.jenc",
       "archive_root": ".",
       "access": "restricted",
       "requires_key": true,
@@ -34,7 +34,7 @@
         "scheme": "openssl-aes-256-cbc",
         "hint": "Request the iDM project fetch key from the project maintainer."
       },
-      "compatibility_notes": "Includes vector and axial task cards. The share package intentionally omits the private model/dependency sources."
+      "compatibility_notes": "Includes vector and axial task cards plus the project-local microOMEGAs source tree. Only deps/models/ remains excluded from the package."
     }
   ]
 }
