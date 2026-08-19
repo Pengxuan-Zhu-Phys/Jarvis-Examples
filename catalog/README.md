@@ -1,9 +1,22 @@
 # Official project catalog
 
-**Single source of truth** for `Jarvis2 project list|browse|fetch|info`.
+This JSON on `Jarvis-Examples/main` is the **live source of truth** for
+`Jarvis project list|browse|info|fetch`. It contains project metadata and the
+Release URL for each fetchable project; it does **not** contain project archives.
 
-No PyPI package. Catalog = this GitHub JSON. End users only need the **Jarvis2 CLI**
-(not raw `openssl` commands).
+```text
+Jarvis project browse / list / info
+        ↓
+Jarvis-Examples/main/catalog/official_project_library.json
+        ↓  (project metadata + archive_url)
+Jarvis project fetch NAME
+        ↓
+GitHub Release asset (.tar.gz or .tar.gz.jenc)
+```
+
+There is no PyPI catalog package. `Jarvis-HEP` supplies the client, decrypt, and
+unpack code only. End users and maintainers use the Jarvis CLI, not raw
+`openssl` commands.
 
 ## Index URL
 
@@ -12,25 +25,37 @@ https://raw.githubusercontent.com/Pengxuan-Zhu-Phys/Jarvis-Examples/main/catalog
 ```
 
 ```bash
-# optional override (local testing / private mirror)
+# Optional override for local testing or a private mirror.
 export JARVIS_OFFICIAL_LIBRARY_INDEX_URL=file:///path/to/official_project_library.json
 ```
+
+## Resolution and offline behavior
+
+The client resolves catalog metadata in this order:
+
+1. the remote JSON URL above;
+2. `~/.jarvis/cache/official_catalog.json`, written after a successful remote read;
+3. Jarvis-HEP's packaged snapshot at `jarvishep2/card/official_project_library.json`.
+
+The snapshot is metadata only and may be stale. It never embeds official project
+archives. `fetch` always downloads the actual package from the selected row's
+`archive_url`.
 
 ## End-user commands (only these)
 
 ```bash
-# See which projects need a key
-Jarvis2 project list
+# See which projects need a key.
+Jarvis project list
 
 # Public
-Jarvis2 project fetch Eggbox
+Jarvis project fetch Eggbox
 
 # Restricted (pick one)
-Jarvis2 project fetch SecretName --key 'YOUR_KEY'
+Jarvis project fetch iDM --key 'YOUR_KEY'
 export JARVIS_PROJECT_FETCH_KEY='YOUR_KEY'
-Jarvis2 project fetch SecretName
+Jarvis project fetch iDM
 
-Jarvis2 project info SecretName
+Jarvis project info iDM
 ```
 
 `list` shows columns **Access** (`public` / `restricted`) and **Key** (`no` / `required`).
@@ -38,15 +63,19 @@ Jarvis2 project info SecretName
 ## Maintainer commands (also CLI only)
 
 ```bash
-# Pack + encrypt in one step → *.tar.gz.jenc
-Jarvis2 project pack MyPrivate --repro --encrypt --key 'YOUR_KEY'
+# Pack + encrypt in one step → *.tar.gz.jenc.
+Jarvis project pack MyPrivate --repro --encrypt --key 'YOUR_KEY'
 
 # Or encrypt an existing tarball
-Jarvis2 project pack MyPrivate --repro
-Jarvis2 project encrypt MyPrivate_repro_….tar.gz --key 'YOUR_KEY'
+Jarvis project pack MyPrivate --repro
+Jarvis project encrypt MyPrivate_repro_….tar.gz --key 'YOUR_KEY'
 ```
 
-Upload the `.jenc` (Release or private URL), then add a catalog row:
+Upload the resulting `.tar.gz` or `.jenc` to a GitHub Release first, then add
+or update the catalog row with its immutable asset URL. Do not commit official
+project archives to this repository, and do not add a row before its asset exists.
+
+For example:
 
 ```json
 {
@@ -57,23 +86,31 @@ Upload the `.jenc` (Release or private URL), then add a catalog row:
     "scheme": "openssl-aes-256-cbc",
     "hint": "Ask the collaboration lead for the fetch key"
   },
-  "archive_url": "https://…/MyPrivate_….tar.gz.jenc",
+  "archive_url": "https://github.com/OWNER/Jarvis-Examples/releases/download/TAG/MyPrivate_repro_….tar.gz.jenc",
   "archive_root": ".",
   "entrypoint": "bin/….yaml",
   "summary": "…"
 }
 ```
 
-Do **not** push the plaintext private project tree to the public Examples repo.
+Do **not** push the plaintext private project tree or any plaintext restricted
+archive to the public Examples repository.
 
 ## Schema notes
 
 | Field | Meaning |
 |-------|---------|
+| `name` | CLI project identifier; unique case-insensitively |
+| `category` | Free-form grouping shown by `list` / `browse` |
+| `summary` | One-line description |
+| `entrypoint` | Relative YAML path shown after a successful fetch |
+| `archive_url` | Release URL for the actual `.tar.gz` or `.jenc` package |
+| `archive_root` | Root path inside the archive; use `.` for standard project packs |
 | `access` | `public` or `restricted` |
 | `requires_key` | if true, `fetch` needs `--key` / `JARVIS_PROJECT_FETCH_KEY` |
 | `encryption.scheme` | `none` or `openssl-aes-256-cbc` |
 | `encryption.hint` | shown in `info` / fetch error |
+| `compatibility_notes` | Runtime or package-boundary notes shown by `info` |
 
-Backend format is OpenSSL-compatible AES-256-CBC (PBKDF2). Jarvis2 uses system
-`openssl` or optional `cryptography`; users only call `Jarvis2 project …`.
+Backend format is OpenSSL-compatible AES-256-CBC (PBKDF2). Jarvis uses system
+`openssl` or optional `cryptography`; users only call `Jarvis project …`.
