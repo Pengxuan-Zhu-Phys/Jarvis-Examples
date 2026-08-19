@@ -1,1 +1,0 @@
-src/decays/decay_amplitudes.o: src/decays/decay_amplitudes.cpp src/decays/decay_amplitudes.hpp src/wrappers.hpp src/numerics2.hpp src/cxx_qft/fields.hpp src/eigen_tensor.hpp src/error.hpp src/if.hpp src/logger.hpp src/sum.hpp src/which.hpp src/pp_map.hpp

@@ -1,13 +1,19 @@
 .vscode
 .DS_Store
 
-# Local projects and generated workspace content
+# Local project worktrees and generated workspace content.  Official packages
+# are published as GitHub Release assets; project source trees never belong in
+# this catalog repository.
 /2HDM-PT/
+/Eggbox/
 /Eggbox-V1/
-/GMFit/.obsidian/
-/GMFit/Docs/
-/GMFit/deps/
-/HinoLLP/deps/program/susyhit/prepare_sdecay_input.py
+/GMFit/
+/HinoLLP/
 /NMSSM/
 /Program/
 /QIDDM/
+/iDM/
+
+# Publish package files explicitly as GitHub Release assets, never as Git blobs.
+/*.tar.gz
+/*.tar.gz.jenc

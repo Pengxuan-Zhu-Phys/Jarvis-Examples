@@ -1,1 +1,0 @@
-model_specific/MSSM_higgs/mssm_twoloophiggs.o: model_specific/MSSM_higgs/mssm_twoloophiggs.cpp model_specific/MSSM_higgs/mssm_twoloophiggs.h model_specific/MSSM_higgs/mssm_twoloophiggs.hpp config/config.h src/Li2.hpp

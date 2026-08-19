@@ -73,7 +73,8 @@ Jarvis project encrypt MyPrivate_repro_….tar.gz --key 'YOUR_KEY'
 
 Upload the resulting `.tar.gz` or `.jenc` to a GitHub Release first, then add
 or update the catalog row with its immutable asset URL. Do not commit official
-project archives to this repository, and do not add a row before its asset exists.
+project archives **or project worktrees** to this repository, and do not add a
+row before its asset exists.
 
 For example:
 
@@ -93,8 +94,10 @@ For example:
 }
 ```
 
-Do **not** push the plaintext private project tree or any plaintext restricted
-archive to the public Examples repository.
+Do **not** push any project tree or archive to this repository. Keep project
+sources local; GitHub stores only this catalog on `main` and the published
+packages as Release assets. Restricted packages must be uploaded only as their
+encrypted `.jenc` asset.
 
 ## Schema notes
 
