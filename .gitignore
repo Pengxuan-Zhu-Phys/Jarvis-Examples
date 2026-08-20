@@ -17,3 +17,4 @@
 # Publish package files explicitly as GitHub Release assets, never as Git blobs.
 /*.tar.gz
 /*.tar.gz.jenc
+/pack_*.yaml
