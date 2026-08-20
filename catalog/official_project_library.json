@@ -8,20 +8,6 @@
   },
   "projects": [
     {
-      "name": "2HDM-PT",
-      "category": "phase-transition",
-      "summary": "Two-Higgs-doublet electroweak phase-transition scans with LLPPT (public share package).",
-      "entrypoint": "bin/Random_LLPPT.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/2HDM-PT_share_081915_01.tar.gz",
-      "archive_root": ".",
-      "access": "public",
-      "requires_key": false,
-      "encryption": {
-        "scheme": "none"
-      },
-      "compatibility_notes": "Share package includes project inputs and dependency sources; runtime outputs, images, logs, calculators, and checkpoints are excluded."
-    },
-    {
       "name": "Eggbox",
       "category": "sampling",
       "summary": "Bridson + Jarvis-Operas standalone example (public share package).",
@@ -52,56 +38,60 @@
     {
       "name": "GMFit",
       "category": "global-fit",
-      "summary": "GM global-fit scans with the native GMFit calculator (public share package).",
+      "summary": "GM global-fit scans with the native GMFit calculator (restricted share package).",
       "entrypoint": "bin/GMFit_Validation_CSV.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/GMFit_share_081916_02.tar.gz",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/GMFit_share_081916_02.tar.gz.jenc",
       "archive_root": ".",
-      "access": "public",
-      "requires_key": false,
+      "access": "restricted",
+      "requires_key": true,
       "encryption": {
-        "scheme": "none"
+        "scheme": "openssl-aes-256-cbc",
+        "hint": "Request the GMFit project fetch key from the project maintainer."
       },
       "compatibility_notes": "Includes the project-local GMFit dependency tree; runtime outputs, images, logs, calculators, and checkpoints are excluded."
     },
     {
       "name": "HinoLLP",
       "category": "long-lived-particles",
-      "summary": "Higgsino long-lived-particle scans with SUSYHIT and Jarvis (public share package).",
+      "summary": "Higgsino long-lived-particle scans with SUSYHIT and Jarvis (restricted share package).",
       "entrypoint": "bin/SUSYHIT_Calculator_Validated_CSV.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/HinoLLP_share_082000_01.tar.gz",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/HinoLLP_share_082000_01.tar.gz.jenc",
       "archive_root": ".",
-      "access": "public",
-      "requires_key": false,
+      "access": "restricted",
+      "requires_key": true,
       "encryption": {
-        "scheme": "none"
+        "scheme": "openssl-aes-256-cbc",
+        "hint": "Request the HinoLLP project fetch key from the project maintainer."
       },
       "compatibility_notes": "Includes project-local SUSYHIT dependencies; runtime outputs, images, logs, calculators, and checkpoints are excluded."
     },
     {
       "name": "NMSSM",
       "category": "supersymmetry",
-      "summary": "NMSSMTools scan example with project-local NMSSM dependencies (public share package).",
+      "summary": "NMSSMTools scan example with project-local NMSSM dependencies (restricted share package).",
       "entrypoint": "bin/NTools.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/NMSSM_share_082000_01.tar.gz",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/NMSSM_share_082000_01.tar.gz.jenc",
       "archive_root": ".",
-      "access": "public",
-      "requires_key": false,
+      "access": "restricted",
+      "requires_key": true,
       "encryption": {
-        "scheme": "none"
+        "scheme": "openssl-aes-256-cbc",
+        "hint": "Request the NMSSM project fetch key from the project maintainer."
       },
       "compatibility_notes": "Includes project-local NMSSMTools sources; runtime outputs, images, logs, calculators, and checkpoints are excluded."
     },
     {
       "name": "QIDDM",
       "category": "dark-matter",
-      "summary": "HDECAY and DecayDensityMatrix entropy scans for quantum-information dark matter (public share package).",
+      "summary": "HDECAY and DecayDensityMatrix entropy scans for quantum-information dark matter (restricted share package).",
       "entrypoint": "bin/hdecay_entropy_bridson.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/QIDDM_share_082000_01.tar.gz",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/QIDDM_share_082000_01.tar.gz.jenc",
       "archive_root": ".",
-      "access": "public",
-      "requires_key": false,
+      "access": "restricted",
+      "requires_key": true,
       "encryption": {
-        "scheme": "none"
+        "scheme": "openssl-aes-256-cbc",
+        "hint": "Request the QIDDM project fetch key from the project maintainer."
       },
       "compatibility_notes": "Includes the HDECAY and entropy-scan dependencies; runtime outputs, images, logs, calculators, and checkpoints are excluded."
     },
