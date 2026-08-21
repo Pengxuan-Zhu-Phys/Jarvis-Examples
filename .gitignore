@@ -18,3 +18,4 @@
 /*.tar.gz
 /*.tar.gz.jenc
 /pack_*.yaml
+/pack/
