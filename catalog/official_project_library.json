@@ -48,7 +48,7 @@
         "scheme": "openssl-aes-256-cbc",
         "hint": "Request the GMFit project fetch key from the project maintainer."
       },
-      "compatibility_notes": "Includes the project-local GMFit dependency tree; runtime outputs, images, logs, calculators, and checkpoints are excluded."
+      "compatibility_notes": "Clean Linux source package with GMCalc, SPheno-GM, RGE, pinned dependency archives, and HS/HB documentation; runtime outputs, images, logs, calculators, checkpoints, compiled libraries, and build products are excluded."
     },
     {
       "name": "HinoLLP",
