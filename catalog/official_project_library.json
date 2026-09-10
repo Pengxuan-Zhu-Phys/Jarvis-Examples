@@ -40,7 +40,7 @@
       "category": "global-fit",
       "summary": "GM global-fit scans with the native GMFit calculator (restricted share package).",
       "entrypoint": "bin/GMFit_Validation_CSV.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/GMFit_share_081916_02.tar.gz.jenc",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/GMFit_share_091014_01.tar.gz.jenc",
       "archive_root": ".",
       "access": "restricted",
       "requires_key": true,
@@ -48,7 +48,7 @@
         "scheme": "openssl-aes-256-cbc",
         "hint": "Request the GMFit project fetch key from the project maintainer."
       },
-      "compatibility_notes": "Includes the project-local GMFit dependency tree; runtime outputs, images, logs, calculators, and checkpoints are excluded."
+      "compatibility_notes": "Clean Linux source package with GMCalc, SPheno-GM, RGE, pinned dependency archives, and HS/HB documentation; runtime outputs, images, logs, calculators, checkpoints, compiled libraries, and build products are excluded."
     },
     {
       "name": "HinoLLP",
