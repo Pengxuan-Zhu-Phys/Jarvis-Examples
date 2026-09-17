@@ -100,7 +100,7 @@
       "category": "dark-matter",
       "summary": "Public vector inelastic-dark-matter relic-density, direct-detection, and LZ scan package with V1 and V2 task cards.",
       "entrypoint": "bin/iDM_Vector_V1.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/iDM_share_091705_01.tar.gz",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/iDM_share_091714_01.tar.gz",
       "archive_root": ".",
       "access": "public",
       "requires_key": false,
