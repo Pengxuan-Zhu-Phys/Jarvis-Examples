@@ -96,6 +96,21 @@
       "compatibility_notes": "Includes the HDECAY and entropy-scan dependencies; runtime outputs, images, logs, calculators, and checkpoints are excluded."
     },
     {
+      "name": "2HDM-PT",
+      "category": "phase-transitions",
+      "summary": "R2HDM finite-temperature phase-transition scans with BSMPT 3.1.4 and dynamic nested sampling (Dynesty) (restricted share package).",
+      "entrypoint": "bin/Dynesty_LLPPT.yaml",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/2HDM-PT-Jarvis-Dynesty-20260920.tar.gz.enc",
+      "archive_root": ".",
+      "access": "restricted",
+      "requires_key": true,
+      "encryption": {
+        "scheme": "openssl-aes-256-cbc",
+        "hint": "Request the 2HDM-PT project fetch key from the project maintainer."
+      },
+      "compatibility_notes": "Contains the Dynesty BSMPT finite-temperature scan card, BSMPT source archive, 2HDM helper/postprocess scripts, and fixed-point check data. Runtime outputs, images, logs, checkpoints, compiled calculators, and build products are excluded."
+    },
+    {
       "name": "iDM-LZ",
       "category": "dark-matter",
       "summary": "Public vector inelastic-dark-matter relic-density, direct-detection, and LZ scan package with V1 and V2 task cards.",
