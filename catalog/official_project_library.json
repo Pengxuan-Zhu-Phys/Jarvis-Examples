@@ -100,7 +100,7 @@
       "category": "phase-transitions",
       "summary": "R2HDM finite-temperature phase-transition scans with BSMPT 3.1.4 and dynamic nested sampling (Dynesty) (restricted share package).",
       "entrypoint": "bin/Dynesty_LLPPT.yaml",
-      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/2HDM-PT-Jarvis-Dynesty-20260920.tar.gz.enc",
+      "archive_url": "https://github.com/Pengxuan-Zhu-Phys/Jarvis-Examples/releases/download/latest/2HDM-PT-Jarvis-Dynesty-20260920.tar.gz.jenc",
       "archive_root": ".",
       "access": "restricted",
       "requires_key": true,
